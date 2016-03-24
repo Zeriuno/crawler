@@ -1,4 +1,4 @@
-#livrables
+#Livrables
 
 Liste des livrables pour le projet de crawler.
 
@@ -8,3 +8,5 @@ Liste des livrables pour le projet de crawler.
 * lien vers la release sur github
 
 salut
+*italique*
+**gras**
