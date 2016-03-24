@@ -17,18 +17,16 @@ Un robot d'indexation (ou littéralement araignée du Web ; en anglais web crawl
 
 ##Questions
 
-* ~~Réexpliciter le principe d’indexation~~
-* ~~Convenir des technos à utiliser sur le projet~~
+* Comment éviter les liens morts? On ne garde que les réponses 200 HTTP.
 * Définir le niveau attendu pour la présence des mots clefs: pourcentage de pertinence des résultats.
 * Définir un nombre de mots clefs max à rechercher: un ou plusieurs? Un pour l'instant.
 * Format de la présentation des résultats : liste (éventuellement des graphes).
 * Nécessité de garder les résultats. Pas dans un premier temps.
-* ~~Récupérer les données via du PHP et intégration des données dans une base de données MySQL~~
-* Comment éviter les liens morts? On ne garde que les réponses 200 HTTP.
-* Que faire s’il y a des captcha? On considère le problème comme marginal et non traité par le programme.
-* Texte uniquement ou bien d'autres ressources (images)?
 * Eviter les URL doubles (avec "#source?twitter")
 * Respecte les robots.txt? Oui.
+* ~~Récupérer les données via du PHP et intégration des données dans une base de données MySQL~~
+* ~~Réexpliciter le principe d’indexation~~
+* ~~Convenir des technos à utiliser sur le projet~~
 
 ##Ressources exploitables
 
