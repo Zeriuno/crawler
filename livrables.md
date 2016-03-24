@@ -6,7 +6,3 @@ Liste des livrables pour le projet de crawler.
 * documentation d'installation
 * code commenté
 * lien vers la release sur github
-
-salut
-*italique*
-**gras**
