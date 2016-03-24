@@ -2,7 +2,8 @@
 
 Liste des livrables pour le projet de crawler.
 
-* documentation d'usage
 * documentation d'installation
-* code commenté
-* lien vers la release sur github
+* documentation d'utilisation
+* code
+
+* Cahier des charges (pour le 29/4, pour Juillet aussi?)
