@@ -1,4 +1,4 @@
-#livrables
+#Livrables
 
 Liste des livrables pour le projet de crawler.
 
@@ -6,3 +6,6 @@ Liste des livrables pour le projet de crawler.
 * documentation d'installation
 * code commenté
 * lien vers la release sur github
+
+*italique*
+**gras**
