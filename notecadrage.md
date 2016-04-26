@@ -1,11 +1,11 @@
-# INTITULE DU PROJET : CRAWLER THÉMATIQUE
+# Crawler thématique
 
-## PARTIES PRENANTES
+## Parties prenantes
 
-* Membres de l'équipe projet : Daniele PITROLO, Salah DAHAMNI, Meriyama BANE.
-* Validateur : Julien ROUSSEL.
+* Membres de l'équipe projet : Daniele PITROLO, Salah DAHAMNI, Meriyama BANE
+* Validateur : Julien ROUSSEL
 
-## CONTEXTE DE LA DEMANDE
+## Contexte de la demande
 
 Date de la demande : 26 mars 2016
 Motivation du besoin : Validation du master 2 Professionnel MIMO
@@ -16,7 +16,7 @@ Description de la situation idéale visée : Le projet doit permettre de propose
 La finalité est de proposer à l'utilisateur une page web permettant de déterminer les mots les plus présents dans une page web donnée.
 
 
-## LIMITES DU PROJET
+## Limites du projet
 
 * Il n'existera aucun stockage des résultats dans une base de donnée.
 * Le programme doit suivre les directives dans le fichier robots.txt à la racine du site.
@@ -24,7 +24,7 @@ La finalité est de proposer à l'utilisateur une page web permettant de déterm
 * Le programme seul doit déterminer le pourcentage de pertinence des pages associées, ici : 50%.
 * Le programme présentera les résultats par page crawlée.
 
-## CONTRAINTES
+## Contraintes
 
 * Choix des langages de programmation à intégrer au projet (en dehors du python).
 * Les contraintes professionnelles de chaque membre de l’équipe projet.    
@@ -32,17 +32,26 @@ La finalité est de proposer à l'utilisateur une page web permettant de déterm
 * Le langage de programmation Python est encore peu maitrisée par l'équipe.
 
 
-##LES RISQUES :
-    * Le manque de cohésion dans le groupe projet.
-    * Le manque de cadrage dans le déroulement du projet.
-    * Une mauvaise répartition des tâches entre les membres de l'équipe projet.
-    * Incompréhension du sujet de départ.   
+## Risques
 
-##MOYENS DISPONIBLES POUR REALISER LE PROJET :
+* Le manque de cohésion dans le groupe projet.
+* Le manque de cadrage dans le déroulement du projet.
+* Une mauvaise répartition des tâches entre les membres de l'équipe projet.
+* Incompréhension du sujet de départ.   
 
-    * Une plateforme de travail collaboratif : Github.
-    * Un cahier des charges.
-    * Un gantt avec suivi de l'avancement en temps réel.
-    * Un IDE : PyCharm.    
+## Moyens disponibles
 
-##Mots clefs du projet : RECHERCHE, EXPLORATION, WEB, CRAWLER, STATISTIQUES, MOTS, SUJET.
+* Une plateforme de travail collaboratif : Github.
+* Un cahier des charges.
+* Un gantt avec suivi de l'avancement en temps réel.
+* Un IDE : PyCharm.    
+
+## Mots clefs du projet
+
+* Recherche
+* Exploration
+* Web
+* Crawler
+* Statistiques
+* Mots
+* Sujet
