@@ -19,7 +19,7 @@ La finalité est de proposer à l'utilisateur une page web permettant de déterm
 ## Limites du projet
 
 * Le programme doit suivre les directives dans le fichier robots.txt à la racine du site.
-* Le programme exécute une recherche recursive sur trois niveaux maximum.
+* Le programme traite la page fournie par l'utilisateur et les pages liées. Ce traitement récursif est limité à trois niveaux maximum.
 * Le programme seul doit déterminer le pourcentage de pertinence des pages associées, ici : 50%.
 * Le programme présentera les résultats par page crawlée.
 
