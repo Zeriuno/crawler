@@ -32,6 +32,13 @@ DEMANDE POUR LE CLIENT
 ------------------------------------------------------------------------------------
 DEMANDE POUR LE CLIENT
 
+* mobile
+* documentation utilisateur
+* documentation client
+* documentation
+* design
+
+
 ### Limites
 
 Les parties suivantes de l'application ne seront pas développées dans le cadre du projet, qui réutilisera des éléments déjà existants :
