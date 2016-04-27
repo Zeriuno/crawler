@@ -1,23 +1,27 @@
 #UML
 
-## CLASSES A CREER
+## Classes
 
 * Pages
 * Mots
 * Resultats
 
-## Relations entre les classes
+## Définitions
 
-* Page contient 0..* Mots
-* Mot est contenu 0..* Pages
-* Resultats contient 0..* Mots
-* Mot est contenu dans 0..* liste de resultats
+On assimile, pour commodité une URL à une page.
 
-* Pages sont associées à 0..* pages
+Résultat est le résultat synthétique produit par l'analyse d'une page et affiché à l'utilisateur.
+
+## Schéma
+
+page 0, * ---contient--- 0, * ---> mots [cela doit être la flèche d'association forte]
+
+page 0, * ---renvoie vers--- 0, * ---> page
+
+page 1, * ---produit --- 1, 1 ---> Résultat
 
 ## Processus
 
 * Afficher les résultats
 * Chercher les mots clefs dans la page
 * Chercher les mêmes mots clefs dans les pages associées
-
