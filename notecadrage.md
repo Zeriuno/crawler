@@ -4,6 +4,7 @@
 
 * Membres de l'équipe projet : Daniele PITROLO, Salah DAHAMNI, Meriyama BANE
 * Tuteur : Julien ROUSSEL
+* Validation de la gestion du projet: Georges GROSZ, Stéphane LAMASSE
 
 ##Identification du projet
 
@@ -14,10 +15,10 @@ Nature du projet : nouvelle application
 ## Contexte de la demande
 
 Date de la demande : 26 mars 2016
-Motivation du besoin : Validation du Master 2 Professionnel MIMO
+Motivation du besoin : évaluation, cours de Python, Master 2 MIMO
 
-Description de la situation idéale visée : le projet est constitué d'une application web. Celle-ci demande à l'utilisateur de fournir une URL.
-Une fois lancée, l'application analyse la page associée à l'URL et elle en identifie les mots clefs.
+Objet principal: le projet est consiste en la réalisation d'une application web.
+Celle-ci demande à l'utilisateur de fournir une URL. Une fois lancée, l'application analyse la page associée à l'URL et elle en identifie les mots clefs.
 L'application itère l'opération de manière récursive sur les pages dont l'URL est contenue dans la page analysée et effectue ainsi plusieurs niveaux d'analyse.
 L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
