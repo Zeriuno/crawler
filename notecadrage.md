@@ -48,10 +48,10 @@ o Lot 1 > Conception de la  solution
 consistant à rédiger les livrables suivants : Rédaction du cahier des charges, des spécifications fonctionnelles générales et détaillées, des spécifications techniques générales et détaillées, du diagramme des classes et de la modélisation des use cases.
 Ce jalon doit être idéalement terminé pour le 22/05/2016, avec une tolérance de 7 jours pour commencer la phase de développement de la solution au plus tard début juin.
 
-o Jalon N° 2 > Développement de la solution : développement de l'interface web côté client, création de la base de données associée pour stocker l'historique de recherche des URL fournis par les utilisateurs, développement des script de crawling des URL fournis et des pages associées, développement du script de génération des résultats du crawling.
+o Lot 2 > Développement de la solution : développement de l'interface web côté client, création de la base de données associée pour stocker l'historique de recherche des URL fournis par les utilisateurs, développement des script de crawling des URL fournis et des pages associées, développement du script de génération des résultats du crawling.
 Ce jalon doit être idéalement terminé pour le 27/06/2016, avec une tolérance de 4 jours pour commencer la phase de recette avant le rendu fin juillet.
 
-o Jalon N° 3 > Recette : rédaction du cahier de recette et tests utilisateurs.
+o Lot 3 > Recette : rédaction du cahier de recette et tests utilisateurs.
 Ce jalon doit être idéalement terminé pour le 10/07/2016, avec une tolérance de 2 jours pour déployer la solution au plus tard 13/07/2016.
 
 Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion avec les membres de l'équipe projet.
