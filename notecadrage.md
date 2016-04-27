@@ -2,8 +2,8 @@
 
 ## Parties prenantes
 
-* Membres de l'équipe projet : Daniele PITROLO, Salah DAHAMNI, Meriyama BANE
-* Tuteur : Julien ROUSSEL
+* Client : Julien ROUSSEL
+* Membres de l'équipe projet (Gestion de projet, MOA, MOE, DEV) : Meriyama BANE, Salah DAHAMNI, Daniele PITROLO
 * Validation de la gestion du projet: Georges GROSZ, Stéphane LAMASSE
 
 ##Identification du projet
@@ -55,6 +55,14 @@ L'application livrée ne sera pas :
 ## Phasage
 
 Le projet est décomposé sur les 4 jalons suivants:
+
+
+######################################################################################
+				Remarques
+Pas d'accord: je suis pour un échelonnement différent. Première étape la rédaction du cahier des charges, du cahier de recette.
+Ensuite compte tenu du fait que l'équipe gestion projet, MOA, MOE et DEV sont les mêmes persones, rédaction des spécifications fonctionnelles au four et à mésure du développement. Le développement doit être abordé tôt avec une approche agile d'itération et amélioration continue.
+On parle de jalons si on a des livraisons: le client accepte-t-il le principe de plusieurs livraisons?
+
 
 o Jalon n.1 > Conception de la  solution
 consistant à rédiger les livrables suivants : Rédaction du cahier des charges, des spécifications fonctionnelles générales et détaillées, des spécifications techniques générales et détaillées, du diagramme des classes et de la modélisation des use cases.
