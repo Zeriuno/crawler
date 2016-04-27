@@ -26,6 +26,9 @@ L'application présente enfin les résultats obtenus à l'utilisateur: les pages
 
 L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
 
+DEMANDE POUR LE CLIENT
+--->>>>Ses objectifs peuvent être ainsi résumés, par priorités décroissantes :<<<<---
+DEMANDE POUR LE CLIENT
 
 ### Limites
 
