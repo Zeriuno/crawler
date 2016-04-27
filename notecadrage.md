@@ -22,9 +22,23 @@ Celle-ci demande à l'utilisateur de fournir une URL. Une fois lancée, l'applic
 L'application itère l'opération de manière récursive sur les pages dont l'URL est contenue dans la page analysée et effectue ainsi plusieurs niveaux d'analyse.
 L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
-### Finalité
+### Objectifs
 
-La finalité est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
+L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
+
+
+### Limites
+
+Les parties suivantes de l'application ne seront pas développées dans le cadre du projet, qui réutilisera des éléments déjà existants :
+
+* serveur web
+* bibliothèque de crawling
+* base de données et interaction avec celle-ci
+
+L'application livrée ne sera pas :
+
+* disponible hors-ligne
+* soumise à des tests de charge
 
 ## Phasage
 
@@ -42,12 +56,6 @@ Ce jalon doit être idéalement terminé pour le 10/07/2016, avec une tolérance
 
 Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion avec les membres de l'équipe projet.
 
-## Limites du projet
-
-* Le programme doit suivre les directives dans le fichier robots.txt à la racine du site.
-* Le programme traite la page fournie par l'utilisateur et les pages liées. Ce traitement récursif est limité à trois niveaux maximum.
-* Le programme seul doit déterminer le pourcentage de pertinence des pages associées, ici : 50%.
-* Le programme présentera les résultats par page crawlée.
 
 ## les contraintes liés au projet sont :
 
