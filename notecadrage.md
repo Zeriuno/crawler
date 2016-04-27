@@ -4,7 +4,7 @@
 
 * Client : Julien ROUSSEL
 * Membres de l'équipe projet (Gestion de projet, MOA, MOE, DEV) : Meriyama BANE, Salah DAHAMNI, Daniele PITROLO
-* Validation de la gestion du projet: Georges GROSZ, Stéphane LAMASSE
+* Validation de la gestion du projet: Georges GROSZ, Stéphane LAMASSÉ
 
 ##Identification du projet
 
