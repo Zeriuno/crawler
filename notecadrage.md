@@ -1,30 +1,35 @@
 # Crawler thématique
 
-## IDENTIFICATION DES PARTIES PRENANTES
+## Parties prenantes
 
 * Membres de l'équipe projet : Daniele PITROLO, Salah DAHAMNI, Meriyama BANE
-* TUTEUR : Julien ROUSSEL
+* Tuteur : Julien ROUSSEL
 
-##IDENTIFICATION DU PROJET :
+##Identification du projet
 
-###Nom du projet : CRAWLER
+Nom du projet : Crawler thématique
 
-###Nature du projet : Nouvelle application 
+Nature du projet : nouvelle application 
 
 ## Contexte de la demande
 
-###Date de la demande : 26 mars 2016
-###Motivation du besoin : Validation du master 2 Professionnel MIMO
+Date de la demande : 26 mars 2016
+Motivation du besoin : Validation du Master 2 Professionnel MIMO
 
-###Description de la situation idéale visée : Le projet doit permettre de proposer une page web permettant de faire une recherche de mots clefs dans une page. Puis le programme fera un crawling des pages web associées qui contiennent plus de 50% des mêmes mots. Le programme présentera les résultats obtenus par le moyen d'un tableau de statistiques.
+Description de la situation idéale visée : le projet est constitué d'une application web. Celle-ci demande à l'utilisateur de fournir une URL.
+Une fois lancée, l'application analyse la page associée à l'URL et elle en identifie les mots clefs.
+L'application itère l'opération de manière récursive sur les pages dont l'URL est contenue dans la page analysée et effectue ainsi plusieurs niveaux d'analyse.
+L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
 ### Finalité
 
-La finalité est de proposer à l'utilisateur une page web permettant de déterminer les mots les plus présents dans une page web donnée.
+La finalité est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
 
-##Phasage
-Le projet est décomposé sur 4 jalons qui seront les suivants :
-o Jalon N° 1 > Conception de la  solution
+## Phasage
+
+Le projet est décomposé en 4 lots avec autants de jalons.
+
+o Lot 1 > Conception de la  solution
 consistant à rédiger les livrables suivants : Rédaction du cahier des charges, des spécifications fonctionnelles générales et détaillées, des spécifications techniques générales et détaillées, du diagramme des classes et de la modélisation des use cases.
 Ce jalon doit être idéalement terminé pour le 22/05/2016, avec une tolérance de 7 jours pour commencer la phase de développement de la solution au plus tard début juin.
 
@@ -46,7 +51,7 @@ Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion
 ## les contraintes liés au projet sont :
 
 * Choix des langages de programmation à intégrer au projet (en dehors du python).
-* Les contraintes professionnelles de chaque membre de l’équipe projet.    
+* Les contraintes professionnelles de chaque membre de l’équipe projet.
 * La tenue des délais pour les différentes étapes du projet.
 * Le langage de programmation Python est encore peu maitrisée par l'équipe.
 
@@ -56,7 +61,7 @@ Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion
 * Le manque de cohésion dans le groupe projet.
 * Le manque de cadrage dans le déroulement du projet.
 * Une mauvaise répartition des tâches entre les membres de l'équipe projet.
-* Incompréhension du sujet de départ.   
+* Incompréhension du sujet de départ.
 
 ##Evolution du projet 
 
@@ -68,7 +73,7 @@ Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion
 * Une plateforme de travail collaboratif : Github.
 * Un cahier des charges.
 * Un gantt avec suivi de l'avancement en temps réel.
-* Un IDE : PyCharm.    
+* Un IDE : PyCharm.
 
 ## Mots clefs du projet
 
