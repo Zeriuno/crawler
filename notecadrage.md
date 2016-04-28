@@ -31,7 +31,6 @@ L'objectif principal est de proposer à l'utilisateur une page web permettant de
 * design
 * mobile (facultatif)
 
-
 ### Limites
 
 Les parties suivantes de l'application ne seront pas développées dans le cadre du projet, qui réutilisera des éléments déjà existants :
