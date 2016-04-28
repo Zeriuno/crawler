@@ -30,6 +30,7 @@ L'objectif principal est de proposer à l'utilisateur une page web permettant de
 * documentation utilisateur
 * design
 * mobile (facultatif)
+* export des résultats (facultatif)
 
 ### Limites
 
@@ -44,22 +45,14 @@ L'application livrée ne sera pas :
 * disponible hors-ligne
 * soumise à des tests de charge
 * haute disponibilité non requise
+* la compatibilité des pages web avec IE ne sera pas testée
 
 ## Phasage
 
 Le projet est décomposé sur les 4 jalons suivants:
 
 
-######################################################################################
-				Remarques
-Pas d'accord: je suis pour un échelonnement différent. Première étape la rédaction du cahier des charges, du cahier de recette.
-Ensuite compte tenu du fait que l'équipe gestion projet, MOA, MOE et DEV sont les mêmes persones, rédaction des spécifications fonctionnelles au four et à mésure du développement. Le développement doit être abordé tôt avec une approche agile d'itération et amélioration continue.
-On parle de jalons si on a des livraisons: le client accepte-t-il le principe de plusieurs livraisons?
-
-
-o Jalon n.1 > Conception de la  solution
-consistant à rédiger les livrables suivants : Rédaction du cahier des charges, des spécifications fonctionnelles générales et détaillées, des spécifications techniques générales et détaillées, du diagramme des classes et de la modélisation des use cases.
-Ce jalon doit être idéalement terminé pour le 22/05/2016, avec une tolérance de 7 jours pour commencer la phase de développement de la solution au plus tard début juin.
+o Jalon n.1 > Rédaction du cahier des charges
 
 o Jalon n.2 > Développement de la solution : développement de l'interface web côté client, création de la base de données associée pour stocker l'historique de recherche des URL fournis par les utilisateurs, développement des script de crawling des URL fournis et des pages associées, développement du script de génération des résultats du crawling.
 Ce jalon doit être idéalement terminé pour le 27/06/2016, avec une tolérance de 4 jours pour commencer la phase de recette avant le rendu fin juillet.
