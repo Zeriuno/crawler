@@ -10,7 +10,7 @@
 
 Nom du projet : Crawler thématique
 
-Nature du projet : nouvelle application 
+Nature du projet : nouvelle application
 
 ## Contexte de la demande
 
@@ -26,17 +26,10 @@ L'application présente enfin les résultats obtenus à l'utilisateur: les pages
 
 L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
 
-DEMANDE POUR LE CLIENT
-------------------------------------------------------------------------------------
-!!!!!!Ses objectifs peuvent être ainsi résumés, par priorités décroissantes!!!!!!!!!
-------------------------------------------------------------------------------------
-DEMANDE POUR LE CLIENT
-
-* mobile
-* documentation utilisateur
 * documentation client
-* documentation
+* documentation utilisateur
 * design
+* mobile (facultatif)
 
 
 ### Limites
@@ -51,6 +44,7 @@ L'application livrée ne sera pas :
 
 * disponible hors-ligne
 * soumise à des tests de charge
+* haute disponibilité non requise
 
 ## Phasage
 
@@ -92,7 +86,7 @@ Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion
 * Une mauvaise répartition des tâches entre les membres de l'équipe projet.
 * Incompréhension du sujet de départ.
 
-##Evolution du projet 
+##Evolution du projet
 
 * Fournir des statistiques inhérents au pages recherchées.
 * Aller plus loin sur le principe récursif de recherche des pages associées à l'URL de départ.
