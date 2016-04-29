@@ -43,9 +43,9 @@ Les parties suivantes de l'application ne seront pas développées dans le cadre
 L'application livrée ne sera pas :
 
 * disponible hors-ligne
-* soumise à des tests de charge
-* haute disponibilité non requise
-* la compatibilité des pages web avec IE ne sera pas testée
+* évaluée pour la montée en charge
+* conçue pour de la haute disponibilité
+* garantie compatible avec IE
 
 ## Phasage
 
