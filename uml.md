@@ -14,14 +14,16 @@ Résultat est le résultat synthétique produit par l'analyse d'une page et affi
 
 ## Schéma
 
-page 0, * ---contient--- 0, * ---> mots [cela doit être la flèche d'association forte]
+page 0, * ---traite--- 0, * ---> thème [cela doit être la flèche d'association forte]
 
-page 0, * ---renvoie vers--- 0, * ---> page
+page 0, * ---renvoie vers--- 0, * ---> page [association faible]
 
 page 1, * ---produit --- 1, 1 ---> Résultat
 
+Résultat 1, * --- inclut --- 0, * ---> thème [association forte]
+
 ## Processus
 
-* Afficher les résultats
 * Chercher les mots clefs dans la page
-* Chercher les mêmes mots clefs dans les pages associées
+* Stocker le résultat
+* Afficher les résultats
