@@ -50,4 +50,7 @@ L'application livrée ne sera pas :
 ## Phasage
 
 Le seul jalon prévu avec le client est la livraison du cahier des charges.
-À cause de la réduite connaissance en la matière de l'équipe de développement, le choix est fait d'engager rapidement le développement pour identifier au plus tôt les difficultés et disposer d'une marge confortable pour ajuster les estimations.
+
+En considération des caractéristiques du projet (équipe débutante, lourdes contraintes de temps), le choix est fait d'une approche agile.
+
+Chacun des processus fera l'objet d'un sprint qui comprendra la conception détaillée, le développement et un compte-rendu sur la session.
