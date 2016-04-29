@@ -55,6 +55,9 @@ L'application livrée ne sera pas :
 * conçue pour de la haute disponibilité
 * garantie compatible avec IE
 
+Nous analyserons la possibilité de limiter le nombre de pages associées qui seront traitées par l'application (risque de temps de calcul trop important).
+Par ailleurs, nous analyserons le comportement de l'application en cas de présence d'images et de vidéos.
+
 ## Phasage
 
 Le seul jalon prévu avec le client est la livraison du cahier des charges.
