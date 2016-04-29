@@ -49,53 +49,5 @@ L'application livrée ne sera pas :
 
 ## Phasage
 
-Le projet est décomposé sur les 4 jalons suivants:
-
-
-o Jalon n.1 > Rédaction du cahier des charges
-
-o Jalon n.2 > Développement de la solution : développement de l'interface web côté client, création de la base de données associée pour stocker l'historique de recherche des URL fournis par les utilisateurs, développement des script de crawling des URL fournis et des pages associées, développement du script de génération des résultats du crawling.
-Ce jalon doit être idéalement terminé pour le 27/06/2016, avec une tolérance de 4 jours pour commencer la phase de recette avant le rendu fin juillet.
-
-o Jalon n.3 > Recette : rédaction du cahier de recette et tests utilisateurs.
-Ce jalon doit être idéalement terminé pour le 10/07/2016, avec une tolérance de 2 jours pour déployer la solution au plus tard 13/07/2016.
-
-Il sera diffusé toutes les 15 jours un état du tableau de bord et une réunion avec les membres de l'équipe projet.
-
-
-## les contraintes liés au projet sont :
-
-* Choix des langages de programmation à intégrer au projet (en dehors du python).
-* Les contraintes professionnelles de chaque membre de l’équipe projet.
-* La tenue des délais pour les différentes étapes du projet.
-* Le langage de programmation Python est encore peu maitrisée par l'équipe.
-
-
-## Risques
-
-* Le manque de cohésion dans le groupe projet.
-* Le manque de cadrage dans le déroulement du projet.
-* Une mauvaise répartition des tâches entre les membres de l'équipe projet.
-* Incompréhension du sujet de départ.
-
-##Evolution du projet
-
-* Fournir des statistiques inhérents au pages recherchées.
-* Aller plus loin sur le principe récursif de recherche des pages associées à l'URL de départ.
-
-## Moyens disponibles
-
-* Une plateforme de travail collaboratif : Github.
-* Un cahier des charges.
-* Un gantt avec suivi de l'avancement en temps réel.
-* Un IDE : PyCharm.
-
-## Mots clefs du projet
-
-* Recherche
-* Exploration
-* Web
-* Crawler
-* Statistiques
-* Mots
-* Sujet
+Le seul jalon prévu avec le client est la livraison du cahier des charges.
+À cause de la réduite connaissance en la matière de l'équipe de développement (difficulté d'estimer la difficulté des tâche ), le choix est fait d'engager rapidement le développement
