@@ -50,4 +50,4 @@ L'application livrée ne sera pas :
 ## Phasage
 
 Le seul jalon prévu avec le client est la livraison du cahier des charges.
-À cause de la réduite connaissance en la matière de l'équipe de développement (difficulté d'estimer la difficulté des tâche ), le choix est fait d'engager rapidement le développement
+À cause de la réduite connaissance en la matière de l'équipe de développement, le choix est fait d'engager rapidement le développement pour identifier au plus tôt les difficultés et disposer d'une marge confortable pour ajuster les estimations.
