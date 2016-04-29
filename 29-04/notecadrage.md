@@ -24,7 +24,7 @@ L'application présente enfin les résultats obtenus à l'utilisateur: les pages
 
 ### Objectifs
 
-L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
+L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les mots récurrents dans une page web donnée et la continuité de présence de ces mots dans les pages associées.
 
 * documentation client
 * documentation utilisateur
