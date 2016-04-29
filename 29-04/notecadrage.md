@@ -28,7 +28,12 @@ L'objectif principal est de proposer à l'utilisateur une web application permet
 
 L'application sera à la fois mise en ligne et son code source envoyé au client.
 
-####
+#### Problèmes
+
+Il est également nécessaire de prendre en compte le problème que poserait au bon fonctionnement de l'application une grand nombre de liens présents dans une page et prévoir des modalités adaptées pour y pallier.
+
+Pour ce qui est des résultats, seront à prendre en considération également plusieurs facteurs qui risquent d'en reduire la validité. Tels que la présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
+
 
 #### Objectifs complémentaires
 
@@ -54,9 +59,6 @@ L'application livrée ne sera pas :
 * évaluée pour la montée en charge
 * conçue pour de la haute disponibilité
 * garantie compatible avec IE
-
-Nous analyserons la possibilité de limiter le nombre de pages associées qui seront traitées par l'application (risque de temps de calcul trop important).
-Par ailleurs, nous analyserons le comportement de l'application en cas de présence d'images et de vidéos.
 
 ## Phasage
 
