@@ -24,7 +24,15 @@ L'application présente enfin les résultats obtenus à l'utilisateur: les pages
 
 ### Objectifs
 
-L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les mots récurrents dans une page web donnée et la continuité de présence de ces mots dans les pages associées.
+L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
+
+L'application sera à la fois mise en ligne et son code source envoyé au client.
+
+####
+
+#### Objectifs complémentaires
+
+Les objectifs complémentaires, classés par ordre de priorité decroissante sont :
 
 * documentation client
 * documentation utilisateur
