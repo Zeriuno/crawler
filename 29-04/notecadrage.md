@@ -24,7 +24,20 @@ L'application présente enfin les résultats obtenus à l'utilisateur: les pages
 
 ### Objectifs
 
-L'objectif principal est de proposer à l'utilisateur une page web permettant de déterminer les thèmes évoqués dans une page web donnée et la continuité thématique au travers des liens présentés.
+L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
+
+L'application sera à la fois mise en ligne et son code source envoyé au client.
+
+#### Problèmes
+
+Il est également nécessaire de prendre en compte le problème que poserait au bon fonctionnement de l'application une grand nombre de liens présents dans une page et prévoir des modalités adaptées pour y pallier.
+
+Pour ce qui est des résultats, seront à prendre en considération également plusieurs facteurs qui risquent d'en reduire la validité. Tels que la présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien à longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
+
+
+#### Objectifs complémentaires
+
+Les objectifs complémentaires, classés par ordre de priorité decroissante sont :
 
 * documentation client
 * documentation utilisateur
@@ -43,11 +56,14 @@ Les parties suivantes de l'application ne seront pas développées dans le cadre
 L'application livrée ne sera pas :
 
 * disponible hors-ligne
-* soumise à des tests de charge
-* haute disponibilité non requise
-* la compatibilité des pages web avec IE ne sera pas testée
+* évaluée pour la montée en charge
+* conçue pour de la haute disponibilité
+* garantie compatible avec IE
 
 ## Phasage
 
 Le seul jalon prévu avec le client est la livraison du cahier des charges.
-À cause de la réduite connaissance en la matière de l'équipe de développement (difficulté d'estimer la difficulté des tâche ), le choix est fait d'engager rapidement le développement
+
+En considération des caractéristiques du projet (équipe débutante, lourdes contraintes de temps), le choix est fait d'une approche agile.
+
+Chacun des processus fera l'objet d'un sprint qui comprendra la conception détaillée, le développement et un compte-rendu sur la session.
