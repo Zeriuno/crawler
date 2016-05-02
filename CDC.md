@@ -1,22 +1,5 @@
 # Crawler thématique
 
-## Parties prenantes
-
-* Client : Julien ROUSSEL
-* Membres de l'équipe projet (Gestion de projet, MOA, MOE, DEV) : Meriyama BANE, Salah DAHAMNI, Daniele PITROLO
-* Validation de la gestion du projet: Georges GROSZ, Stéphane LAMASSÉ
-
-##Identification du projet
-
-Nom du projet : Crawler thématique
-
-Nature du projet : nouvelle application
-
-## Contexte de la demande
-
-Date de la demande : 26 mars 2016
-Motivation du besoin : évaluation, cours de Python, Master 2 MIMO
-
 Objet principal: le projet est consiste en la réalisation d'une application web.
 Celle-ci demande à l'utilisateur de fournir une URL. Une fois lancée, l'application analyse la page associée à l'URL et elle en identifie les mots clefs.
 L'application itère l'opération de manière récursive sur les pages dont l'URL est contenue dans la page analysée et effectue ainsi plusieurs niveaux d'analyse.
@@ -59,11 +42,3 @@ L'application livrée ne sera pas :
 * évaluée pour la montée en charge
 * conçue pour de la haute disponibilité
 * garantie compatible avec IE
-
-## Phasage
-
-Le seul jalon prévu avec le client est la livraison du cahier des charges.
-
-En considération des caractéristiques du projet (équipe débutante, lourdes contraintes de temps), le choix est fait d'une approche agile.
-
-Chacun des processus fera l'objet d'un sprint qui comprendra la conception détaillée, le développement et un compte-rendu sur la session.
