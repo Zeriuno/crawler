@@ -47,11 +47,10 @@ Historique :
 
 
 
-CRA4.a - Le système doit itérer la recherche du point CRA2.a sur les URL du point CRA3.a.
-Numéro de l’exigence :
+Numéro de l’exigence : CRA4.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description :
+Description : Le système doit itérer la recherche du point CRA2.a sur les URL du point CRA3.a.
 Justification :
 Origine :
 Critère de satisfaction :
@@ -63,11 +62,10 @@ Documents relatifs :
 Historique :
 
 
-CRA5.a - Le système doit itérer la recherche du point CRA3.a sur les URL du point CRA3.a.
-Numéro de l’exigence :
+Numéro de l’exigence : CRA5.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description :
+Description : Le système doit itérer la recherche du point CRA3.a sur les URL du point CRA3.a.
 Justification :
 Origine :
 Critère de satisfaction :
@@ -78,11 +76,11 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
-CRA5.b - Le système doit limiter la récursion du point CRA4.a à trois niveaux: URL fournie par l'utilisateur + deux niveaux de recherche.
-Numéro de l’exigence :
+
+Numéro de l’exigence : CRA5.b
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description :
+Description : Le système doit limiter la récursion du point CRA4.a à trois niveaux: URL fournie par l'utilisateur + deux niveaux de recherche.
 Justification :
 Origine :
 Critère de satisfaction :
@@ -93,11 +91,11 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
-CRA5.c - Le système doit limiter la recherche du point CRA4.a à n éléments (à déterminer via des tests).
-Numéro de l’exigence :
+
+Numéro de l’exigence : CRA5.c
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description :
+Description : Le système doit limiter la recherche du point CRA4.a à n éléments (à déterminer via des tests).
 Justification :
 Origine :
 Critère de satisfaction :
@@ -108,11 +106,11 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
-CRA5.d - Le système doit permettre à l'utilisateur de désactiver les limitations des points CRA5.b et CRA5.c.
-Numéro de l’exigence :
+
+Numéro de l’exigence : CRA5.d
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description :
+Description : Le système doit permettre à l'utilisateur de désactiver les limitations des points CRA5.b et CRA5.c.
 Justification :
 Origine :
 Critère de satisfaction :
