@@ -34,18 +34,3 @@ Les objectifs complémentaires, classés par ordre de priorité decroissante son
 * design
 * mobile (facultatif)
 * export des résultats (facultatif)
-
-### Limites
-
-Les parties suivantes de l'application ne seront pas développées dans le cadre du projet, qui réutilisera des éléments déjà existants :
-
-* serveur web
-* bibliothèque de crawling
-* base de données et interaction avec celle-ci
-
-L'application livrée ne sera pas :
-
-* disponible hors-ligne
-* évaluée pour la montée en charge
-* conçue pour de la haute disponibilité
-* garantie compatible avec IE
