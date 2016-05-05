@@ -1,13 +1,127 @@
 # Crawler thématique
 
-CRA1.a - Le système doit permettre à l'utilisateur de saisir une URL.
-CRA2.a - Le système doit consulter la page présente à l'URL donnée et y identifier les mots les plus fréquents.
-CRA3.a - Le système doit identifier les URL présentes à l'intérieur de la page fournie présente à l'URL fournie.
+
+Numéro de l’exigence : CRA1.a
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit permettre à l'utilisateur de saisir une URL.
+Justification : rendre la recherche possible sur la page souhaitée par le client
+Origine : Julien Roussel
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
+Numéro de l’exigence : CRA2.a
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit consulter la page présente à l'URL donnée et y identifier les mots les plus fréquents.
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
+Numéro de l’exigence : CRA3.a
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit identifier les URL présentes à l'intérieur de la page fournie présente à l'URL fournie.
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
+
 CRA4.a - Le système doit itérer la recherche du point CRA2.a sur les URL du point CRA3.a.
+Numéro de l’exigence :
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description :
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
 CRA5.a - Le système doit itérer la recherche du point CRA3.a sur les URL du point CRA3.a.
+Numéro de l’exigence :
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description :
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
 CRA5.b - Le système doit limiter la récursion du point CRA4.a à trois niveaux: URL fournie par l'utilisateur + deux niveaux de recherche.
+Numéro de l’exigence :
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description :
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
 CRA5.c - Le système doit limiter la recherche du point CRA4.a à n éléments (à déterminer via des tests).
+Numéro de l’exigence :
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description :
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
 CRA5.d - Le système doit permettre à l'utilisateur de désactiver les limitations des points CRA5.b et CRA5.c.
+Numéro de l’exigence :
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description :
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
 
 
 L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
