@@ -1,8 +1,15 @@
 # Crawler thématique
 
-Objet principal: le projet est consiste en la réalisation d'une application web.
-Celle-ci demande à l'utilisateur de fournir une URL. Une fois lancée, l'application analyse la page associée à l'URL et elle en identifie les mots clefs.
-L'application itère l'opération de manière récursive sur les pages dont l'URL est contenue dans la page analysée et effectue ainsi plusieurs niveaux d'analyse.
+CRA1.a - Le système doit permettre à l'utilisateur de saisir une URL.
+CRA2.a - Le système doit consulter la page présente à l'URL donnée et y identifier les mots les plus fréquents.
+CRA3.a - Le système doit identifier les URL présentes à l'intérieur de la page fournie présente à l'URL fournie.
+CRA4.a - Le système doit itérer la recherche du point CRA2.a sur les URL du point CRA3.a.
+CRA5.a - Le système doit itérer la recherche du point CRA3.a sur les URL du point CRA3.a.
+CRA5.b - Le système doit limiter la récursion du point CRA4.a à trois niveaux: URL fournie par l'utilisateur + deux niveaux de recherche.
+CRA5.c - Le système doit limiter la recherche du point CRA4.a à n éléments (à déterminer via des tests).
+CRA5.d - Le système doit permettre à l'utilisateur de désactiver les limitations des points CRA5.b et CRA5.c.
+
+
 L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
 ### Objectifs
