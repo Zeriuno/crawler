@@ -121,7 +121,7 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
-Numéro de l’exigence : CRA5.e
+Numéro de l’exigence : CRA6.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
 Description : Le système doit permettre à l'utilisateur de visualiser les résulats de l'analyse de l'URL fournie et de ses pages associées.
@@ -131,6 +131,20 @@ Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+Numéro de l’exigence : CRA7.a
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit stocker les résultats dans une base de données associées.
+Justification :
+Origine : Julien Roussel
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes : CRA6.a
 Exigences conflictuelles :
 Documents relatifs :
 Historique :
@@ -160,7 +174,7 @@ Les objectifs complémentaires, classés par ordre de priorité decroissante son
 * mobile (facultatif)
 * export des résultats, fichier format JSON ou XML(facultatif)
 
-## Aspects techniques
+### Aspects techniques
 
 Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application est conçue pour offrir une disponibilité continue 24h/7j.
 
