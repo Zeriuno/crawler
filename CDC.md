@@ -10,9 +10,9 @@ Origine : Julien Roussel
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
-Exigences dépendantes :
+Exigences dépendantes : 
 Exigences conflictuelles :
-Documents relatifs :
+Documents relatifs : 
 Historique :
 
 
@@ -121,8 +121,21 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
+Numéro de l’exigence : CRA5.e
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit permettre à l'utilisateur de visualiser les résulats de l'analyse de l'URL fournie et de ses pages associées.
+Justification :
+Origine : Julien Roussel
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
 
-L'application présente enfin les résultats obtenus à l'utilisateur: les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
+Nb : les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
 ### Objectifs
 
@@ -145,4 +158,18 @@ Les objectifs complémentaires, classés par ordre de priorité decroissante son
 * documentation utilisateur
 * design
 * mobile (facultatif)
-* export des résultats (facultatif)
+* export des résultats, fichier format JSON ou XML(facultatif)
+
+## Aspects techniques
+
+Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application est conçue pour offrir une disponibilité continue 24h/7j.
+
+### Stockage des données
+
+* Stockage des données en cache web (utilisation de cookies). 
+* Stockage en base de données (utilisation des tables temporaires qui pourront soit rester en base soit devenir des fichier de logs)
+* Vérification de l'adhérence entre la base de données et le cache
+
+
+
+
