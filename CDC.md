@@ -10,9 +10,9 @@ Origine : Julien Roussel
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
-Exigences dépendantes : 
+Exigences dépendantes :
 Exigences conflictuelles :
-Documents relatifs : 
+Documents relatifs :
 Historique :
 
 
@@ -162,14 +162,12 @@ Les objectifs complémentaires, classés par ordre de priorité decroissante son
 
 ## Aspects techniques
 
-Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application est conçue pour offrir une disponibilité continue 24h/7j.
+Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application n'est pas testée pour offrir une disponibilité continue 24h/7j, ni pour la montée en charge.
 
 ### Stockage des données
 
-* Stockage des données en cache web (utilisation de cookies). 
-* Stockage en base de données (utilisation des tables temporaires qui pourront soit rester en base soit devenir des fichier de logs)
-* Vérification de l'adhérence entre la base de données et le cache
+Commentaire DP: Je ne suis pas d'accord sur cette partie: pour moi cache et BDD sont pareilles.
 
-
-
-
+* Stockage des données en cache web (utilisation de cookies). Commentaire DP: je ne vois pas, pour moi ça peut sauter.
+* Stockage en base de données (utilisation des tables temporaires qui pourront soit rester en base soit devenir des fichier de logs). Commentaire DP: je ne comprends pas la partie sur les logs. À mon avis les éléments à prendre en considération sont: sauvegarder ou, en plus, supprimer après un certain temps (il faut un script pour ça).
+* Vérification de l'adhérence entre la base de données et le cache. Commentaire DP: je ne vois pas, pour moi ça peut sauter.
