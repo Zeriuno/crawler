@@ -1,5 +1,12 @@
 # Crawler thématique
 
+##Definition du besoin
+
+L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
+
+L'application sera à la fois mise en ligne et son code source envoyé au client.
+
+##Exigences
 
 Numéro de l’exigence : CRA1.a
 Type d’exigence :
@@ -26,6 +33,36 @@ Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
+Numéro de l’exigence : CRA2.b
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit vérifier si l'URL fournie a déjà été crawlée dans un délai de ??(DONNER UN DELAI)
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes : CRA2.a
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
+Numéro de l’exigence : CRA2.c
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit produire un message d'erreur si l'URL n'est pas valide
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes : CRA2.a
 Exigences conflictuelles :
 Documents relatifs :
 Historique :
@@ -121,6 +158,22 @@ Exigences conflictuelles :
 Documents relatifs :
 Historique :
 
+
+Numéro de l’exigence : CRA5.e
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit respecter les robots.txt des pages crawlées.
+Justification :
+Origine :
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes : CRA2.a et CRA5.a
+Exigences conflictuelles :
+Documents relatifs :
+Historique :
+
+
 Numéro de l’exigence : CRA6.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
@@ -138,7 +191,7 @@ Historique :
 Numéro de l’exigence : CRA7.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description : Le système doit stocker les résultats dans une base de données associées.
+Description : Le système doit stocker les résultats dans une base de données associée.
 Justification :
 Origine : Julien Roussel
 Critère de satisfaction :
@@ -151,34 +204,40 @@ Historique :
 
 Nb : les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
-### Objectifs
 
-L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
+## Objectifs complémentaires
 
-L'application sera à la fois mise en ligne et son code source envoyé au client.
+Les objectifs complémentaires, classés par ordre de priorité decroissante sont :
 
-#### Problèmes
+* Fournir une documentation client
+* Créer une documentation utilisateur
+* Perfection du design de la page
+* Responsive design mobile (facultatif)
+* Export des résultats par l'utilisateur, fichier format JSON ou XML(facultatif)
+
+
+## Contraintes
 
 Il est également nécessaire de prendre en compte le problème que poserait au bon fonctionnement de l'application une grand nombre de liens présents dans une page et prévoir des modalités adaptées pour y pallier.
 
 Pour ce qui est des résultats, seront à prendre en considération également plusieurs facteurs qui risquent d'en reduire la validité. Tels que la présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien à longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
 
 
-#### Objectifs complémentaires
+## Aspects techniques
 
-Les objectifs complémentaires, classés par ordre de priorité decroissante sont :
-
-* documentation client
-* documentation utilisateur
-* design
-* mobile (facultatif)
-* export des résultats, fichier format JSON ou XML(facultatif)
-
-### Aspects techniques
+### Généralités
 
 Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application est conçue pour offrir une disponibilité continue 24h/7j.
 
-### Stockage des données
+### Environnement technique
+
+* HTML, CSS, JavaScript pour la conception du site
+* Python et ses différentes libraires pour les scripts de crawling, de stockage des résultats et d'affichage des résultats.
+* Json et XML pour le format de stockage des fichiers de résultats.
+* Un serveur web 
+
+
+## Stockage des données
 
 * Stockage des données en cache web (utilisation de cookies). 
 * Stockage en base de données (utilisation des tables temporaires qui pourront soit rester en base soit devenir des fichier de logs)
