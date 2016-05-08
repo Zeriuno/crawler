@@ -2,33 +2,33 @@
 
 
 Numéro de l’exigence : CRA1.a
-Type d’exigence :
+Type d’exigence : EF
 Evénements / Cas d’utilisation :
 Description : Le système doit permettre à l'utilisateur de saisir une URL.
 Justification : rendre la recherche possible sur la page souhaitée par le client
 Origine : Julien Roussel
-Critère de satisfaction :
-Contentement du maître d’ouvrage:
-Mécontentement du maître d’ouvrage:
-Exigences dépendantes :
-Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Critère de satisfaction : "Si il y a un peu de design, deux couleurs, c'est mieux. L'affichage mobile n'est pas indispensable."
+Contentement du maître d’ouvrage: 3
+Mécontentement du maître d’ouvrage: 5
+Exigences dépendantes : CRA6.a
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA2.a
-Type d’exigence :
+Type d’exigence : EF
 Evénements / Cas d’utilisation :
 Description : Le système doit consulter la page présente à l'URL donnée et y identifier les mots les plus fréquents.
-Justification :
-Origine :
+Justification : Afin d'identifier les mots les plus présents.
+Origine : intitulé du sujet
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
 Exigences conflictuelles :
 Documents relatifs :
-Historique :
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA3.a
@@ -36,14 +36,14 @@ Type d’exigence :
 Evénements / Cas d’utilisation :
 Description : Le système doit identifier les URL présentes à l'intérieur de la page fournie présente à l'URL fournie.
 Justification :
-Origine :
+Origine : intitulé du sujet
 Critère de satisfaction :
-Contentement du maître d’ouvrage:
-Mécontentement du maître d’ouvrage:
-Exigences dépendantes :
-Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Contentement du maître d’ouvrage: 3
+Mécontentement du maître d’ouvrage: 5
+Exigences dépendantes : CRA5.a, CRA5.b, CRA5.c, CRA6.a
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 
@@ -59,7 +59,7 @@ Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
 Exigences conflictuelles :
 Documents relatifs :
-Historique :
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA5.a
@@ -74,7 +74,7 @@ Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
 Exigences conflictuelles :
 Documents relatifs :
-Historique :
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA5.b
@@ -87,9 +87,9 @@ Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
-Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA5.c
@@ -97,14 +97,14 @@ Type d’exigence :
 Evénements / Cas d’utilisation :
 Description : Le système doit limiter la recherche du point CRA4.a à n éléments (à déterminer via des tests).
 Justification :
-Origine :
+Origine : suggestion de Georges Grosz
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
-Exigences dépendantes :
-Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Exigences dépendantes : CRA5.d
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA5.d
@@ -119,7 +119,7 @@ Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
 Exigences conflictuelles :
 Documents relatifs :
-Historique :
+Historique : 2016-05-08
 
 Numéro de l’exigence : CRA6.a
 Type d’exigence :
@@ -131,23 +131,23 @@ Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
-Exigences conflictuelles :
+Exigences conflictuelles : /
 Documents relatifs :
-Historique :
+Historique : 2016-05-08
 
 Numéro de l’exigence : CRA7.a
 Type d’exigence :
 Evénements / Cas d’utilisation :
 Description : Le système doit stocker les résultats dans une base de données associées.
-Justification :
+Justification : Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
 Origine : Julien Roussel
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes : CRA6.a
-Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 Nb : les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
