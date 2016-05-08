@@ -17,7 +17,7 @@ Origine : Julien Roussel
 Critère de satisfaction : "Si il y a un peu de design, deux couleurs, c'est mieux. L'affichage mobile n'est pas indispensable."
 Contentement du maître d’ouvrage: 3
 Mécontentement du maître d’ouvrage: 5
-Exigences dépendantes : CRA6.a
+Exigences dépendantes : CRA2.a, CRA2.b, CRA2.c, CRA3.a, CRA6.a
 Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
@@ -33,7 +33,7 @@ Critère de satisfaction :
 Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes :
-Exigences conflictuelles :
+Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
@@ -41,16 +41,16 @@ Historique : 2016-05-08
 Numéro de l’exigence : CRA2.b
 Type d’exigence :
 Evénements / Cas d’utilisation :
-Description : Le système doit vérifier si l'URL fournie a déjà été crawlée dans un délai de ??(DONNER UN DELAI)
-Justification :
+Description : Le système dans la base de données sont présents des résultats pour l'URL donnée.
+Justification : Afin de proposer à l'utilisateur les résultats déjà calculés et fournir une réponse plus rapidemenet et avec moins de charge pour le système.
 Origine :
 Critère de satisfaction :
-Contentement du maître d’ouvrage:
-Mécontentement du maître d’ouvrage:
-Exigences dépendantes : CRA2.a
+Contentement du maître d’ouvrage: 4
+Mécontentement du maître d’ouvrage: 2
+Exigences dépendantes : CRA6.a, CRA7.a
 Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA2.c
@@ -64,8 +64,8 @@ Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes : CRA2.a
 Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA3.a
@@ -170,8 +170,8 @@ Contentement du maître d’ouvrage:
 Mécontentement du maître d’ouvrage:
 Exigences dépendantes : CRA2.a et CRA5.a
 Exigences conflictuelles :
-Documents relatifs :
-Historique :
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 Numéro de l’exigence : CRA6.a
@@ -188,16 +188,11 @@ Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
-Numéro de l’exigence : CRA7.a
-Type d’exigence :
+Numéro de l’exigence : CRA6.b
+Type d’exigence : EF
 Evénements / Cas d’utilisation :
-<<<<<<< HEAD
-Description : Le système doit stocker les résultats dans une base de données associées.
-Justification : Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
-=======
-Description : Le système doit stocker les résultats dans une base de données associée.
+Description : les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 Justification :
->>>>>>> 5010233029d5578544925534f5674e736c1bcd64
 Origine : Julien Roussel
 Critère de satisfaction :
 Contentement du maître d’ouvrage:
@@ -207,7 +202,19 @@ Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
-Nb : les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
+Numéro de l’exigence : CRA7.a
+Type d’exigence :
+Evénements / Cas d’utilisation :
+Description : Le système doit stocker les résultats dans une base de données associée.
+Justification : Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
+Origine : Julien Roussel
+Critère de satisfaction :
+Contentement du maître d’ouvrage:
+Mécontentement du maître d’ouvrage:
+Exigences dépendantes : CRA6.a
+Exigences conflictuelles : /
+Documents relatifs : /
+Historique : 2016-05-08
 
 
 ## Objectifs complémentaires
