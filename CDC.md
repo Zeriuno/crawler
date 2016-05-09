@@ -1,12 +1,12 @@
 # Crawler thématique
 
-##Definition du besoin
+## Definition du besoin
 
 L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
 
 L'application sera à la fois mise en ligne et son code source envoyé au client.
 
-##Exigences
+## Exigences
 
 Numéro de l’exigence : CRA1.a
 Type d’exigence : EF
