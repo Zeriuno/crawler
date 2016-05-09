@@ -1,4 +1,4 @@
-* abandonner notion de thème et de mot. Utiliser le thème.
+* abandonner notion de thème et de mot. Utiliser le mot.
 
 
 
