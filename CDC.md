@@ -1,5 +1,6 @@
 # Crawler thématique
 
+
 ## Definition du besoin
 
 L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
