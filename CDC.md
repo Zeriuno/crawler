@@ -10,6 +10,7 @@ Celui-ci est une application web destinée à l'analyse lexicale statistique de 
 
 Les livrables du projet sont:
 
+* Ce cahier des charges
 * Code source du logiciel
 * Documentation client
 * Documentation utilisateur
