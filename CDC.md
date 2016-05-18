@@ -1,5 +1,10 @@
 # Crawler thématique
 
+##Objet
+
+Le présent cahier des charges a pour objet la définition des exigences liées au programme *crawler thématique*.
+
+Celui-ci est une application web destinée à l'analyse lexicale statistique de pages fournies par les utilisateurs avec une modalité récursive.
 
 ## Definition du besoin
 
