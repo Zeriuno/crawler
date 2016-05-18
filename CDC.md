@@ -225,17 +225,6 @@ Documents relatifs : /
 Historique : 2016-05-08
 
 
-## Objectifs complémentaires
-
-Les objectifs complémentaires, classés par ordre de priorité decroissante sont :
-
-* Fournir une documentation client
-* Créer une documentation utilisateur
-* Perfection du design de la page
-* Responsive design mobile (facultatif)
-* Export des résultats par l'utilisateur, fichier format XML(facultatif)
-* Stockage des données en cache web (facultatif)
-
 ## Contraintes
 
 Il est également nécessaire de prendre en compte le problème que poserait au bon fonctionnement de l'application une grand nombre de liens présents dans une page et prévoir des modalités adaptées pour y pallier.
