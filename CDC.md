@@ -44,11 +44,11 @@ Le programme ne sera pas conçu pour les situations suivantes:
 ### Accueil de l'utilisateur
 
 Numéro de l’exigence : CRA1.a
-Type d’exigence : EF
-Description : Le système doit permettre à l'utilisateur de saisir une URL.
+Type d’exigence : Exigence Fonctionnelle
+Description : Le système doit permettre à l'utilisateur de saisir une URL qui fera l'objet des traitements successifs.
 Justification : La recherche s'applique sur une URL donnée par l'utilisateur.
 Origine : Julien Roussel
-Critère de satisfaction : "Si il y a un peu de design, deux couleurs, c'est mieux. L'affichage mobile n'est pas indispensable."
+Critère de satisfaction : Quoique bienvenues, de minimes éléments de design ne sont pas nécessaires. L'affichage mobile n'est pas indispensable.
 Contentement du maître d’ouvrage: 3
 Mécontentement du maître d’ouvrage: 5
 Exigences dépendantes : CRA2.a, CRA2.b, CRA2.c, CRA3.a, CRA6.a
