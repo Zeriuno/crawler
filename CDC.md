@@ -29,7 +29,8 @@ Des éléments du programme seront réutilisés à partir de solutions déjà ex
 
 * serveur web
 * bibliothèque de crawling
-* base de données et interaction avec celle-ci.
+* base de données
+* bibliothèque pour l'intéraction avec celle-ci
 
 Le programme ne sera pas conçu pour les situations suivantes:
 
