@@ -39,13 +39,7 @@ Le programme ne sera pas conçu pour les situations suivantes:
 * montée en charge
 * scalabilité
 
-## Definition du besoin
-
-L'objectif principal est de proposer à l'utilisateur une web application permettant de déterminer les mots clefs d'une page web donnée par l'utilisateur et la continuité de présence de ces mots dans les pages associées.
-
-L'application sera à la fois mise en ligne et son code source envoyé au client.
-
-## Exigences
+### Accueil de l'utilisateur
 
 Numéro de l’exigence : CRA1.a
 Type d’exigence : EF
@@ -60,6 +54,7 @@ Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
+### Analyse de la page fournie
 
 Numéro de l’exigence : CRA2.a
 Type d’exigence : EF
@@ -74,10 +69,9 @@ Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
-
 Numéro de l’exigence : CRA2.b
 Type d’exigence : EF
-Description : Le système doit retourner les résultats si les résultas de l'analyse de l'URL est disponible dans la base de données.
+Description : Le système doit retourner les résultats si le résultat de l'analyse de l'URL est disponible dans la base de données.
 Justification : Proposer à l'utilisateur les résultats déjà calculés et fournir une réponse plus rapidement et avec moins de charge pour le système.
 Origine : Equipe projet
 Critère de satisfaction :
@@ -89,26 +83,12 @@ Documents relatifs : /
 Historique : 2016-05-08
 
 
-Numéro de l’exigence : CRA2.c
-Type d’exigence : EF
-Description : Le système doit produire un message d'erreur si l'URL n'est pas valide
-Justification : Informer l'utilisateur que l'analyse ne peut être effectuée.
-Origine : Equipe projet
-Critère de satisfaction : 
-Contentement du maître d’ouvrage: 2
-Mécontentement du maître d’ouvrage: 3
-Exigences dépendantes : CRA2.a
-Exigences conflictuelles : /
-Documents relatifs : /
-Historique : 2016-05-08
-
-
 Numéro de l’exigence : CRA3.a
 Type d’exigence : EF
 Description : Le système doit identifier les URL présentes à l'intérieur de la page fournie présente à l'URL fournie.
 Justification : Pour poursuuivre l'analyse sur les pages associées.
 Origine : intitulé du sujet
-Critère de satisfaction : 
+Critère de satisfaction :
 Contentement du maître d’ouvrage: 3
 Mécontentement du maître d’ouvrage: 5
 Exigences dépendantes : CRA5.a, CRA5.b, CRA5.c, CRA6.a
@@ -116,7 +96,7 @@ Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
-
+### Récursion
 
 Numéro de l’exigence : CRA4.a
 Type d’exigence : EF
@@ -130,7 +110,6 @@ Exigences dépendantes :CRA2.a, CRA3.a
 Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
-
 
 Numéro de l’exigence : CRA5.a
 Type d’exigence : EF
@@ -154,7 +133,7 @@ Origine : Julien Rousserl
 Critère de satisfaction :
 Contentement du maître d’ouvrage: 4
 Mécontentement du maître d’ouvrage: 4
-Exigences dépendantes : CRA2.a, CRA3.a, CRA4.a, CRA5.a 
+Exigences dépendantes : CRA2.a, CRA3.a, CRA4.a, CRA5.a
 Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
@@ -180,31 +159,31 @@ Description : Le système doit permettre à l'utilisateur de désactiver les li
 Justification : l'utlisateur doit pouvoir se limiter à l'analyse de l'URL donnée s'il le souhaite.
 Origine : Equipe projet
 Critère de satisfaction :
-Contentement du maître d’ouvrage: 2 
-Mécontentement du maître d’ouvrage: 1	
+Contentement du maître d’ouvrage: 2
+Mécontentement du maître d’ouvrage: 1
 Exigences dépendantes : CRA1.a, CRA2.a
 Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
+### Présentation du résultat
 
-Numéro de l’exigence : CRA5.e
+Numéro de l’exigence : CRA2.c
 Type d’exigence : EF
-Description : Le système doit respecter les robots.txt des pages crawlées.
-Justification :
-Origine : Julien Roussel
+Description : Le système doit produire un message d'erreur si l'URL n'est pas valide
+Justification : Informer l'utilisateur que l'analyse ne peut être effectuée.
+Origine : Equipe projet
 Critère de satisfaction :
-Contentement du maître d’ouvrage:
-Mécontentement du maître d’ouvrage:
-Exigences dépendantes : CRA2.a et CRA5.a
-Exigences conflictuelles :
+Contentement du maître d’ouvrage: 2
+Mécontentement du maître d’ouvrage: 3
+Exigences dépendantes : CRA2.a
+Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
 
-
 Numéro de l’exigence : CRA6.a
 Type d’exigence : EF
-Description : Le système doit permettre l'affichade des résulats d'analyse de l'URL fournie et de ses pages associées.
+Description : Le système doit permettre l'affichage des résulats d'analyse de l'URL fournie et de ses pages associées.
 Justification : Fonctionnalité attendue de l'application.
 Origine : Intitulé du sujet
 Critère de satisfaction :
@@ -227,6 +206,8 @@ Exigences dépendantes : CRA6.a
 Exigences conflictuelles : /
 Documents relatifs : /
 Historique : 2016-05-08
+
+### Sauvegarde du résultat
 
 Numéro de l’exigence : CRA7.a
 Type d’exigence : EF
@@ -277,6 +258,4 @@ Le programme est une application web compatible avec la dernière version de Fir
 
 ## Stockage des données
 
-* Stockage des résultats en base de données pour une durée de 7 jours. 
-
-
+* Stockage des résultats en base de données pour une durée de 7 jours.
