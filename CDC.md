@@ -62,8 +62,8 @@ Numéro de l’exigence : CRA2.a
 Type d’exigence : EF
 Description : Le système doit consulter la page présente à l'URL donnée et y identifier les mots les plus fréquents.
 Justification : Déterminer les mots les plus fréquents sur la page.
-Origine : Intitulé du sujet
-Critère de satisfaction :
+Origine : Julien Roussel
+Critère de satisfaction : Capacité d'identifier les mots les plus fréquents hormis les articles, conjonctions et prépositions.
 Contentement du maître d’ouvrage: 5
 Mécontentement du maître d’ouvrage: 5
 Exigences dépendantes : CRA1.a
