@@ -21,11 +21,11 @@ Le programme permet de gérer les évènements suivants:
 
 * Accueil de l'utilisateur
 * Analyse de la page fournie
-* Récursion
+* Récursion de l'analyse
 * Présentation du résultat
 * Sauvegarde du résultat
 
-Le programme aura recours à des éléments déjà prêts, dont le développement ne rentre pas dans le cadre du projet:
+Des éléments du programme seront réutilisés à partir de solutions déjà existantes et ne feront pas l'objet de développement dans le cadre du projet:
 
 * serveur web
 * bibliothèque de crawling
