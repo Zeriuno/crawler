@@ -5,5 +5,4 @@ Les objectifs complémentaires, classés par ordre de priorité decroissante son
 * Perfection du design de la page
 * Responsive design mobile (facultatif)
 * Export des résultats par l'utilisateur, fichier format XML(facultatif)
-* Stockage des données en cache web (facultatif)
 
