@@ -1,10 +1,43 @@
 # Crawler thématique
 
-##Objet
+## Objet
 
 Le présent cahier des charges a pour objet la définition des exigences liées au programme *crawler thématique*.
 
 Celui-ci est une application web destinée à l'analyse lexicale statistique de pages fournies par les utilisateurs avec une modalité récursive.
+
+## Livrables
+
+Les livrables du projet sont:
+
+* Code source du logiciel
+* Documentation client
+* Documentation utilisateur
+
+## Portée
+
+Le programme permet de gérer les évènements suivants:
+
+* Accueil de l'utilisateur
+* Analyse de la page fournie
+* Récursion
+* Présentation du résultat
+* Sauvegarde du résultat
+
+Le programme aura recours à des éléments déjà prêts, dont le développement ne rentre pas dans le cadre du projet:
+
+* serveur web
+* bibliothèque de crawling
+* base de données et interaction avec celle-ci.
+
+Le programme ne sera pas conçu pour les situations suivantes:
+
+* offline first
+* mobile first
+* haute disponibilité
+* compatibilité avec IE
+* montée en charge
+* scalabilité
 
 ## Definition du besoin
 
