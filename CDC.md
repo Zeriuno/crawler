@@ -400,7 +400,6 @@ Pour ce qui est des résultats, seront à prendre en considération également p
 
 ### Généralités
 
-Le programme est une application web et est compatible tous les navigateurs, seule la compatibilité avec Internet Explorer ne sera pas testée. Cette application est conçue pour offrir une disponibilité continue 24h/7j.
 
 ### Environnement technique
 
