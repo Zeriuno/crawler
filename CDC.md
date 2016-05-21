@@ -393,6 +393,30 @@ L'analyse est exhaustive.
 **Historique :** 2016-05-20
 
 
+#### Exigence CRA9.a
+
+**Type d’exigence :** Contrainte
+
+**Description :** Le système doit être conçu pour un déploiement sur un serveur GNU/Linux.
+
+**Justification :** Faut quand même pas déconner, hein.
+
+**Origine :** Daniele Pitrolo
+
+**Critère de satisfaction :** /
+
+**Contentement du maître d’ouvrage :** 1
+
+**Mécontentement du maître d’ouvrage :** 2
+
+**Exigences dépendantes :** /
+
+**Exigences conflictuelles :** /
+
+**Documents relatifs :** /
+
+**Historique :** 2016-05-21
+
 Pour ce qui est des résultats, seront à prendre en considération également plusieurs facteurs qui risquent d'en reduire la validité. Tels que la présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien à longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
 
 
