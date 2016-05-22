@@ -20,3 +20,31 @@ python setup.py install
 2. `tar xvzf beautifulsoup4-4.4.1.tar.gz`
 3. `cd beautifulsoup4-4.4.1`
 4. `python setup.py build && python setup.py install`
+
+
+###Installer un parser BS
+
+Beautiful Soup supports the HTML parser included in Python’s standard library, but it also supports a number of third-party Python parsers. One is the lxml parser. Depending on your setup, you might install lxml with one of these commands:
+
+$ apt-get install python-lxml
+
+$ easy_install lxml
+
+$ pip install lxml
+
+Another alternative is the pure-Python html5lib parser, which parses HTML the way a web browser does. Depending on your setup, you might install html5lib with one of these commands:
+
+$ apt-get install python-html5lib
+
+$ easy_install html5lib
+
+$ pip install html5lib
+
+
+###Entête du fichier.py
+
+from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(open("index.html"))
+
+soup = BeautifulSoup("<html>data</html>")
