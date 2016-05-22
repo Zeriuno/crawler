@@ -32,7 +32,7 @@ Des éléments du programme seront réutilisés à partir de solutions déjà ex
 * base de données
 * bibliothèque pour l'intéraction avec celle-ci
 
-Le programme ne sera pas conçu pour les situations suivantes:
+Le programme ne sera pas conçu en prenant en compte les contraintes suivantes :
 
 * offline first
 * mobile first
@@ -40,6 +40,7 @@ Le programme ne sera pas conçu pour les situations suivantes:
 * compatibilité avec IE
 * montée en charge
 * scalabilité
+* longevité
 
 ## Contraintes sur la conception de la solution
 ### À prendre en compte
