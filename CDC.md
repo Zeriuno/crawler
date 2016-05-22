@@ -41,7 +41,7 @@ Le programme ne sera pas conçu pour les situations suivantes:
 * montée en charge
 * scalabilité
 
-## Contraintes
+## Contraintes sur la conception de la solution
 ### À prendre en compte
 
 Plusieurs facteurs risquent de reduire la validité des résultats. La présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien des pages de longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
