@@ -34,14 +34,14 @@ Des éléments du programme seront réutilisés à partir de solutions déjà ex
 
 Le programme ne sera pas conçu en prenant en compte les contraintes suivantes :
 
-* offline first
+* offline first // pertinence? On ne fonctionne pas comme ap mais comme un site internet herbergé.
 * mobile first
 * haute disponibilité
-* compatibilité avec IE
+* compatibilité avec IE // va-t-on tester Opéra? Safari, Edge etc.? pourquoi n'exclure qu'IE? (caniuse.com)
 * montée en charge
 * scalabilité
-* longevité
-* compatbilité avec d'autres navigateurs que la dernière version de Firefox.
+* longevité // Tolerance aux pannes ? Montée en version ? s
+* compatbilité avec d'autres navigateurs que la dernière version de Firefox. //Redite ? 4 eme point ?
 
 ## Contraintes sur la conception de la solution
 ### À prendre en compte
@@ -110,7 +110,7 @@ Documents relatifs : /
 
 **Justification :** Proposer à l'utilisateur les résultats déjà calculés et fournir une réponse plus rapidement et avec moins de charge pour le système.
 
-**Origine :** Daniele Pitrolo.
+**Origine :** Daniele Pitrolo.// ???? Equipe projet ???
 
 **Critère de satisfaction :**
 
@@ -136,7 +136,7 @@ Documents relatifs : /
 
 **Origine :** Julien Roussel.
 
-**Critère de satisfaction :** l'analyse dresse una liste des adresses des `a`; les adresses présentes plusieurs fois ne sont comptées qu'une seule fois.
+**Critère de satisfaction :** l'analyse dresse una liste des adresses des `a` //je ne comprend pas ce point; les adresses présentes plusieurs fois ne sont comptées qu'une seule fois.
 
 **Contentement du maître d’ouvrage :** 3
 
@@ -285,7 +285,8 @@ L'analyse est exhaustive.
 
 **Justification :** Informer l'utilisateur que l'analyse ne peut être effectuée.
 
-**Origine :** MBA.
+**Origine :** MBA. // ???? Equipe projet ???
+
 
 **Critère de satisfaction :** Si l'URL fournie par l'utilisateur n'est pas valide ou bien si elle renvoie un code HTTP d'erreur, le message d'erreur est affiché à l'écran.
 
@@ -329,7 +330,7 @@ L'analyse est exhaustive.
 
 **Type d’exigence :** Exigence Fonctionnelle
 
-**Description :** les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
+**Description :** Les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
 **Justification :** Affichage des résultats uniquement s'ils sont pertinents par rapport à l'analyse de l'URL fournie.
 
@@ -408,9 +409,9 @@ L'analyse est exhaustive.
 
 **Description :** Le système doit être conçu pour un déploiement sur un serveur GNU/Linux.
 
-**Justification :** Faut quand même pas déconner, hein.
+**Justification :** Faut quand même pas déconner, hein. // ???
 
-**Origine :** Daniele Pitrolo
+**Origine :** Daniele Pitrolo  // ???? Equipe projet ???
 
 **Critère de satisfaction :** /
 
@@ -425,6 +426,7 @@ L'analyse est exhaustive.
 **Documents relatifs :** /
 
 **Historique :** 2016-05-21
+
 
 ## Références
 
