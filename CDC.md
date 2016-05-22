@@ -41,6 +41,13 @@ Le programme ne sera pas conçu pour les situations suivantes:
 * montée en charge
 * scalabilité
 
+## Contraintes
+### À prendre en compte
+
+Plusieurs facteurs risquent de reduire la validité des résultats. La présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien des pages de longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
+
+Ces éléments seront pris en compte au cours du développement du produit.
+
 ### Accueil de l'utilisateur
 
 #### Exigence CRA1.a
@@ -416,9 +423,6 @@ L'analyse est exhaustive.
 **Documents relatifs :** /
 
 **Historique :** 2016-05-21
-
-Pour ce qui est des résultats, seront à prendre en considération également plusieurs facteurs qui risquent d'en reduire la validité. Tels que la présence d'images et de vidéos, que l'application ne saurait pas prendre en compte, ainsi que des textes courts, ou bien à longueur inégale, où l'on toucherait aux limites de l'analyse textuelle avec une simple statistique gaussienne.
-
 
 ## Aspects techniques
 
