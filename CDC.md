@@ -345,7 +345,7 @@ L'analyse est exhaustive.
 #### Exigence CRA7.a
 **Type d’exigence :** Exigence fonctionnelle
 
-**Description :** Le système doit stocker les résultats dans une base de données associée.
+**Description :** Le système doit stocker les résultats dans une base de données associée et les conserver pour une durée qui sera déterminée au cours du projet.
 
 **Justification :** Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
 
