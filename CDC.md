@@ -425,20 +425,6 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-05-21
 
-## Aspects techniques
+## Références
 
-### Généralités
-
-
-### Environnement technique
-
-* HTML, CSS, JavaScript pour la conception du site
-* Python et ses différentes libraires pour les scripts de crawling, de stockage des résultats et d'affichage des résultats.
-* XML pour le format de stockage des fichiers de résultats.
-* Un serveur web
-
-Le programme est une application web compatible avec la dernière version de Firefox disponible au 2016-05-08; la compatibilité avec Internet Explorer ne sera pas testée. Cette application n'est pas testée pour offrir une disponibilité continue 24h/7j, ni pour la montée en charge.
-
-## Stockage des données
-
-* Stockage des résultats en base de données pour une durée de 7 jours.
+Ce cahier des charges contient des éléments dérivés du modèle Volere: http://www.volere.co.uk
