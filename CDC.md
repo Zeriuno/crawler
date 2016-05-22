@@ -360,9 +360,9 @@ L'analyse est exhaustive.
 
 **Critère de satisfaction :** Le système peut proposer les résultats en moins de temps et avec moins de charge qu'en les calculant.
 
-**Contentement du maître d’ouvrage :**
+**Contentement du maître d’ouvrage :** 4
 
-**Mécontentement du maître d’ouvrage :**
+**Mécontentement du maître d’ouvrage :** 2
 
 **Exigences dépendantes :** CRA6.a
 
