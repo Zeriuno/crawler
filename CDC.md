@@ -41,6 +41,7 @@ Le programme ne sera pas conçu en prenant en compte les contraintes suivantes :
 * montée en charge
 * scalabilité
 * longevité
+* compatbilité avec d'autres navigateurs que la dernière version de Firefox.
 
 ## Contraintes sur la conception de la solution
 ### À prendre en compte
