@@ -313,9 +313,9 @@ L'analyse est exhaustive.
 
 **Critère de satisfaction :**
 
-**Contentement du maître d’ouvrage :**
+**Contentement du maître d’ouvrage :** 4
 
-**Mécontentement du maître d’ouvrage :**
+**Mécontentement du maître d’ouvrage :** 5
 
 **Exigences dépendantes :** CRA2.a, CRA2.b, CRA3.a, CRA4.a, CRA5.a, CRA6.b
 
@@ -335,11 +335,11 @@ L'analyse est exhaustive.
 
 **Origine :** Julien Roussel.
 
-**Critère de satisfaction :**
+**Critère de satisfaction :** La présentation des résultats permet de suivre jusqu'à quel point existe une continuité lexicale entre les pages.
 
-**Contentement du maître d’ouvrage :**
+**Contentement du maître d’ouvrage :** 4
 
-**Mécontentement du maître d’ouvrage :**
+**Mécontentement du maître d’ouvrage :** 5
 
 **Exigences dépendantes :** CRA6.a
 
