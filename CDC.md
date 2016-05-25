@@ -333,7 +333,7 @@ L'analyse est exhaustive.
 
 **Justification :** Affichage des résultats uniquement s'ils sont pertinents par rapport à l'analyse de l'URL fournie.
 
-**Origine :** Julien Roussel
+**Origine :** Julien Roussel.
 
 **Critère de satisfaction :**
 
@@ -358,7 +358,7 @@ L'analyse est exhaustive.
 
 **Justification :** Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
 
-**Origine :** Julien Roussel
+**Origine :** Julien Roussel.
 
 **Critère de satisfaction :** Le système peut proposer les résultats en moins de temps et avec moins de charge qu'en les calculant.
 
@@ -384,7 +384,7 @@ L'analyse est exhaustive.
 
 **Justification :** Nécessité pédagogique.
 
-**Origine :** Julien Roussel
+**Origine :** Julien Roussel.
 
 **Critère de satisfaction :** /
 
@@ -409,7 +409,7 @@ L'analyse est exhaustive.
 
 **Justification :** Parce que.
 
-**Origine :** Daniele Pitrolo
+**Origine :** Daniele Pitrolo.
 
 **Critère de satisfaction :** /
 
