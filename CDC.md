@@ -8,16 +8,16 @@ Celui-ci est une application web destinée à l'analyse lexicale statistique de 
 
 ## Livrables
 
-Les livrables du projet sont:
+Les livrables du projet sont :
 
-* Ce cahier des charges
+* Cahier des charges (ce document)
 * Code source du logiciel
 * Documentation client
 * Documentation utilisateur
 
 ## Portée
 
-Le programme permet de gérer les évènements suivants:
+Le programme permet de gérer les évènements suivants :
 
 * Accueil de l'utilisateur
 * Analyse de la page fournie
@@ -25,19 +25,19 @@ Le programme permet de gérer les évènements suivants:
 * Présentation du résultat
 * Sauvegarde du résultat
 
-Des éléments du programme seront réutilisés à partir de solutions déjà existantes et ne feront pas l'objet de développement dans le cadre du projet:
+Des éléments du programme seront réutilisés à partir de solutions déjà existantes et ne feront pas l'objet de développement dans le cadre du projet :
 
 * serveur web
 * bibliothèque de crawling
 * base de données
 * bibliothèque pour l'intéraction avec celle-ci
 
-Le programme ne sera pas conçu en prenant en compte les contraintes suivantes :
+Les contraintes suivantes sont hors du champ de la portée du programme :
 
 * offline first
 * mobile first
 * haute disponibilité
-* compatbilité avec d'autres navigateurs que la dernière version de Firefox.
+* compatbilité avec d'autres navigateurs que la dernière version de Firefox
 * montée en charge
 * scalabilité
 * longevité
@@ -52,7 +52,7 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 ### Accueil de l'utilisateur
 
-#### Exigence CRA1.a
+### Exigence CRA1.a
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -60,7 +60,7 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Justification :** La recherche s'applique sur une URL donnée par l'utilisateur.
 
-**Origine :** Julien Roussel
+**Origine :** Julien Roussel.
 
 **Critère de satisfaction :** Quoique bienvenues, de minimes éléments de design ne sont pas nécessaires. L'affichage mobile n'est pas indispensable.
 
@@ -72,13 +72,13 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Exigences conflictuelles :** /
 
-Documents relatifs : /
+**Documents relatifs :** /
 
 **Historique :** 2016-05-08
 
 ### Analyse de la page fournie
 
-#### Exigence CRA2.a
+### Exigence CRA2.a
 
 **Type d’exigence : ** Exigence Fonctionnelle
 
@@ -86,7 +86,7 @@ Documents relatifs : /
 
 **Justification :** Déterminer les mots les plus fréquents sur la page.
 
-**Origine :** Julien Roussel
+**Origine :** Julien Roussel.
 
 **Critère de satisfaction :** Capacité d'identifier les mots les plus fréquents hormis les articles, conjonctions et prépositions.
 
@@ -102,7 +102,7 @@ Documents relatifs : /
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA2.b
+### Exigence CRA2.b
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -110,7 +110,7 @@ Documents relatifs : /
 
 **Justification :** Proposer à l'utilisateur les résultats déjà calculés et fournir une réponse plus rapidement et avec moins de charge pour le système.
 
-**Origine :** Daniele Pitrolo.// ???? Equipe projet ???
+**Origine :** Daniele Pitrolo.
 
 **Critère de satisfaction :**
 
@@ -126,7 +126,7 @@ Documents relatifs : /
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA3.a
+### Exigence CRA3.a
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -152,7 +152,7 @@ Documents relatifs : /
 
 ### Récursion
 
-#### Exigence CRA4.a
+### Exigence CRA4.a
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -176,7 +176,7 @@ Documents relatifs : /
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA5.a
+### Exigence CRA5.a
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -201,7 +201,7 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA5.b
+### Exigence CRA5.b
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -226,7 +226,7 @@ L'analyse est exhaustive.
 **Historique :** 2016-05-08
 
 
-#### Exigence CRA5.c
+### Exigence CRA5.c
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -251,7 +251,7 @@ L'analyse est exhaustive.
 **Historique :** 2016-04-29
 
 
-#### Exigence CRA5.d
+### Exigence CRA5.d
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -277,7 +277,7 @@ L'analyse est exhaustive.
 
 ### Présentation du résultat
 
-#### Exigence CRA2.c
+### Exigence CRA2.c
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -286,7 +286,6 @@ L'analyse est exhaustive.
 **Justification :** Informer l'utilisateur que l'analyse ne peut être effectuée.
 
 **Origine :** MBA.
-
 
 **Critère de satisfaction :** Si l'URL fournie par l'utilisateur n'est pas valide ou bien si elle renvoie un code HTTP d'erreur, le message d'erreur est affiché à l'écran.
 
@@ -302,7 +301,7 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA6.a
+### Exigence CRA6.a
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -326,7 +325,7 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-05-08
 
-#### Exigence CRA6.b
+### Exigence CRA6.b
 
 **Type d’exigence :** Exigence Fonctionnelle
 
@@ -352,7 +351,7 @@ L'analyse est exhaustive.
 
 ### Sauvegarde du résultat
 
-#### Exigence CRA7.a
+### Exigence CRA7.a
 **Type d’exigence :** Exigence fonctionnelle
 
 **Description :** Le système doit stocker les résultats dans une base de données associée et les conserver pour une durée qui sera déterminée au cours du projet.
@@ -375,10 +374,9 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-05-08
 
-
 ## Contraintes
 
-#### Exigence CRA8.a
+### Exigence CRA8.a
 
 **Type d’exigence :** Contrainte
 
@@ -403,7 +401,7 @@ L'analyse est exhaustive.
 **Historique :** 2016-05-20
 
 
-#### Exigence CRA9.a
+### Exigence CRA9.a
 
 **Type d’exigence :** Contrainte
 
