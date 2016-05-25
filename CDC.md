@@ -255,15 +255,15 @@ L'analyse est exhaustive.
 
 **Type d’exigence :** Exigence Fonctionnelle
 
-**Description :** Le système doit permettre à l'utilisateur de désactiver les limitations des points CRA5.b et CRA5.c.
+**Description :** Le système doit permettre à l'utilisateur de désactiver les limitations du point CRA5.c.
 
 **Justification :** l'utlisateur doit pouvoir se limiter à l'analyse de l'URL donnée s'il le souhaite.
 
-**Origine :** Equipe projet
+**Origine :** sur conseil de Georges Grosz.
 
-**Critère de satisfaction :**
+**Critère de satisfaction :** Il existe une option qui permet d'avoir des résultats plus exhaustifs.
 
-**Contentement du maître d’ouvrage :** 2
+**Contentement du maître d’ouvrage :** 3
 
 **Mécontentement du maître d’ouvrage :** 1
 
