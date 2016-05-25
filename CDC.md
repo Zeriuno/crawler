@@ -405,9 +405,9 @@ L'analyse est exhaustive.
 
 **Type d’exigence :** Contrainte
 
-**Description :** Le système doit être conçu pour un déploiement sur un serveur GNU/Linux.
+**Description :** Le système sera deploié sur un serveur GNU/Linux.
 
-**Justification :** Faut quand même pas déconner, hein.
+**Justification :** Parce que.
 
 **Origine :** Daniele Pitrolo
 
