@@ -366,7 +366,7 @@ L'analyse est exhaustive.
 
 **Mécontentement du maître d’ouvrage :** 2
 
-**Exigences dépendantes :** CRA6.a
+**Exigences dépendantes :** CRA2.b, CRA6.a
 
 **Exigences conflictuelles :** /
 
