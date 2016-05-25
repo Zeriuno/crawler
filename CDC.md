@@ -112,7 +112,7 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Origine :** Daniele Pitrolo.
 
-**Critère de satisfaction :**
+**Critère de satisfaction :** Une même recherche effectuée deux fois de suite sera traitée de manière bien plus rapide lors de la deuxième fois.
 
 **Contentement du maître d’ouvrage :** 5
 
