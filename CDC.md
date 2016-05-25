@@ -34,14 +34,14 @@ Des éléments du programme seront réutilisés à partir de solutions déjà ex
 
 Le programme ne sera pas conçu en prenant en compte les contraintes suivantes :
 
-* offline first // pertinence? On ne fonctionne pas comme ap mais comme un site internet herbergé.
+* offline first
 * mobile first
 * haute disponibilité
-* compatibilité avec IE // va-t-on tester Opéra? Safari, Edge etc.? pourquoi n'exclure qu'IE? (caniuse.com)
+* compatbilité avec d'autres navigateurs que la dernière version de Firefox.
 * montée en charge
 * scalabilité
-* longevité // Tolerance aux pannes ? Montée en version ? s
-* compatbilité avec d'autres navigateurs que la dernière version de Firefox. //Redite ? 4 eme point ?
+* longevité
+* tolerance aux pannes
 
 ## Contraintes sur la conception de la solution
 ### À prendre en compte
@@ -136,7 +136,7 @@ Documents relatifs : /
 
 **Origine :** Julien Roussel.
 
-**Critère de satisfaction :** l'analyse dresse una liste des adresses des `a` //je ne comprend pas ce point; les adresses présentes plusieurs fois ne sont comptées qu'une seule fois.
+**Critère de satisfaction :** l'analyse dresse una liste des adresses des éléments `a` de la page ; les adresses présentes plusieurs fois ne sont comptées qu'une seule fois.
 
 **Contentement du maître d’ouvrage :** 3
 
@@ -234,7 +234,7 @@ L'analyse est exhaustive.
 
 **Justification :** Une limitation horizontale de la récursion est nécessaire afin de limiter le nombre de pages analysées (qui impactent les temps d'attente et les performances de l'application).
 
-**Origine :** suggestion de Georges Grosz
+**Origine :** suggestion de Georges Grosz.
 
 **Critère de satisfaction :**
 
@@ -285,7 +285,7 @@ L'analyse est exhaustive.
 
 **Justification :** Informer l'utilisateur que l'analyse ne peut être effectuée.
 
-**Origine :** MBA. // ???? Equipe projet ???
+**Origine :** MBA.
 
 
 **Critère de satisfaction :** Si l'URL fournie par l'utilisateur n'est pas valide ou bien si elle renvoie un code HTTP d'erreur, le message d'erreur est affiché à l'écran.
@@ -409,9 +409,9 @@ L'analyse est exhaustive.
 
 **Description :** Le système doit être conçu pour un déploiement sur un serveur GNU/Linux.
 
-**Justification :** Faut quand même pas déconner, hein. // ???
+**Justification :** Faut quand même pas déconner, hein.
 
-**Origine :** Daniele Pitrolo  // ???? Equipe projet ???
+**Origine :** Daniele Pitrolo
 
 **Critère de satisfaction :** /
 
