@@ -307,7 +307,7 @@ L'analyse est exhaustive.
 
 **Description :** Le système doit permettre l'affichage des résulats d'analyse de l'URL fournie et de ses pages associées.
 
-**Justification : Rendre possible à l'utilisateur de prendre connaissance de l'analyse effectuée; suivre l'évolution des mots-clefs à travers plusieurs pages.
+**Justification :** Rendre possible à l'utilisateur de prendre connaissance de l'analyse effectuée; suivre l'évolution des mots-clefs à travers plusieurs pages.
 
 **Origine :** Julien Roussel.
 
