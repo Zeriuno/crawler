@@ -234,7 +234,7 @@ L'analyse est exhaustive.
 
 **Justification :** Une limitation horizontale de la récursion est nécessaire afin de limiter le nombre de pages analysées (qui impactent les temps d'attente et les performances de l'application).
 
-**Origine :** suggestion de Georges Grosz.
+**Origine :** Daniele Pitrolo (suggestion de Georges Grosz).
 
 **Critère de satisfaction :**
 
@@ -259,7 +259,7 @@ L'analyse est exhaustive.
 
 **Justification :** l'utlisateur doit pouvoir se limiter à l'analyse de l'URL donnée s'il le souhaite.
 
-**Origine :** sur conseil de Georges Grosz.
+**Origine :** Daniele Pitrolo (suggestion de Georges Grosz).
 
 **Critère de satisfaction :** Il existe une option qui permet d'avoir des résultats plus exhaustifs.
 
