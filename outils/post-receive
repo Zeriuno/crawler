@@ -1,0 +1,3 @@
+#!/bin/sh
+GIT_WORK_TREE=/home/biscia/projets.mastermimo.fr/python/crawler git checkout -f
+
