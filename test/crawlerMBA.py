@@ -17,4 +17,4 @@ html_doc = """
 soup = BeautifulSoup(html_doc)
 
 for p in soup.find_all('p'):
-    print (p)
+    print(p)
