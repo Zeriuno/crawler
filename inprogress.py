@@ -4,7 +4,15 @@ wget $cible ou, mieux, cf la vidéo proposée par MBA
 #Il faut en extraire les liens, attention aux chemins relatifs
 recupliens
 from bs4 import BeautifulSoup
-import csv
+
+#page est la variable qui indique le nom de la page
+
+soup = BeautifulSoup(open(page))
+
+links = soup.find_all('a')
+
+for link in links:
+   print(link)
 
 #en extraire les mots avec BeautifulSoup
 recupmots
