@@ -6,5 +6,5 @@
 (>>> print soup.prettify() )
 >>> soup.find_all("a") // récupérer tous les liens de la page
 >>> for link in soup.find_all("a"): // récupérer tous les liens de la page
->>>     link.get("href") OU >>>     print link.text, link.get("href") OU >>>     "<a href='%s'>%s</a>" %(link.get("href"), link.text) // récupérer tous les liens de la page
+>>>     link.get("href") OU >>>     print link.text, link.get("href") OU >>>  print "<a href='%s'>%s</a>" %(link.get("href"), link.text) // récupérer tous les liens de la page
 
