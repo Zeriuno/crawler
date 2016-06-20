@@ -11,3 +11,4 @@ https://larlet.fr/david/biologeek/archives/20081206-nombre-doccurences-dun-mot-d
 
 
 video très complete : https://www.youtube.com/watch?v=3xQTJi2tqgk
+Récupérer les mots: http://stackoverflow.com/questions/24396406/find-most-common-words-from-a-website-in-python-3
