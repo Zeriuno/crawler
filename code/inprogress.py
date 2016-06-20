@@ -1,3 +1,5 @@
+#Traiter l'url donnée avec urllib.parse: https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse
+
 #Il faut récupérer la page demandée
 recuppage
 wget $cible ou, mieux, cf la vidéo proposée par MBA
