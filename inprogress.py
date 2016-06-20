@@ -15,7 +15,9 @@ for link in links:
    print(link)
 
 #en extraire les mots avec BeautifulSoup
-recupmots
+
+Récupérer tout le texte: soup.get_text()
+
 #sauvegarder cela dans un XML
 #hypothèse
 <page>
