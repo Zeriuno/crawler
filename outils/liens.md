@@ -15,3 +15,5 @@ Récupérer les mots: http://stackoverflow.com/questions/24396406/find-most-comm
 
 
 Exclure les mots inutiles : https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words
+
+Utiliser nltk : https://www.youtube.com/watch?v=FLZvOKSCkxY il y a deux parties à la vidéo
