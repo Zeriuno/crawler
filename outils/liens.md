@@ -12,3 +12,8 @@ https://larlet.fr/david/biologeek/archives/20081206-nombre-doccurences-dun-mot-d
 
 video très complete : https://www.youtube.com/watch?v=3xQTJi2tqgk
 Récupérer les mots: http://stackoverflow.com/questions/24396406/find-most-common-words-from-a-website-in-python-3
+
+
+Exclure les mots inutiles : https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words
+
+Utiliser nltk : https://www.youtube.com/watch?v=FLZvOKSCkxY il y a deux parties à la vidéo
