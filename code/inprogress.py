@@ -1,16 +1,15 @@
 #Traiter l'url donnée avec urllib.parse: https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse
 
 #Il faut récupérer la page demandée
-recuppage
-wget $cible ou, mieux, cf la vidéo proposée par MBA
-#Il faut en extraire les liens, attention aux chemins relatifs
-recupliens
+
+import requests
 from bs4 import BeautifulSoup
 
-#page est la variable qui indique le nom de la page
+url = "http://brucespringsteen.net/songs/blood-brothers"
+r = requests.get(url)
+soup = BeautifulSoup(r.content)
 
-soup = BeautifulSoup(open(page))
-
+#Récupérer les liens.
 links = soup.find_all('a')
 
 for link in links:

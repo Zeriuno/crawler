@@ -7,3 +7,4 @@ Assomptions:
 à faire
 modèle de données
 connexion et insertion BDD
+vérifier si la bdd existe comme souhaité et la créer si besoin
