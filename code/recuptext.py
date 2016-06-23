@@ -22,9 +22,9 @@ print ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
 
 #ECRITURE DES RESULTATS DANS FICHIER
 
-# création et ecriture
+#Création et ecriture
 
 monFichier = open("resultatscrawling.txt", "w", encoding="utf-8")
-monFichier.write ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
+monFichier.write ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)[:3]))
 monFichier.close()
 
