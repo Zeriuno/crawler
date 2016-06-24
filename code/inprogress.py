@@ -16,8 +16,22 @@ def grabpage(url):
     soup = BeautifulSoup(r.content)
     return soup
 
-for link in links:
-   print(link)
+def grablinks(soup):
+    '''
+    Récupérer les liens de la variable soup
+    '''
+    #Récupérer les balises a
+    atags = soup.find_all('a')
+    #On va chercher dans la balise et on prend l'adresse du lien
+    for atag in atags:
+        link = atag.get('href')
+        arraylinks = (link)
+    return arraylinks
+
+
+#on pourrait les mettre dans un tableau: linkssource
+
+linksniveau2
 
 #en extraire les mots avec BeautifulSoup
 
