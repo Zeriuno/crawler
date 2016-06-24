@@ -37,7 +37,15 @@ linksniveau2
 
 cf MBA
 
-#sauvegarder cela dans un XML
+#sauvegarder cela dans la BDD
+
+db = pymysql.connect(host='localhost',
+                     #port=3306,
+                     user='crawler',
+                     password='onyva',
+                     database='crawler')
+
+#si on met les liens dans un tableau
 #hypothèse
 <page>
   <mots>
