@@ -35,7 +35,7 @@ linksniveau2
 
 #en extraire les mots avec BeautifulSoup
 
-Récupérer tout le texte: soup.get_text()
+cf MBA
 
 #sauvegarder cela dans un XML
 #hypothèse
