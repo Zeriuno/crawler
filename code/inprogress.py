@@ -6,11 +6,15 @@ import requests
 from bs4 import BeautifulSoup
 
 url = "http://brucespringsteen.net/songs/blood-brothers"
-r = requests.get(url)
-soup = BeautifulSoup(r.content)
 
-#Récupérer les liens.
-links = soup.find_all('a')
+def grabpage(url):
+    '''
+    Prend l'URL passsée en paramètre et la récupère avec requests.
+    On peut l'utiliser de cette manière: soup = grabpage(url)
+    '''
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content)
+    return soup
 
 for link in links:
    print(link)
