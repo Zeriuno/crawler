@@ -19,3 +19,5 @@ Exclure les mots inutiles : https://www.kaggle.com/c/word2vec-nlp-tutorial/detai
 Utiliser nltk : https://www.youtube.com/watch?v=FLZvOKSCkxY il y a deux parties à la vidéo
 
 Utiliser le serveur de conf : https://github.com/julienroussel/mimo-2016/blob/master/cours/web/cherrypy/helloworld.py
+
+Tuto SQLAlchemy: http://www.rmunn.com/sqlalchemy-tutorial/tutorial.html
