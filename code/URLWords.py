@@ -4,9 +4,9 @@ class URLWords(object):
 
 
     Attributs:
-       wordcount: un entier pour le total des mots.
-       wordsitems: une liste avec mots, leur occurrence, leur pourcentage (["salut", 3, 42.86], ["bonjour",  2, 28.57], ["adieu", 2, 28.57])
-       URL : 
+        address
+        wordcount: un entier pour le total des mots.
+        wordsitems: une liste avec mots, leur occurrence, leur pourcentage (["salut", 3, 42.86], ["bonjour",  2, 28.57], ["adieu", 2, 28.57])
     '''
 
     def __init__(self):
