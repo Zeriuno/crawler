@@ -14,6 +14,10 @@ for link in soup.find_all("p"): # récupérer tous les liens de la page
 
 #COMPTAGE MOTS
 
+def  wordcount(self):
+    '''
+    '''
+    text = 
 songs = (soup.get_text())
 lsongs = [song.replace('"', '').lower() for song in songs.split()]
 freqs = [(- lsongs.count(song), song) for song in set(lsongs)]
