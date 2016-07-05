@@ -16,8 +16,3 @@ class URLWords(object):
         analysePage = URLWords(url)
         '''
         self.address = url
-class WordsItems(object):
-
-    def __init__(self):
-        '''
-        '''
