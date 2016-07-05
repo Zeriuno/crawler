@@ -38,7 +38,12 @@ linksniveau2
 
 #en extraire les mots avec BeautifulSoup
 
-cf MBA
+def countWords(soup):
+    '''
+    '''
+    for i in BeautifulSoup(soup.find_all('p')):
+        print i.text.strip()
+    word_freq = Counter(word_tokenize(text))
 
 #sauvegarder cela dans la BDD
 
