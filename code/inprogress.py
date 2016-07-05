@@ -3,7 +3,9 @@
 #Il faut récupérer la page demandée
 
 import requests
+from collections import Counter
 from bs4 import BeautifulSoup
+from nltk import word_tokenize
 
 url = "http://brucespringsteen.net/songs/blood-brothers"
 
