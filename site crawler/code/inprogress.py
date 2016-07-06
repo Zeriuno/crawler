@@ -4,6 +4,9 @@
 
 import requests
 from bs4 import BeautifulSoup
+from collections import Counter #pour le comptage des mots
+from nltk import word_tokenize #pour le comptage des mots
+
 
 url = "http://brucespringsteen.net/songs/blood-brothers"
 
@@ -23,10 +26,11 @@ def grablinks(soup):
     #Récupérer les balises a
     atags = soup.find_all('a')
     #On va chercher dans la balise et on prend l'adresse du lien
+    links = []
     for atag in atags:
         link = atag.get('href')
-        arraylinks = (link)
-    return arraylinks
+        links.append = (link)
+    return links
 
 
 #on pourrait les mettre dans un tableau: linkssource
@@ -35,7 +39,12 @@ linksniveau2
 
 #en extraire les mots avec BeautifulSoup
 
-cf MBA
+def countWords(soup):
+    '''
+    '''
+    for i in BeautifulSoup(soup.find_all('p')):
+        print i.text.strip()
+    word_freq = Counter(word_tokenize(text))
 
 #sauvegarder cela dans la BDD
 
