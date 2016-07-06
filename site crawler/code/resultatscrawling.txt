@@ -1,3 +1,0 @@
-homme      : 19
-panier     : 15
-tee-shirt  : 14

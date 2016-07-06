@@ -35,16 +35,20 @@ def grablinks(soup):
 
 #on pourrait les mettre dans un tableau: linkssource
 
-linksniveau2
+#linksniveau2
 
 #en extraire les mots avec BeautifulSoup
 
+<<<<<<< Updated upstream
 def countWords(soup):
     '''
     '''
     for i in BeautifulSoup(soup.find_all('p')):
         print i.text.strip()
     word_freq = Counter(word_tokenize(text))
+=======
+#cf MBA
+>>>>>>> Stashed changes
 
 #sauvegarder cela dans la BDD
 
