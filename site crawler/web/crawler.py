@@ -9,8 +9,4 @@ class HelloWorld(object):
         tmpl = env.get_template('index.html')
         return tmpl.render()
 
-
-
     index.exposed = True
-
-cherrypy.quickstart(HelloWorld(), config='server.conf')
