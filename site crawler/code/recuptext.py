@@ -4,15 +4,16 @@ import requests
 from bs4 import BeautifulSoup
 
 #CRAWLING
+# On n'a pas besoin de cette fonction: on récupère les liens dans la création de l'objet Page (cf `Page.py`). Par ailleurs on n'irait pas chercher les 'p', mais plutôt les 'a'.
 
-def recupliens(liens):
-    r = requests.get("http://www.charo-shop.com/fr/")
-    soup = BeautifulSoup(r.content, "html.parser")
-    soup.get_text
-    soup.find_all("p") # récupérer tous le texte de la page
-    for link in soup.find_all("p"): # récupérer tous les liens de la page
-        liens = ("'%s'%s" %(link.get("p"), link.text)) #récupérer tous les liens de la page
-    return liens
+# def recupliens(liens):
+#     r = requests.get("http://www.charo-shop.com/fr/")
+#     soup = BeautifulSoup(r.content, "html.parser")
+#     soup.get_text
+#     soup.find_all("p") # récupérer tous le texte de la page
+#     for link in soup.find_all("p"): # récupérer tous les liens de la page
+#         liens = ("'%s'%s" %(link.get("p"), link.text)) #récupérer tous les liens de la page
+#     return liens
 
 #COMPTAGE MOTS
 
