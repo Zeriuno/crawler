@@ -21,10 +21,10 @@ class Crawler(object):
     def prendreURL (self, lien=None):
         if lien:
             #ici nous allons dérouler tout notre programme. Ce sera notre "main"
-            print("Crawling en cours"); #par exemple.
+            print("Crawling en cours") #par exemple.
 
             #on prend lien, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
-            soup = grabpage(lien); #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
+            soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
 
         else:
             print("Il est nécessaire de soumettre une URL")
@@ -33,7 +33,7 @@ class Crawler(object):
 
 #recupérer le texte de la page
 
-    def grabpage(lien):
+    def grabpage(self,lien):
         '''
         Prend l'URL passsée en paramètre et la récupère avec requests.
         On peut l'utiliser de cette manière: soup = grabpage(url)
