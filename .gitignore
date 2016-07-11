@@ -4,5 +4,3 @@
 .~lock.*
 .$
 Risque.md
-
-site crawler/web/cherrypy/crawler.py
