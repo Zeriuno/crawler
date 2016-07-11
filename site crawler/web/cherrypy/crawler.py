@@ -21,7 +21,10 @@ class Crawler(object):
     def prendreURL (self, lien=None):
         if lien:
             #ici nous allons dérouler tout notre programme. Ce sera notre "main"
-            print("Crawling en cours")
+            print("Crawling en cours"); #par exemple.
+            soup = grabpage(lien);
+            
+
         else:
             print("Il est nécessaire de soumettre une URL")
         return lien
