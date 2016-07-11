@@ -22,8 +22,9 @@ class Crawler(object):
         if lien:
             #ici nous allons dérouler tout notre programme. Ce sera notre "main"
             print("Crawling en cours"); #par exemple.
-            soup = grabpage(lien);
-            
+
+            #on prend lien, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
+            soup = grabpage(lien); #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
 
         else:
             print("Il est nécessaire de soumettre une URL")
