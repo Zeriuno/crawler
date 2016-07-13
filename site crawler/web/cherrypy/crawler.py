@@ -2,6 +2,8 @@ import cherrypy
 import pymysql
 from jinja2 import Environment, FileSystemLoader
 
+
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -56,8 +58,6 @@ class Crawler(object):
     comptagemots.exposed = True
 
 #récupérer les liens de la page
-
-    
 
 
 

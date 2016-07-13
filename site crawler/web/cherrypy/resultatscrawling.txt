@@ -1,3 +1,3 @@
-en         : 15
-homme      : 15
+homme      : 17
 panier     : 15
+en         : 14
