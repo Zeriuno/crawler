@@ -2,8 +2,6 @@ import cherrypy
 import pymysql
 from jinja2 import Environment, FileSystemLoader
 
-
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -22,7 +20,10 @@ class Crawler(object):
 #récupérer le lien soumis
     def prendreURL (self, lien=None):
         if lien:
+
+
             #ici nous allons dérouler tout notre programme. Ce sera notre "main"
+            #print("Crawling en cours") par exemple.
 
             #on prend lien, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
             soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
