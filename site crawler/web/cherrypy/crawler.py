@@ -27,7 +27,8 @@ class Crawler(object):
 
             #on prend lien, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
 
-            Page1 = Page(lien)
+            Page1 = Page(lien) #cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
+            #On récupère les mots dans la page et leur occurrence. Pour ça on peut travailler sur l'objet Page1.soup
 
 
             soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
