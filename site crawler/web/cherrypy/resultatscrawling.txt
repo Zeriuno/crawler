@@ -1,0 +1,3 @@
+homme      : 17
+panier     : 15
+en         : 14
