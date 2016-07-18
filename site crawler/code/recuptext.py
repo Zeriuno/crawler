@@ -17,12 +17,14 @@ from bs4 import BeautifulSoup
 
 #COMPTAGE MOTS
 
-def comptagemots(compte):
-    songs = (soup.get_text())
-    lsongs = [song.replace('"', '').lower() for song in songs.split()]
-    freqs = [(- lsongs.count(song), song) for song in set(lsongs)]
-    compte = ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
-    return compte
+#Fonction reprise dans Page.py, wordcount().
+
+# def comptagemots(compte):
+#     songs = (soup.get_text())
+#     lsongs = [song.replace('"', '').lower() for song in songs.split()]
+#     freqs = [(- lsongs.count(song), song) for song in set(lsongs)]
+#     compte = ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
+#     return compte
 
 #ECRITURE DES 3 1er RESULTATS DANS LE FICHIER
 
