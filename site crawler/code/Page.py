@@ -32,4 +32,4 @@ class Page:
         totitems = 0 #un compteur, initialisé à 0
         for word in set(items):
             totitems += items.count(word) #combien d'occurrences, tout mot confondu?
-        self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans itemsfreqs on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
+        self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
