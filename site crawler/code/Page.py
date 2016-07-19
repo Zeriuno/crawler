@@ -25,6 +25,6 @@ class Page:
         '''
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
         '''
-        words = self.soup.get_text #On récupère le texte
+        words = self.soup.get_text() #On récupère le texte
         items = [word.replace('"', '').lower() for word in words.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis.
         itemsfreqs = sorted([(items.count(word), word) for word in set(items)], reverse=True) #dans itemsfreqs on a ainsi une liste d'éléments constitués de nombre d'occurrences et mot, la liste est ordonnée par nombre décroissant d'occurrences.
