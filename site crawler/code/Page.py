@@ -27,4 +27,7 @@ class Page:
         '''
         words = self.soup.get_text() #On récupère le texte
         items = [word.replace('"', '').lower() for word in words.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis.
-        itemsfreqs = sorted([(items.count(word), word) for word in set(items)], reverse=True) #dans itemsfreqs on a ainsi une liste d'éléments constitués de nombre d'occurrences et mot, la liste est ordonnée par nombre décroissant d'occurrences.
+        totitems = 0 #un compteur, initialisé à 0
+        for word in set(items):
+            totitems += items.count(word) #combien d'occurrences, tout mot confondu?
+        itemsfreqs = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans itemsfreqs on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
