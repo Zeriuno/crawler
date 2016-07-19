@@ -6,6 +6,7 @@ class Page:
         url : pour garder l'adresse de la page.
         soup: pour traiter la page via BeautifulSoup
         links: liste avec les liens présents dans la page, sans doublons.
+        wordlist: lista delle parole con numero occorrenze, percentuale presenza, lemma
     '''
 
     def __init__(self, url):
