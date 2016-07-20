@@ -5,7 +5,7 @@ class URLWords(object):
 
     Attributs:
         address: l'url de la page analysée
-        wordlist: une liste avec mots, leur occurrence, leur pourcentage (["salut", 3, 42.86], ["bonjour",  2, 28.57], ["adieu", 2, 28.57])
+        results: une liste avec mots, leur occurrence, leur pourcentage ([3, 42.86, 'salut'], [2, 28.57, 'bonjour'], [2, 28.57, 'adieu'])
     '''
 
     def __init__(self, Page):
