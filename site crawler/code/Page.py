@@ -33,3 +33,10 @@ class Page:
         for word in set(items):
             totitems += items.count(word) #combien d'occurrences, tout mot confondu?
         self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
+
+    def results_level1():
+        '''
+        Renvoie une liste des trois mots les plus présents dans la page et de leur présence
+        '''
+        words_level1 = [self.wordlist[0], self.wordlist[1], self.wordlist[2]]
+        return words_level1
