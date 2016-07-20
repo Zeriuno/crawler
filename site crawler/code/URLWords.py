@@ -1,6 +1,6 @@
 class URLWords(object):
     '''
-    Objet pour traiter les résultats des analyses des pages en vue de les transférer dans le résultat et de les stocker.
+    Objet pour traiter les résultats des analyses des pages en vue de les afficher.
 
 
     Attributs:
