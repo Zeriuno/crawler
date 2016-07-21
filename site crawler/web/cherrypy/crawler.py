@@ -39,10 +39,11 @@ class Crawler(object):
                 if index == 10: #limitation horizontale: il n'y aura l'analyse que de dix liens pour niveau
                     break
                 Page2 = Page(link) #de chaque lien on fait un objet Page
-                for link in Page2.links: #test pour éviter de mettre plusieurs fois le même lien dans la liste. Il faut ajouter un test contre Page1.url
-                    if link not in level2_links:
+                for link in Page2.links: #test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
+                    if link not in Page1.url and link not in level2_links:
                         level2_links.append(link)
                 Page2.wordcount() #de chaque page on compte les mots
+
 
 
             soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
