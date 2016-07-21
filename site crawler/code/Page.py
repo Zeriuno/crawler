@@ -17,7 +17,7 @@ class Page:
         self.soup = BeautifulSoup(r.content, "html.parser")
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
-        for link in self.soup.find_all('a'):
+        for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
             if(url not in self.links):
                 self.links.append(url)
