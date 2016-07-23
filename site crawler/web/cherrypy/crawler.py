@@ -36,7 +36,7 @@ class Crawler(object):
 
             level2_links = [] #ici on mettra tous les liens présents dans toutes les pages
             level2 = [] #contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
-            for index, link in enumerate(Page1.links): #tous les liens du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
+            for index, link in enumerate(Page1.links): #tous les liens des pages du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
                 if index == 10: #limitation horizontale: il n'y aura l'analyse que de dix liens pour niveau
                     break
                 Page2 = Page(link) #de chaque lien on fait un objet Page
