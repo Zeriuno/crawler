@@ -59,6 +59,10 @@ class Crawler(object):
             res_lev3.results = Page3.find_same_words(level1) #On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
             level3.append(res_lev3) #on ajoute le résultat dans le tableau
 
+            crawling = [level1, level2, level3] #Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
+
+            #show_results(crawling) #on pourrait appeller la fonction qui fait l'affichage des résultats
+
 
             soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
             comptage = self.comptagemots(soup)
