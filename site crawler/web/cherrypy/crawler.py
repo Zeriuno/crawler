@@ -35,6 +35,7 @@ class Crawler(object):
             level1.results = Page1.results_level1() #La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
             level2_links = [] #ici on mettra tous les liens présents dans toutes les pages
+            level2 = [] #contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
             for index, link in enumerate(Page1.links): #tous les liens du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
                 if index == 10: #limitation horizontale: il n'y aura l'analyse que de dix liens pour niveau
                     break
@@ -45,6 +46,7 @@ class Crawler(object):
                 Page2.wordcount() #de chaque page on compte les mots
                 res_lev2 = URLWords(Page2) #On crée un objet pour chaque page
                 res_lev2.results = Page2.find_same_words(level1) #On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
+                level2.append(res_lev2) #on ajoute le résultat dans le tableau
 
 
 
