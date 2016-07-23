@@ -69,7 +69,7 @@ class Page:
 
         for item in self.wordlist:
             for result in URLWords.results:
-                if item[2] == result[2]:
+                if item[2] == result[2] and item[1] >= 2:
                     comparison_list.append(item)
 
         return comparison_list
