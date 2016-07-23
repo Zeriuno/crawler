@@ -4,6 +4,8 @@ from jinja2 import Environment, FileSystemLoader
 
 import requests
 from bs4 import BeautifulSoup
+from Page import *
+from URLWords import *
 
 env = Environment(loader=FileSystemLoader('templates'))
 
