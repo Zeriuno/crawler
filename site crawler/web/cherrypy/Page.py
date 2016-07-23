@@ -1,3 +1,6 @@
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
 class Page:
     '''
     Objet pour traiter une page.
@@ -23,6 +26,19 @@ class Page:
                 self.links.append(url)
 
 
+    def stopwords(text):
+        '''
+        Filtrer les mots
+        '''
+        #dictionnaire français des mots à exclure
+        stop_words = set(stopwords.words("french"))
+        words = word_tokenize(text)
+        filtered_phrase = []
+        for w in words:
+            if w not in stop_words:
+                text = filtered_phrase.append(w)
+
+
     def wordcount():
         '''
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
@@ -40,6 +56,7 @@ class Page:
 
         '''
         text = self.soup.get_text() #On récupère le texte
+        stopwords(text)
         items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis.
         #avant le reste il faut éliminer les mots communs
         totitems = 0 #un compteur, initialisé à 0

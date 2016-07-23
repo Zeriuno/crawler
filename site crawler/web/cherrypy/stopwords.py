@@ -1,15 +1,20 @@
-import re
-from nltk.tokenize.regexp import RegexpTokenizer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
-reg_words = r'''(?x)
-      aujourd'hui    # exception 1
-    | prud'hom\w+ # exception 2
-    | \d+(,\d+)?\s*[%€$] # les valeurs
-    | \d+                # les nombres
-    | \w'                 # les contractions d', l', j', t', s'
-    | \w+(-\w+)+    # les mots composés
-    | (\d|\w)+         # les combinaisons alphanumériques
-    | \w+               # les mots simples
-    '''
+exempledephrase = "ceci est une exemple de phrase."
+stop_words = set(stopwords.words("french"))
 
-tokenizer = RegexpTokenizer(reg_words, flags=re.UNICODE | re.IGNORECASE)
+print(stop_words)
+
+words = word_tokenize(exempledephrase)
+
+filtered_phrase = []
+
+for w in words:
+    if w not in stop_words:
+        filtered_phrase.append(w)
+
+
+print(filtered_phrase)
+
+
