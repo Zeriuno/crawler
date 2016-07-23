@@ -25,7 +25,7 @@ class Crawler(object):
             #ici nous allons dérouler tout notre programme. Ce sera notre "main"
             #print("Crawling en cours") par exemple.
 
-            #on prend lien, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
+            #on prend `lien`, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
 
             Page1 = Page(lien) #cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
 
