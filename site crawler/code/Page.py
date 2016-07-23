@@ -25,6 +25,18 @@ class Page:
     def wordcount():
         '''
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
+
+        Exemples
+        Page1.wordlist = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
+
+        Comment accéder aux éléments de la liste:
+
+        Page1[0] = (12, 30.00, "salut")
+        Page1[1] = (1, 2.000, "adieu")
+        Page1[0][0] = 12
+        Page1[0][1] = 30.00
+        Page1[0][3] = "salut"
+
         '''
         text = self.soup.get_text() #On récupère le texte
         items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis.
@@ -33,7 +45,6 @@ class Page:
         for word in set(items):
             totitems += items.count(word) #combien d'occurrences, tout mot confondu?
         self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
-        # Exemple: Page1.wordlist = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
 
     def results_level1():
         '''
