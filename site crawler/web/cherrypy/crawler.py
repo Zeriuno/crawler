@@ -48,6 +48,14 @@ class Crawler(object):
                 res_lev2.results = Page2.find_same_words(level1) #On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
                 level2.append(res_lev2) #on ajoute le résultat dans le tableau
 
+            for index, link in enumerate(level2_links): #cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
+                if index == 10:
+                    break
+                Page3 = Page(link) #on crée un objet pour chaque lien
+                Page3.wordcount() #de chaque page on compte les mots
+            res_lev3 = URLWords(Page3) #On crée un objet pour chaque page
+            res_lev3.results = Page3.find_same_words(level1) #On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
+            level3.append(res_lev3) #on ajoute le résultat dans le tableau
 
 
             soup = self.grabpage(lien) #la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
