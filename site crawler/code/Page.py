@@ -62,3 +62,12 @@ class Page:
         La fonction confronte les mots présents dans self.wordlist avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
         La liste est retournée par la fonction.
         '''
+
+        comparison_list = [] # création de la liste où l'on mettra le résultat de la comparaison.
+
+        for item in self.wordlist:
+            for result in URLWords.results:
+                if item[2] == result[2]:
+                    comparison_list.append(item)
+
+        return comparison_list
