@@ -1,9 +1,3 @@
-import re
-from nltk.tokenize.regexp import RegexpTokenizer
-from nltk.corpus import stopwords
-
-
-
 class Page:
     '''
     Objet pour traiter une page.
@@ -54,26 +48,6 @@ class Page:
         self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
         #[(12, 30.00, "salut"),(1, 2.000, "adieu")]
 
-        reg_words = r'''(?x)
-              aujourd'hui    # exception 1
-            | prud'hom\w+ # exception 2
-            | \d+(,\d+)?\s*[%€$] # les valeurs
-            | \d+                # les nombres
-            | \w'                 # les contractions d', l', j', t', s'
-            | \w+(-\w+)+    # les mots composés
-            | (\d|\w)+         # les combinaisons alphanumériques
-            | \w+               # les mots simples
-            '''
-
-
-        tokenizer = RegexpTokenizer(reg_words, flags=re.UNICODE | re.IGNORECASE)
-
-        tokenizer.tokenize(text)
-        for sw in stopwords.words("french"):
-            if totitems.has_key(sw):
-                totitems.pop(sw)
-
-                totitems.items()[:50]
 
     def results_level1():
         '''
