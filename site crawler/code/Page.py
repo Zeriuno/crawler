@@ -41,3 +41,13 @@ class Page:
         '''
         words_level1 = [self.wordlist[0], self.wordlist[1], self.wordlist[2]]
         return words_level1
+
+    def find_same_words(URLWords):
+        '''
+        La fonction prend un `URLWords` en argument et travaille sur son élément `results`.
+        La liste est formatée de cette manière:
+        [(12, 30.00, "salut"),(1, 2.000, "adieu"), (1, 2.000, "hellogoodbye")].
+
+        La fonction confronte les mots présents dans self.wordlist avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
+        La liste est retournée par la fonction.
+        '''
