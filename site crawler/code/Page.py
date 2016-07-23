@@ -36,7 +36,7 @@ class Page:
         # Exemple: Page1.wordlist = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
     def results_level1():
         '''
-        Renvoie une liste des trois mots les plus présents dans la page et de leur présence
+        Sélectionne dans self.wordlist les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
         '''
         words_level1 = [self.wordlist[0], self.wordlist[1], self.wordlist[2]]
         return words_level1
