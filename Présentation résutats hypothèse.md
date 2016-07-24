@@ -21,7 +21,7 @@ Pourcentage: `poursan`<br>
 ## Niveau 2
 
 Page: `url`<br>
-Aucun résultat
+Aucun résultat (on fait un test: si la liste de mots est vide)
 
 Page: `url`<br>
 Mot: `mot1`<br>
