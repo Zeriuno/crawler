@@ -1,0 +1,49 @@
+<crawling>
+<level1>
+  <url>`url`</url>
+  <words>
+    <word>
+      <item>`mot1`</item>
+      <occurences>nb`</occurences>
+      <percentage>`poursan`</percentage>
+    </word>
+    <word>
+      <item>`mot2`</item>
+      <occurences>nb`</occurences>
+      <percentage>`poursan`</percentage>
+    </word>
+    <word>
+      <item>`mot3`</item>
+      <occurences>nb`</occurences>
+      <percentage>`poursan`</percentage>
+    </word>
+</level1>
+<level2>
+Page: `url`<br>
+Aucun résultat (on fait un test: si la liste de mots est vide)
+
+Page: `url`<br>
+Mot: `mot1`<br>
+Occurrences: `nb`<br>
+Pourcentage: `poursan`<br>
+
+Page: `url`<br>
+Mot: `mot2`<br>
+Occurrences: `nb`<br>
+Pourcentage: `poursan`<br>
+</level2>
+<level3>
+Page: `url`<br>
+Aucun résultat
+
+Page: `url`<br>
+Mot: `mot1`<br>
+Occurrences: `nb`<br>
+Pourcentage: `poursan`<br>
+
+Page: `url`<br>
+Mot: `mot2`<br>
+Occurrences: `nb`<br>
+Pourcentage: `poursan`<br>
+</level3>
+</crawling>
