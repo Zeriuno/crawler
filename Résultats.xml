@@ -1,7 +1,7 @@
 <crawling>
 <level1>
   <url>`url`</url>
-  <words>
+  <results>
     <word>
       <item>`mot1`</item>
       <occurences>nb`</occurences>
@@ -17,33 +17,96 @@
       <occurences>nb`</occurences>
       <percentage>`poursan`</percentage>
     </word>
+  </results>
 </level1>
 <level2>
-Page: `url`<br>
-Aucun résultat (on fait un test: si la liste de mots est vide)
-
-Page: `url`<br>
-Mot: `mot1`<br>
-Occurrences: `nb`<br>
-Pourcentage: `poursan`<br>
-
-Page: `url`<br>
-Mot: `mot2`<br>
-Occurrences: `nb`<br>
-Pourcentage: `poursan`<br>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+    </results>
+  </page>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+      <word>
+        <item>
+          `mot1`
+        </item>
+        <occurrences>
+          `nb`
+        </occurrences>
+        <percentage>
+          `poursan`
+        </percentage>
+      </word>
+    </results>
+  </page>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+      <word>
+        <item>
+          `mot2`
+        </item>
+        <occurrences>
+          `nb`
+        </occurrences>
+        <percentage>
+          `poursan`
+        </percentage>
+      </word>
+    </results>
+  </page>
 </level2>
 <level3>
-Page: `url`<br>
-Aucun résultat
-
-Page: `url`<br>
-Mot: `mot1`<br>
-Occurrences: `nb`<br>
-Pourcentage: `poursan`<br>
-
-Page: `url`<br>
-Mot: `mot2`<br>
-Occurrences: `nb`<br>
-Pourcentage: `poursan`<br>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+    </results>
+  </page>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+      <word>
+        <item>
+          `mot1`
+        </item>
+        <occurrences>
+          `nb`
+        </occurrences>
+        <percentage>
+          `poursan`
+        </percentage>
+      </word>
+    </results>
+  </page>
+  <page>
+    <url>
+      `url`
+    </url>
+    <results>
+      <word>
+        <item>
+          `mot2`
+        </item>
+        <occurrences>
+          `nb`
+        </occurrences>
+        <percentage>
+          `poursan`
+        </percentage>
+      </word>
+    </results>
+  </page>
 </level3>
 </crawling>
