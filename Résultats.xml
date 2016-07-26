@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf8"?>
 <crawling>
 <level1>
+  <page>
   <url>`url`</url>
   <results>
     <word>
@@ -19,6 +20,7 @@
       <percentage>`poursan`</percentage>
     </word>
   </results>
+  </page>
 </level1>
 <level2>
   <page>
