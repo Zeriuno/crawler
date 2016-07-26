@@ -10,7 +10,7 @@ S'il faut une DTD ou proche, le schéma sera
 -->
 <?xml version="1.0" encoding="utf8"?>
 <crawling>
-<level1>
+<level iteration="1">
   <page>
   <url>`url`</url>
   <results>
@@ -31,8 +31,8 @@ S'il faut une DTD ou proche, le schéma sera
     </word>
   </results>
   </page>
-</level1>
-<level2>
+</level>
+<level iteration="2">
   <page>
     <url>
       `url`
@@ -76,8 +76,8 @@ S'il faut une DTD ou proche, le schéma sera
       </word>
     </results>
   </page>
-</level2>
-<level3>
+</level>
+<level iteration="3">
   <page>
     <url>
       `url`
@@ -121,5 +121,5 @@ S'il faut une DTD ou proche, le schéma sera
       </word>
     </results>
   </page>
-</level3>
+</level>
 </crawling>
