@@ -2,10 +2,13 @@ import cherrypy
 import pymysql
 from jinja2 import Environment, FileSystemLoader
 
+from urllib.parse import urlparse #pour tester les URL passées par l'utilisateur et pour reconstituer les liens rélatifs
+
 import requests
 from bs4 import BeautifulSoup
 from Page import *
 from URLWords import *
+
 
 env = Environment(loader=FileSystemLoader('templates'))
 
@@ -28,6 +31,12 @@ class Crawler(object):
             #print("Crawling en cours") par exemple.
 
             #on prend `lien`, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
+
+            lienparse = urlparse(lien)
+            if lienparse.scheme == '':
+                lien = 'http://' + lien
+
+            #ici tester si la page donne un 200 (r.status_code)
 
             Page1 = Page(lien) #cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
 
