@@ -16,6 +16,10 @@ class Page:
 
     def __init__(self, url):
         '''
+        Pour créer un objet Page; nécesaire de passer en paramètre une URL.
+
+        Exemple
+        Page1 = Page(url)
         '''
         self.url = url
         r = requests.get(self.url)
