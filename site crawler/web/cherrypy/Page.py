@@ -45,7 +45,7 @@ class Page:
                 text = filtered_phrase.append(w)
 
 
-    def wordcount():
+    def wordcount(self):
         '''
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
 
