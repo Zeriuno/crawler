@@ -59,12 +59,10 @@ class Page:
         Page1[0][0] = 12
         Page1[0][1] = 30.00
         Page1[0][3] = "salut"
-
         '''
         text = self.soup.get_text() #On récupère le texte
-        stopwords(text)
         items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis.
-        #avant le reste il faut éliminer les mots communs
+        stopwords(text) #avant le reste il faut éliminer les mots communs
         totitems = 0 #un compteur, initialisé à 0
         for word in set(items):
             totitems += items.count(word) #combien d'occurrences, tout mot confondu?
