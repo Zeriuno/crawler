@@ -69,6 +69,7 @@ class Page:
         totitems = len(items)
         self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
+
     @property
     def results_level1(self):
         """
