@@ -1,8 +1,4 @@
 
-from Page import *
-from URLWords import *
-from stopwords import *
-from crawler import *
 
 class URLWords(object):
     '''
