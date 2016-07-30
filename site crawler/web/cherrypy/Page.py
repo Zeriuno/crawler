@@ -63,9 +63,9 @@ class Page:
         text = self.soup.get_text() #On récupère le texte
         items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
-        len(items)
+        totitems = len(items)
         for word in set(items):
-            
+
         self.wordlist = sorted([(items.count(word), (items.count(word)*100)/ totitems, word) for word in set(items)], reverse=True) #dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
     @property
