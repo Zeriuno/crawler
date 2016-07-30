@@ -19,5 +19,10 @@ class URLWords(object):
 
 #fonction pour mettre dans le résultat
 
+def showcrawling(self, crawling):
+    dkf
+    slice
+    return
 
-#fonction pour sauvegarder
+
+#sauvegarder les resultats
