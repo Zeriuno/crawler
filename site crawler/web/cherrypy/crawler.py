@@ -45,7 +45,10 @@ class Crawler(object):
             Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
             level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
-            level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
+            words_level1 = [Page1.wordset[0], Page1.wordset[1], Page1.wordset[2]]
+            level1.results = words_level1
+
+            # level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
             level2_links = []  # ici on mettra tous les liens présents dans toutes les pages
             level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
