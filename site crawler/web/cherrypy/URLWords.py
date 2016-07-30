@@ -8,7 +8,7 @@ class URLWords(object):
         results: une liste avec mots, leur occurrence, leur pourcentage ([3, 42.86, 'salut'], [2, 28.57, 'bonjour'], [2, 28.57, 'adieu'])
     '''
 
-    def __init__(self, Page):
+    def __init__(self, Page: object) -> object:
         '''
         Pour créer un objet URLWords en passant la classe Page.
         Exemple d'utilisation:

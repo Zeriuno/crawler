@@ -8,6 +8,8 @@ import requests
 from bs4 import BeautifulSoup
 from Page import *
 from URLWords import *
+from stopwords import *
+
 
 
 env = Environment(loader=FileSystemLoader('templates'))
@@ -43,7 +45,7 @@ class Crawler(object):
             Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
             level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
-            level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
+            level1.results = Page1.results_level1  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
             level2_links = []  # ici on mettra tous les liens présents dans toutes les pages
             level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
@@ -70,7 +72,7 @@ class Crawler(object):
             level3.append(res_lev3)  # on ajoute le résultat dans le tableau
 
             crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
-
+            print(crawling)
             #show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
 
             soup = self.grabpage(lien)  # la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
