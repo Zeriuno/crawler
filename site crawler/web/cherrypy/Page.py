@@ -27,7 +27,7 @@ class Page:
         self.soup = BeautifulSoup(r.content, "html.parser")
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
-        self.wordlist = []
+        self.wordset = []
         for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
             if(url not in self.links):
@@ -67,14 +67,14 @@ class Page:
         #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
         totitems = len(items)
-        self.wordlist = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
+        self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
     @property
     def results_level1(self):
-        '''
-        Sélectionne dans self.wordlist les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
-        '''
-        words_level1 = [self.wordlist[0], self.wordlist[1], self.wordlist[2]]
+        """
+        Sélectionne dans self.wordset les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
+        """
+        words_level1 = [self.wordset[0], self.wordset[1], self.wordset[2]]
         return words_level1
 
     def find_same_words(self, URLWords):
