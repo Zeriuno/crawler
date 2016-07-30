@@ -25,7 +25,7 @@ class Crawler(object):
     index.exposed = True
 
 # récupérer le lien soumis
-    def prendreURL (self, lien=None):
+    def prendreURL(self, lien=None):
         if lien:
 
 
