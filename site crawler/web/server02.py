@@ -1,12 +1,16 @@
 from http.server import BaseHTTPRequestHandler, \
     HTTPServer
 import pymysql
+from jinja2 import Environment, FileSystemLoader
+import cherrypy
 
 # HTTPRequestHandler class
 class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
 
-  # GET
-  def do_GET(self):
+ env = Environment(loader=FileSystemLoader('templates'))
+
+# GET
+def do_GET(self):
         # Send response status code
         self.send_response(200)
 
@@ -21,8 +25,10 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         message += '<h1>TITRE</h1>'
 
         db = pymysql.connect(host='localhost',
-                             port=3306,
-                             database='mimo')
+                             database = 'crawler',
+                             user ='root',
+                             password='root',
+                             port=8889)
         cur = db.cursor(pymysql.cursors.DictCursor)
         cur.execute("SELECT item FROM liste")
         message += "<ul>"
