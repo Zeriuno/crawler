@@ -10,4 +10,6 @@
 * numpy
 * pysql
 
+Via python3, nltk.download() télécharger stopwords, all
+
 # SQLAlchemy, libxml2
