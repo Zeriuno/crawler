@@ -15,6 +15,7 @@ class URLWords(object):
         analysePage = URLWords(Page1)
         '''
         self.address = Page.url
+        self.results = []
 
 
 #fonction pour mettre dans le résultat
