@@ -2,6 +2,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from bs4 import BeautifulSoup
 import requests
+import re  # pour découper le texte en mots
 
 class Page:
     '''
@@ -26,6 +27,7 @@ class Page:
         self.soup = BeautifulSoup(r.content, "html.parser")
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
+        self.wordlist = []
         for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
             if(url not in self.links):
@@ -61,7 +63,8 @@ class Page:
         Page1[0][3] = "salut"
         '''
         text = self.soup.get_text() #On récupère le texte
-        items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
+        items = re.sub("[^\w]", " ",  text).split()
+        #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
         totitems = len(items)
         for word in set(items):
