@@ -21,9 +21,13 @@ class URLWords(object):
 #fonction pour mettre dans le résultat
 
 def showcrawling(self, crawling):
-    dkf
-    slice
-    return
+    for result in crawling:
+        print("1er lien: " + str(level1.Page1.url))
+        print("Mots les plus frequents: " + str(level1.Page1.results))
+        print("1er lien: " + str(level2.Page2.url))
+        print("Mots les plus frequents: " + str(level2.Page2.results))
+        print("1er lien: " + str(level3.Page3.url))
+        print("Mots les plus frequents: " + str(level3.Page3.results))
 
 
 #sauvegarder les resultats
