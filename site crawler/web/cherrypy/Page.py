@@ -32,16 +32,21 @@ class Page:
         self.wordset = []
         for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
+            print("J'ai vu ce lien: " + url)
             urlanalysis = urlparse(url)
+            if urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
+                print("Je tue ce lien: " + url)
+                url = ''
             if urlanalysis.scheme == '' and urlanalysis.netloc == '':
-                url = homeparse.scheme + '://' + homeparse.netloc + url
-            if urlanalysis.scheme == '':
-                lien = 'http://' + url
-            print("J'ai pris ce lien :" + url)
-
-
-            if(url not in self.links):
+                if url[0] == '/':
+                    url = homeparse.scheme + '://' + homeparse.netloc + url
+                else:
+                    url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
+            if urlanalysis.scheme == '' and urlanalysis.netloc != '':
+                url = 'http://' + url
+            if url != '' and url not in self.links:
                 self.links.append(url)
+                print("J'ai pris ce lien :" + url)  # debug
 
 
     def stopwords(self, lien):
