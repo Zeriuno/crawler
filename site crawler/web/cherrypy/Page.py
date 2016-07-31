@@ -32,7 +32,6 @@ class Page:
         self.wordset = []
         index = 0;
         for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
-<<<<<<< HEAD
             url = link.get('href', index)
             urlanalysis = urlparse(url)
             if urlanalysis.scheme == '' and urlanalysis.netloc == '':
@@ -43,7 +42,6 @@ class Page:
             if(url not in self.links):
                 self.links.append(url)
                 index += 1
-=======
             try:
                 url = link.get('href')  # debug: print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
@@ -61,7 +59,6 @@ class Page:
             except TypeError:
                 pass
 
->>>>>>> origin/master
 
     def stopwords(self, lien):
         '''
