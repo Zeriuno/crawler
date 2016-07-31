@@ -53,7 +53,7 @@ class Crawler(object):
                     break
                 Page2 = Page(link)  # de chaque lien on fait un objet Page
                 for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
-                    if link not in Page1.url and link not in level2_links:
+                    if link != Page1.url and link not in level2_links:
                         level2_links.append(link)
                 Page2.wordcount()  # de chaque page on compte les mots
                 res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
