@@ -73,8 +73,6 @@ class Crawler(object):
             crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
             #show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
 
-            soup = self.grabpage(lien)  # la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
-            comptage = self.comptagemots(soup)
         else:
             print("Il est nécessaire de soumettre une URL")
         return ("Crawling en cours")
