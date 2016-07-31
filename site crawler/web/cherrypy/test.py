@@ -52,6 +52,7 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
             print("3 Encore un objet page")
             # on crée un objet pour chaque lien
             Page3.wordcount()  # de chaque page on compte les mots
+            print(Page3.links)
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
         res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
