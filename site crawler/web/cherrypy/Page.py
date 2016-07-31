@@ -34,7 +34,7 @@ class Page:
                 self.links.append(url)
 
 
-    def stopwords(text):
+    def stopwords(self, text):
         '''
         Filtrer les mots
         '''
