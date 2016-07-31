@@ -8,7 +8,6 @@ import re  # pour découper le texte en mots
 class Page:
     '''
     Objet pour traiter une page.
-
     Attributs:
         url : pour garder l'adresse de la page.
         soup: pour traiter la page via BeautifulSoup
@@ -19,7 +18,6 @@ class Page:
     def __init__(self, url):
         '''
         Pour créer un objet Page; nécesaire de passer en paramètre une URL.
-
         Exemple
         Page1 = Page(url)
         '''
@@ -30,36 +28,24 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a')[:10]:#il faudra améliorer ça en utilisant urllib.parse et urllib.join
+        for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
-            print ("là c'est le "'href')
+            print("J'ai vu ce lien: " + url)
             urlanalysis = urlparse(url)
+            if urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
+                print("Je tue ce lien: " + url)
+                url = ''
             if urlanalysis.scheme == '' and urlanalysis.netloc == '':
-               url = homeparse.scheme + '://' + homeparse.netloc + url
-            if urlanalysis.scheme == '':
-               lien = 'http://' + url
-               print("J'ai pris ce lien \n :" + url)
-               print("\n ")
-            if(url not in self.links):
-                self.links.append(url)
-            try:
-                url = link.get('href')  # debug: print("J'ai vu ce lien: " + url)
-                urlanalysis = urlparse(url)
-                if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
-                   url = ''  # debug print("Je tue ce lien: " + url)
-                if urlanalysis.scheme == '' and urlanalysis.netloc == '':
-                   if url[0] == '/':
+                if url[0] == '/':
                     url = homeparse.scheme + '://' + homeparse.netloc + url
                 else:
                     url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
-                    if urlanalysis.scheme == '' and urlanalysis.netloc != '':
-                       url = 'http://' + url
-                    if url != '' and url not in self.links:
-                       self.links.append(url)
-                       print("J'ai pris ce lien là aussi:" + url)
-                       print("\n ")
-            except TypeError:
-                    pass
+            if urlanalysis.scheme == '' and urlanalysis.netloc != '':
+                url = 'http://' + url
+            if url != '' and url not in self.links:
+                self.links.append(url)
+                print("J'ai pris ce lien :" + url)  # debug
+
 
     def stopwords(self, lien):
         '''
@@ -77,12 +63,9 @@ class Page:
     def wordcount(self):
         '''
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
-
         Exemples
         Page1.wordset = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
-
         Comment accéder aux éléments de la liste:
-
         Page1[0] = (12, 30.00, "salut")
         Page1[1] = (1, 2.000, "adieu")
         Page1[0][0] = 12
@@ -110,7 +93,6 @@ class Page:
         La fonction prend un `URLWords` en argument et travaille sur son élément `results`.
         La liste est formatée de cette manière:
         [(12, 30.00, "salut"),(1, 2.000, "adieu"), (1, 2.000, "hellogoodbye")].
-
         La fonction confronte les mots présents dans self.wordset avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
         La liste est retournée par la fonction.
         '''
