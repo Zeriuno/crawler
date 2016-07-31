@@ -1,3 +1,4 @@
+from urllib.parse import *  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from bs4 import BeautifulSoup
@@ -23,6 +24,7 @@ class Page:
         Page1 = Page(url)
         '''
         self.url = url
+        homeparse = urlparse(self.url)  # servira pour reconstruire des url absolues
         r = requests.get(self.url)
         self.soup = BeautifulSoup(r.content, "html.parser")
         # Récupère les liens de la page et les place dans un tableau.
@@ -30,6 +32,14 @@ class Page:
         self.wordset = []
         for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             url = link.get('href')
+            urlanalysis = urlparse(url)
+            if urlanalysis.scheme == '' and urlanalysis.netloc == '':
+                url = homeparse.scheme + '://' + homeparse.netloc + url
+            if urlanalysis.scheme == '':
+                lien = 'http://' + url
+            print("J'ai pris ce lien :" + url)
+
+
             if(url not in self.links):
                 self.links.append(url)
 
