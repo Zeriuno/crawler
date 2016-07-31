@@ -12,7 +12,7 @@ class Page:
         url : pour garder l'adresse de la page.
         soup: pour traiter la page via BeautifulSoup
         links: liste avec les liens présents dans la page, sans doublons.
-        wordlist: lista delle parole con numero occorrenze, percentuale presenza, lemma
+        wordset: lista delle parole con numero occorrenze, percentuale presenza, lemma
     '''
 
     def __init__(self, url):
@@ -52,7 +52,7 @@ class Page:
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
 
         Exemples
-        Page1.wordlist = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
+        Page1.wordset = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
 
         Comment accéder aux éléments de la liste:
 
@@ -67,7 +67,7 @@ class Page:
         #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
         totitems = len(items)
-        self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordlist on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
+        self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordset on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
 
     @property
@@ -84,13 +84,13 @@ class Page:
         La liste est formatée de cette manière:
         [(12, 30.00, "salut"),(1, 2.000, "adieu"), (1, 2.000, "hellogoodbye")].
 
-        La fonction confronte les mots présents dans self.wordlist avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
+        La fonction confronte les mots présents dans self.wordset avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
         La liste est retournée par la fonction.
         '''
 
         comparison_list = [] # création de la liste où l'on mettra le résultat de la comparaison.
 
-        for item in self.wordlist:
+        for item in self.wordset:
             for result in URLWords.results:
                 if item[2] == result[2] and item[1] >= 2:
                     comparison_list.append(item)
