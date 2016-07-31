@@ -25,7 +25,7 @@ print("RESULTATS DU CRAWLING")
 print("\n")
 #VERIF print(level1.results)
 print("     Résultats du crawling de la page 1 ")
-print("Liens de la page 1", Page1.links)
+print("Liens de la page 1", ", ".join(Page1.links))
 print("Mot : ", level1.results[0][2], ", nombre d'occurences du mot : ", level1.results[0][0], ",pourcentage de présence du mot : ", level1.results[0][1],"%")
 print("Mot : ", level1.results[1][2], ", nombre d'occurences du mot : ", level1.results[1][0], ",pourcentage de présence du mot : ", level1.results[1][1],"%")
 print("Mot : ", level1.results[2][2], ", nombre d'occurences du mot : ", level1.results[2][0], ",pourcentage de présence du mot : ", level1.results[2][1],"%")
@@ -66,7 +66,7 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
 print("     Résultats du crawling de la page 2 ")
 if res_lev2.results:
-   print("Liens de la page 2 ", Page2.links)
+   print("Liens de la page 2 ", ", ".join(Page2.links))
 else:
     print("Pas de liens pour la page 2") # on affiche pas les listes vides
 
@@ -79,7 +79,7 @@ print("\n")
 print("     Résultats du crawling de la page 3 ")
 
 if res_lev3.results:
-    print("Liens de la page 3", Page3.links)
+    print("Liens de la page 3", ", ".join(Page3.links))
 else:
     print("Pas de liens pour la page 3") # on affiche pas les listes vides
 
