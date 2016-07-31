@@ -34,8 +34,8 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         break
     Page2 = Page(link)  # de chaque lien on fait un objet Page
     Page2.stopwords(lien)
-    print("Un nouvel objet page")
-    print("Un nouvel objet page")  # debug
+    print("2 Un nouvel objet page")
+    print("2 Un nouvel objet page")  # debug
     for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
         if link != Page1.url and link not in level2_links:
             level2_links.append(link)
@@ -48,7 +48,9 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         for index, link in enumerate(level2_links):  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
             if index == 10:
                 break
-            Page3 = Page(link)  # on crée un objet pour chaque lien
+            Page3 = Page(link)
+            print("3 Encore un objet page")
+            # on crée un objet pour chaque lien
             Page3.wordcount()  # de chaque page on compte les mots
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
         res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
