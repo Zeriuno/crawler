@@ -34,17 +34,17 @@ class Page:
                 self.links.append(url)
 
 
-    def stopwords(self, text):
+    def stopwords(self, lien):
         '''
         Filtrer les mots
         '''
         #dictionnaire français des mots à exclure
         stop_words = set(stopwords.words("french"))
-        words = word_tokenize(text)
+        words = word_tokenize(lien)
         filtered_phrase = []
         for w in words:
             if w not in stop_words:
-                text = filtered_phrase.append(w)
+                lien = filtered_phrase.append(w)
 
 
     def wordcount(self):

@@ -28,6 +28,10 @@ class Crawler(object):
     def prendreURL(self, lien=None):
         if lien:
 
+
+            # ici nous allons dérouler tout notre programme. Ce sera notre "main"
+            # print("Crawling en cours") par exemple.
+
             # on prend `lien`, la variable qui nous est renvoyée par la page, et on la donne aux fonctions que nous avons définies par ailleurs.
 
             lienparse = urlparse(lien)
@@ -53,7 +57,7 @@ class Crawler(object):
                     break
                 Page2 = Page(link)  # de chaque lien on fait un objet Page
                 for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
-                    if link != Page1.url and link not in level2_links:
+                    if link not in Page1.url and link not in level2_links:
                         level2_links.append(link)
                 Page2.wordcount()  # de chaque page on compte les mots
                 res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
@@ -73,35 +77,39 @@ class Crawler(object):
             crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
             #show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
 
+            soup = self.grabpage(lien)  # la fonction grabpage retourne une `soup`, donc on dit que `soup` prend le résultat de `grabpage` appliqué à la variable lien.
+            comptage = self.comptagemots(soup)
         else:
             print("Il est nécessaire de soumettre une URL")
         return ("Crawling en cours")
     prendreURL.exposed = True
 
-  # # recupérer le texte de la page
-  #
-  #   def grabpage(self,lien):
-  #       """
-  #       Prend l'URL passsée en paramètre et la récupère avec requests.
-  #       On peut l'utiliser de cette manière: soup = grabpage(url)
-  #       """
-  #       r = requests.get(lien)
-  #       soup = BeautifulSoup(r.content, "html.parser")
-  #       return soup
-  #   grabpage.exposed = True
-  #
-  # # comptage des mots
-  #   def comptagemots(self, soup):
-  #       songs = (soup.get_text())
-  #       lsongs = [song.replace('"', '').lower() for song in songs.split()]
-  #       freqs = [(- lsongs.count(song), song) for song in set(lsongs)]
-  #       soup = ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
-  #       #enrgistrer les 3 1er mots dans un fichier txt
-  #       monFichier = open("resultatscrawling.txt", "w", encoding="utf-8")
-  #       monFichier.write("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)[:3]))
-  #       monFichier.close()
-  #       return soup
-  #   comptagemots.exposed = True
+  # recupérer le texte de la page
+
+    def grabpage(self,lien):
+        """
+        Prend l'URL passsée en paramètre et la récupère avec requests.
+        On peut l'utiliser de cette manière: soup = grabpage(url)
+        """
+        r = requests.get(lien)
+        soup = BeautifulSoup(r.content, "html.parser")
+        return soup
+    grabpage.exposed = True
+
+  # comptage des mots
+    def comptagemots(self, soup):
+        songs = (soup.get_text())
+        lsongs = [song.replace('"', '').lower() for song in songs.split()]
+        freqs = [(- lsongs.count(song), song) for song in set(lsongs)]
+        soup = ("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)))
+        #enrgistrer les 3 1er mots dans un fichier txt
+        monFichier = open("resultatscrawling.txt", "w", encoding="utf-8")
+        monFichier.write("\n".join("%-10s : %s" % (n, -f) for f, n in sorted(freqs)[:3]))
+        monFichier.close()
+        return soup
+    comptagemots.exposed = True
+
+  # récupérer les liens de la page
 
 
 

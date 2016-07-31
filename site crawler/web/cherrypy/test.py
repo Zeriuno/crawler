@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 from Page import *
 from URLWords import *
 from stopwords import *
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
 lien = "http://news.ycombinator.com"
 lienparse = urlparse(lien)
@@ -13,7 +15,7 @@ if lienparse.scheme == '':
 # ici tester si la page donne un 200 (r.status_code)
 
 Page1 = Page(lien)  # cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
-
+Page1.stopwords(lien)
 Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
 level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
