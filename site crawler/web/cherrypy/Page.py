@@ -28,9 +28,9 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
+        for link in self.soup.find_all('a')[:7]: #il faudra améliorer ça en utilisant urllib.parse et urllib.join
             try:
-                url = link.get('href')
+                url = link.get('href')[:3]
                 print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
                 if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
@@ -45,7 +45,8 @@ class Page:
                     url = 'http://' + url
                 if url != '' and url not in self.links:
                     self.links.append(url)
-                    print("J'ai pris ce lien :" + url)  # debug
+                    print("J'ai pris ce lien aussi :" + url)  # debug
+                    print("\n")
             except TypeError:
                 pass
 
