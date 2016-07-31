@@ -21,8 +21,9 @@ Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dan
 level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
 words_level1 = [Page1.wordset[0], Page1.wordset[1], Page1.wordset[2]]
 level1.results = words_level1
+print("RESULTATS DU CRAWLING")
 print("Liens de la page 1", Page1.links)
-print("Résultats du crawling de la page 1 : \n", level1.results)  # debug
+print("     Résultats du crawling de la page 1 : ","Mot : ", level1.results[2][2], ",nombre d'occurences du mot : ", level1.results[0][0], ",pourcentage de présence du mot : ", level1.results[1][1],"%")
 
 # level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
@@ -35,8 +36,8 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         break
     Page2 = Page(link)  # de chaque lien on fait un objet Page
     Page2.stopwords(lien)
-    print("2 Un nouvel objet page")
-    print("2 Un nouvel objet page")  # debug
+    #print("2 Un nouvel objet page")
+    #print("2 Un nouvel objet page")  # debug
     for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
         if link != Page1.url and link not in level2_links:
             level2_links.append(link)
@@ -51,10 +52,11 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
             if index == 10:
                 break
             Page3 = Page(link)
-            print("3 Encore un objet page")
+            #print("3 Encore un objet page")
             # on crée un objet pour chaque lien
             Page3.wordcount()  # de chaque page on compte les mots
-            print("Liens de la page 3", Page3.links)
+            if level3: #on affiche pas les listes vides
+                print("Liens de la page 3", Page3.links)
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
         res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
