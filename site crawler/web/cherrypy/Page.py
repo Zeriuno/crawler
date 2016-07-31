@@ -30,35 +30,36 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        index = 0;
-        for link in self.soup.find_all('a'): #il faudra améliorer ça en utilisant urllib.parse et urllib.join
-            url = link.get('href', index)
+        for link in self.soup.find_all('a')[:10]:#il faudra améliorer ça en utilisant urllib.parse et urllib.join
+            url = link.get('href')
+            print ("là c'est le "'href')
             urlanalysis = urlparse(url)
             if urlanalysis.scheme == '' and urlanalysis.netloc == '':
-                url = homeparse.scheme + '://' + homeparse.netloc + url
+               url = homeparse.scheme + '://' + homeparse.netloc + url
             if urlanalysis.scheme == '':
                lien = 'http://' + url
-               print("J'ai pris ce lien :" + url, +index)
+               print("J'ai pris ce lien \n :" + url)
+               print("\n ")
             if(url not in self.links):
                 self.links.append(url)
-                index += 1
             try:
                 url = link.get('href')  # debug: print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
                 if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
-                    url = ''  # debug print("Je tue ce lien: " + url)
+                   url = ''  # debug print("Je tue ce lien: " + url)
                 if urlanalysis.scheme == '' and urlanalysis.netloc == '':
-                    if url[0] == '/':
-                        url = homeparse.scheme + '://' + homeparse.netloc + url
-                    else:
-                        url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
-                if urlanalysis.scheme == '' and urlanalysis.netloc != '':
-                    url = 'http://' + url
-                if url != '' and url not in self.links:
-                    self.links.append(url)  # debug print("J'ai pris ce lien :" + url)
+                   if url[0] == '/':
+                    url = homeparse.scheme + '://' + homeparse.netloc + url
+                else:
+                    url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
+                    if urlanalysis.scheme == '' and urlanalysis.netloc != '':
+                       url = 'http://' + url
+                    if url != '' and url not in self.links:
+                       self.links.append(url)
+                       print("J'ai pris ce lien là aussi:" + url)
+                       print("\n ")
             except TypeError:
-                pass
-
+                    pass
 
     def stopwords(self, lien):
         '''

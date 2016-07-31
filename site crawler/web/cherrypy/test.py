@@ -33,12 +33,9 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         print("index == 10")  # debug
         break
     Page2 = Page(link)  # de chaque lien on fait un objet Page
-<<<<<<< HEAD
     Page2.stopwords(lien)
     print("Un nouvel objet page")
-=======
     print("Un nouvel objet page")  # debug
->>>>>>> origin/master
     for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
         if link != Page1.url and link not in level2_links:
             level2_links.append(link)
