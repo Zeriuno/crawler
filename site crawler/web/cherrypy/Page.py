@@ -40,7 +40,7 @@ class Page:
                         url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
                 if urlanalysis.scheme == '' and urlanalysis.netloc != '':
                     url = 'http://' + url
-                if url is None or urlanalysis.scheme[:4] != 'http':
+                if url is None or urlanalysis.scheme[:3] != 'http':
                     #print("Je tue ce lien: " + url)  # debug
                     url = ''                
                 if url != '' and url not in self.links:
