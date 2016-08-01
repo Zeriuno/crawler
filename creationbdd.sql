@@ -3,6 +3,9 @@ CREATE USER 'mimocrawlerusr'@'localhost' IDENTIFIED BY 'yolo';
 GRANT ALL PRIVILEGES ON mimocrawlerdb.* TO 'mimocrawlerusr'@'localhost';
 FLUSH PRIVILEGES;
 
+DROP TABLE url;
+DROP TABLE words;
+
 CREATE TABLE url(
   id INT NOT NULL AUTO_INCREMENT,
   url VARCHAR(300) NOT NULL,
