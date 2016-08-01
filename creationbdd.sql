@@ -1,4 +1,8 @@
-```
+CREATE DATABASE mimocrawlerdb;
+CREATE USER 'mimocrawlerusr'@'localhost' IDENTIFIED BY 'yolo';
+GRANT ALL PRIVILEGES ON mimocrawlerdb.* TO 'mimocrawlerusr'@'localhost';
+FLUSH PRIVILEGES;
+
 CREATE TABLE url(
   id INT NOT NULL AUTO_INCREMENT,
   url VARCHAR(300) NOT NULL,
