@@ -5,7 +5,7 @@ class db:
     Classe pour gérer la base de données.
     """
 
-    def __init__(self, db:object) -> object:
+    def __init__(self, db:object):
         """
         """
         self.conn = pymysql.connect(host='localhost', port= 3306, user="mimocrawlerusr", password="yolo", database="mimocrawlerdb", charset='utf8')
