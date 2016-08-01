@@ -84,5 +84,5 @@ else:
     print("Pas de liens pour la page 3") # on affiche pas les listes vides
 
 # verif print(res_lev3.results)
-print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0], ",pourcentage de présence du mot : ", res_lev2.results[0][1],"%")
-print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0], ",pourcentage de présence du mot : ", res_lev2.results[1][1],"%")
+print("Mot : ", res_lev3.results[0][2], ", nombre d'occurences du mot : ", res_lev3.results[0][0], ",pourcentage de présence du mot : ", res_lev3.results[0][1],"%")
+print("Mot : ", res_lev3.results[1][2], ", nombre d'occurences du mot : ", res_lev3.results[1][0], ",pourcentage de présence du mot : ", res_lev3.results[1][1],"%")
