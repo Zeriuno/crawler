@@ -18,3 +18,12 @@ class db:
         cur = self.cursor()
         # date = date() # obtenir la date du jour et la mettre dans une variable
         cur.execute("insert into url (url,titre,descrip,effort,price,level,view,rate) values ('"+url+"','"+titre+"','"+descrip+"','"+effort+"','"+price+"','"+level+"','"+view+"','"+rate+"')")
+
+    def readPage(Page):
+
+
+Pour la lecture:
+    ```
+    for row in result:
+          mooc.append([row["url"],row["titre"],row["descrip"],row["effort"],row["price"],row["level"],row["view"],row["rate"],score])
+    ```
