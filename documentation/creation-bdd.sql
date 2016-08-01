@@ -1,3 +1,4 @@
+USE mimocrawlerdb;
 DROP TABLE url;
 DROP TABLE words;
 
