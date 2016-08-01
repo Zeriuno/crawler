@@ -27,3 +27,14 @@ Pour la lecture:
     for row in result:
           mooc.append([row["url"],row["titre"],row["descrip"],row["effort"],row["price"],row["level"],row["view"],row["rate"],score])
     ```
+
+/*
+INSERT INTO url(url, date)
++ Page.url +, CURDATE());
+
+La requête pour obtenir les mots d'une page est
+
+SELECT item, occurrences, percentage
+FROM  words
+WHERE url = $item ;
+*/

@@ -18,13 +18,4 @@ CREATE TABLE words(
   item VARCHAR(300),
   occurrences INT,
   percentage FLOAT
-)
-
-
-/*
-La requête pour obtenir les mots d'une page est
-
-SELECT item, occurrences, percentage
-FROM  words
-WHERE url = $item ;
-*/
+);
