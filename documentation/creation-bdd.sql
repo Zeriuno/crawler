@@ -1,6 +1,4 @@
-USE mimocrawlerdb;
-DROP TABLE url;
-DROP TABLE words;
+DROP TABLE IF EXISTS url, words;
 
 CREATE TABLE url(
   id INT AUTO_INCREMENT PRIMARY KEY,
