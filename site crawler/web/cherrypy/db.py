@@ -16,8 +16,10 @@ class db:
         """
         curs = self.conn.cursor()
         curs.execute("INSERT INTO url (url, date) VALUES ('"+Page.url+"', CURDATE())")
+        cpt = 0
         for setitem in Page.wordset:
-            curs.execute("INSERT INTO words(url, item, occurrences, percentage) VALUES ('"+Page.url+"', item'""')")
+            curs.execute("INSERT INTO words(url, item, occurrences, percentage) VALUES ('"+Page.url+"', '"+Page.wordset[cpt][3]+'",'"+Page.wordset[cpt][0]+"','"+Page.wordset[cpt][2]+"')")
+            cpt += 1
         self.conn.commit()
 
     def readPage(Page):
