@@ -16,7 +16,8 @@ class db:
         """
         curs = self.conn.cursor()
         curs.execute("INSERT INTO url (url, date) VALUES ('"+Page.url+"', CURDATE())")
-
+        for setitem in Page.wordset:
+            curs.execute("INSERT INTO words(url, item, occurrences, percentage) VALUES ('"+Page.url+"', item'""')")
         self.conn.commit()
 
     def readPage(Page):
@@ -29,9 +30,6 @@ class db:
 #     ```
 #
 # /*
-# INSERT INTO url(url, date) values
-# ('""+Page.url+"', CURDATE());
-#
 # La requête pour obtenir les mots d'une page est
 #
 # SELECT item, occurrences, percentage
