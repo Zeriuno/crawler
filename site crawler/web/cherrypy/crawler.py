@@ -1,6 +1,5 @@
 from crawl import analysis
 import cherrypy
-import pymysql
 from jinja2 import Environment, FileSystemLoader
 
 from urllib.parse import urlparse  # pour tester les URL passées par l'utilisateur et pour reconstituer les liens rélatifs
