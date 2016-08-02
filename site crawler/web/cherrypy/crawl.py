@@ -1,3 +1,13 @@
+from urllib.parse import urlparse
+import requests
+from bs4 import BeautifulSoup
+from Page import *
+from URLWords import *
+from stopwords import *
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+
 def analysis(lien):
     lienparse = urlparse(lien)
     if lienparse.scheme == '':
