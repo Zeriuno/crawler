@@ -1,5 +1,6 @@
 * Stopwords
 * Création du résultat
 * Affichage
-* BDD (url de la page, mots) -> date (ajouter le jour du crawling de la page)
-* sauter les limitations
+* Traitement BDD
+* Pour l'instant on code en dur utilisateur et mot de passe de la BDD.
+* Faire sauter les limites horizontales de récursion: on ne va pas le faire, mais on va passer les limites horizontales à des variables (non plus un chiffre, en dur, mais une variable)
