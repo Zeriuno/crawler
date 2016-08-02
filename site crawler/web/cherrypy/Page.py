@@ -70,11 +70,11 @@ class Page:
         Exemples
         Page1.wordset = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
         Comment accéder aux éléments de la liste:
-        Page1[0] = (12, 30.00, "salut")
-        Page1[1] = (1, 2.000, "adieu")
-        Page1[0][0] = 12
-        Page1[0][1] = 30.00
-        Page1[0][3] = "salut"
+        Page1.wordset[0] = (12, 30.00, "salut")
+        Page1.wordset[1] = (1, 2.000, "adieu")
+        Page1.wordset[0][0] = 12
+        Page1.wordset[0][1] = 30.00
+        Page1.wordset[0][3] = "salut"
         '''
         text = self.soup.get_text() #On récupère le texte
         items = re.sub("[^\w]", " ",  text).split()
