@@ -50,17 +50,19 @@ class Page:
             except TypeError:
                 pass
 
-    # def stopwords(self, lien): # On n'a pas besoin du lien, car on le trouve dans Page.url
-    #     """
-    #     Filtrer les mots
-    #     """
-    #     #dictionnaire français des mots à exclure
-    #     stop_words = set(stopwords.words("french"))
-    #     words = word_tokenize(lien)
-    #     filtered_phrase = []
-    #     for w in words:
-    #         if w not in stop_words:
-    #             lien = filtered_phrase.append(w)  # On ne va pas mettre un tableau de mots dans le lien. On va plutôt créer une variable de Page qui est filtered_text. Donc ajouter self.filtered_phrase = [] dans l'__init__, et ici enlever lien =. Mais ça nous embrouille un peu.
+
+    def stopwords(self, lien):
+        """
+        Filtrer les mots
+        """
+        #dictionnaire français des mots à exclure
+        stop_words = set(stopwords.words("french"))
+        words = word_tokenize(lien)
+        filtered_phrase = []
+        for w in words:
+            if w not in stop_words:
+                lien = filtered_phrase.append(w)
+
 
     def wordcount(self):
         """

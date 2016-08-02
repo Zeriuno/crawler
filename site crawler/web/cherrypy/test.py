@@ -7,7 +7,7 @@ from stopwords import *
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-lien = "http://www.lemonde.fr"
+lien = "http://news.ycombinator.com"
 lienparse = urlparse(lien)
 if lienparse.scheme == '':
     lien = 'http://' + lien
@@ -15,11 +15,12 @@ if lienparse.scheme == '':
 # ici tester si la page donne un 200 (r.status_code)
 
 Page1 = Page(lien)  # cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
-Page1.wordcount()# On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
+Page1.stopwords(lien)
+Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
+
 level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
 words_level1 = [Page1.wordset[0], Page1.wordset[1], Page1.wordset[2]]
 level1.results = words_level1
-
 print("RESULTATS DU CRAWLING")
 print("\n")
 #VERIF print(level1.results)
@@ -39,6 +40,7 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         print("index == 10")  # debug
         break
     Page2 = Page(link)  # de chaque lien on fait un objet Page
+    Page2.stopwords(lien)
     #print("2 Un nouvel objet page")
     #print("2 Un nouvel objet page")  # debug
     for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
@@ -71,7 +73,6 @@ else:
 #verif print(res_lev2.results)
 print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0], ",pourcentage de présence du mot : ", res_lev2.results[0][1],"%")
 print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0], ",pourcentage de présence du mot : ", res_lev2.results[1][1],"%")
-print("Mot : ", res_lev2.results[2][2], ", nombre d'occurences du mot : ", res_lev2.results[2][0], ",pourcentage de présence du mot : ", res_lev2.results[2][1],"%")
 
 print("\n")
 
@@ -85,4 +86,3 @@ else:
 # verif print(res_lev3.results)
 print("Mot : ", res_lev3.results[0][2], ", nombre d'occurences du mot : ", res_lev3.results[0][0], ",pourcentage de présence du mot : ", res_lev3.results[0][1],"%")
 print("Mot : ", res_lev3.results[1][2], ", nombre d'occurences du mot : ", res_lev3.results[1][0], ",pourcentage de présence du mot : ", res_lev3.results[1][1],"%")
-print("Mot : ", res_lev3.results[2][2], ", nombre d'occurences du mot : ", res_lev3.results[2][0], ",pourcentage de présence du mot : ", res_lev3.results[2][1],"%")

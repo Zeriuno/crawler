@@ -11,6 +11,7 @@ def analysis(lien):
 
     Page1 = Page(
         lien)  # cette opération nous donne Page1.url, avec l'adresse; Page1.soup avec l'objet BeautifulSoup; Page1.links avec tous les liens.
+    Page1.stopwords(lien)
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
     level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
