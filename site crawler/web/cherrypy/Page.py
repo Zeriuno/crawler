@@ -42,7 +42,7 @@ class Page:
                     url = 'http://' + url
                 if url is None or urlanalysis.scheme[:3] != 'http':
                     #print("Je tue ce lien: " + url)  # debug
-                    url = ''                
+                    url = ''
                 if url != '' and url not in self.links:
                     self.links.append(url)
                     #print("J'ai pris ce lien aussi :" + url)  # debug
