@@ -16,11 +16,11 @@ class Page:
     """
 
     def __init__(self, url):
-        """
+        '''
         Pour créer un objet Page; nécesaire de passer en paramètre une URL.
         Exemple
         Page1 = Page(url)
-        """
+        '''
         self.url = url
         homeparse = urlparse(self.url)  # servira pour reconstruire des url absolues
         r = requests.get(self.url)
@@ -28,11 +28,14 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a')[:6]:
+        for link in self.soup.find_all('a')[:6]:  # il faudra améliorer ça en utilisant urllib.parse et urllib.join
             try:
                 url = link.get('href')[:3]
-                #print("J'ai vu ce lien: " + url)  # debug
+                #print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
+                if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
+                    #print("Je tue ce lien: " + url)
+                    url = ''
                 if urlanalysis.scheme == '' and urlanalysis.netloc == '':
                     if url[0] == '/':
                         url = homeparse.scheme + '://' + homeparse.netloc + url
@@ -40,9 +43,6 @@ class Page:
                         url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
                 if urlanalysis.scheme == '' and urlanalysis.netloc != '':
                     url = 'http://' + url
-                if url is None or urlanalysis.scheme[:3] != 'http':
-                    #print("Je tue ce lien: " + url)  # debug
-                    url = ''
                 if url != '' and url not in self.links:
                     self.links.append(url)
                     #print("J'ai pris ce lien aussi :" + url)  # debug
@@ -50,18 +50,6 @@ class Page:
             except TypeError:
                 pass
 
-
-    def stopwords(self, lien):
-        """
-        Filtrer les mots
-        """
-        #dictionnaire français des mots à exclure
-        stop_words = set(stopwords.words("french"))
-        words = word_tokenize(lien)
-        filtered_phrase = []
-        for w in words:
-            if w not in stop_words:
-                lien = filtered_phrase.append(w)
 
 
     def wordcount(self):
