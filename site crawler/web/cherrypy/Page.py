@@ -6,21 +6,21 @@ import requests
 import re  # pour découper le texte en mots
 
 class Page:
-    '''
+    """
     Objet pour traiter une page.
     Attributs:
         url : pour garder l'adresse de la page.
         soup: pour traiter la page via BeautifulSoup
         links: liste avec les liens présents dans la page, sans doublons.
         wordset: lista delle parole con numero occorrenze, percentuale presenza, lemma
-    '''
+    """
 
     def __init__(self, url):
-        '''
+        """
         Pour créer un objet Page; nécesaire de passer en paramètre une URL.
         Exemple
         Page1 = Page(url)
-        '''
+        """
         self.url = url
         homeparse = urlparse(self.url)  # servira pour reconstruire des url absolues
         r = requests.get(self.url)
@@ -52,9 +52,9 @@ class Page:
 
 
     def stopwords(self, lien):
-        '''
+        """
         Filtrer les mots
-        '''
+        """
         #dictionnaire français des mots à exclure
         stop_words = set(stopwords.words("french"))
         words = word_tokenize(lien)
@@ -93,13 +93,13 @@ class Page:
         return words_level1
 
     def find_same_words(self, URLWords):
-        '''
+        """
         La fonction prend un `URLWords` en argument et travaille sur son élément `results`.
         La liste est formatée de cette manière:
         [(12, 30.00, "salut"),(1, 2.000, "adieu"), (1, 2.000, "hellogoodbye")].
         La fonction confronte les mots présents dans self.wordset avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
         La liste est retournée par la fonction.
-        '''
+        """
 
         comparison_list = [] # création de la liste où l'on mettra le résultat de la comparaison.
 
