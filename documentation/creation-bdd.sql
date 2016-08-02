@@ -1,3 +1,4 @@
+USE mimocrawlerdb;
 DROP TABLE IF EXISTS url, words;
 
 CREATE TABLE url(
