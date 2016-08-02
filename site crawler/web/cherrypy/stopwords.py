@@ -17,4 +17,13 @@ for w in words:
 
 print(filtered_phrase)
 
+stops = set(stopwords.words("french"))
 
+print(stops)
+
+
+def stopwords(self,word_list):
+    filtered_word_list = word_list[:] #make a copy of the word_list
+    for word in word_list: # iterate over word_list
+        if word in stopwords.words('french'):
+            filtered_word_list.remove(word)

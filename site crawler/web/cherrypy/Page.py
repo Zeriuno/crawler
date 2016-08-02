@@ -51,18 +51,6 @@ class Page:
                 pass
 
 
-    def stopwords(self, lien):
-        """
-        Filtrer les mots
-        """
-        #dictionnaire français des mots à exclure
-        stop_words = set(stopwords.words("french"))
-        words = word_tokenize(lien)
-        filtered_phrase = []
-        for w in words:
-            if w not in stop_words:
-                lien = filtered_phrase.append(w)
-
 
     def wordcount(self):
         """
