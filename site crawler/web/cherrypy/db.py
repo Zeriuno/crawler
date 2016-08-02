@@ -11,7 +11,7 @@ class db:
     * insertPage(Page) insère url et date dans url et les éléments de wordset dans words
     * readPage(Page) à partir de Page.url, récupère le wordset (retourné comme liste)
 
-    À faire: tester si la date est présente.
+    À faire: tester si la date est présente pour ajourd'hui.
     Supprimer les contenus plus vieux de x jours.
     """
 
