@@ -6,7 +6,7 @@ class db:
 
     Tables:
         * url (id, url, date)
-        * words (item, occurrences, percentage, id, *url*)
+        * words (id, item, occurrences, percentage, *id*)
 
     * insertPage(Page) insère url et date dans url et les éléments de wordset dans words
     * readPage(Page) à partir de Page.url, récupère le wordset (retourné comme liste)
