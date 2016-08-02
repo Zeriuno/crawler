@@ -22,19 +22,16 @@ class db:
             cpt += 1
         self.conn.commit()
 
-    def readPage(Page):
-
-
-# Pour la lecture:
-#     ```
-#     for row in result:
-#           mooc.append([row["url"],row["titre"],row["descrip"],row["effort"],row["price"],row["level"],row["view"],row["rate"],score])
-#     ```
-#
-# /*
-# La requête pour obtenir les mots d'une page est
-#
-# SELECT item, occurrences, percentage
-# FROM  words
-# WHERE url = $item ;
-# */
+    def readPage(self, Page):
+        """
+        Pour extraire le wordset d'une page, à partir d'une URL
+        """
+        curs = self.conn.cursor()
+        curs.execute("SELECT occurrences, percentage, item FROM words WHERE (url = '"+Page.url+"')")
+        request = curs.fetchall()
+        wordset_temp=[]
+        for row in request:
+            wordsetitem_temp=[]
+            wordsetitem_temp.append(row["occurrences"], row["percentage"], row["item"])
+            wordset_temp.append(wordsetitem_temp)
+        return wordset_temp
