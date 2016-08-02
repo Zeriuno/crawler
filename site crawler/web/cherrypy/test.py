@@ -7,7 +7,7 @@ from stopwords import *
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-lien = "http://www.lemonde.fr/sciences/"
+lien = "http://news.ycombinator.com"
 lienparse = urlparse(lien)
 if lienparse.scheme == '':
     lien = 'http://' + lien
@@ -50,19 +50,6 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
         res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
         level2.append(res_lev2)  # on ajoute le résultat dans le tableau
-        print("     Résultats du crawling de la page 2 ")
-        if res_lev2.results:
-            print("Liens de la page 2 ", ", ".join(Page2.links))
-        else:
-            print("Pas de liens pour la page 2")  # on affiche pas les listes vides
-            # verif print(res_lev2.results)
-            print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0],
-                  ",pourcentage de présence du mot : ", res_lev2.results[0][1], "%")
-            print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0],
-                  ",pourcentage de présence du mot : ", res_lev2.results[1][1], "%")
-
-            print("\n")
-
         level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
         for index, link in enumerate(level2_links):  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
             if index == 10:
@@ -74,23 +61,30 @@ for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxi�
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
         res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
-        print("     Résultats du crawling de la page 3 ")
-
-        if res_lev3.results:
-            print("Liens de la page 3", ", ".join(Page3.links))
-            # verif print(res_lev3.results)
-            print("Mot : ", res_lev3.results[0][2], ", nombre d'occurences du mot : ", res_lev3.results[0][0],
-                  ",pourcentage de présence du mot : ", res_lev3.results[0][1], "%")
-            print("Mot : ", res_lev3.results[1][2], ", nombre d'occurences du mot : ", res_lev3.results[1][0],
-                  ",pourcentage de présence du mot : ", res_lev3.results[1][1], "%")
-        else:
-            print("Pas de liens pour la page 3")  # on affiche pas les listes vides
-
 
         crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
         # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
+print("     Résultats du crawling de la page 2 ")
+if res_lev2.results:
+   print("Liens de la page 2 ", ", ".join(Page2.links))
+else:
+    print("Pas de liens pour la page 2") # on affiche pas les listes vides
 
+#verif print(res_lev2.results)
+print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0], ",pourcentage de présence du mot : ", res_lev2.results[0][1],"%")
+print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0], ",pourcentage de présence du mot : ", res_lev2.results[1][1],"%")
+print("Mot : ", res_lev2.results[2][2], ", nombre d'occurences du mot : ", res_lev2.results[2][0], ",pourcentage de présence du mot : ", res_lev2.results[2][1],"%")
 
+print("\n")
 
+print("     Résultats du crawling de la page 3 ")
 
+if res_lev3.results:
+      print("Liens de la page 3", ", ".join(Page3.links))
+else:
+      print("Pas de liens pour la page 3") # on affiche pas les listes vides
 
+# verif print(res_lev3.results)
+print("Mot : ", res_lev3.results[0][2], ", nombre d'occurences du mot : ", res_lev3.results[0][0], ",pourcentage de présence du mot : ", res_lev3.results[0][1],"%")
+print("Mot : ", res_lev3.results[1][2], ", nombre d'occurences du mot : ", res_lev3.results[1][0], ",pourcentage de présence du mot : ", res_lev3.results[1][1],"%")
+print("Mot : ", res_lev3.results[2][2], ", nombre d'occurences du mot : ", res_lev3.results[2][0], ",pourcentage de présence du mot : ", res_lev3.results[2][1],"%")
