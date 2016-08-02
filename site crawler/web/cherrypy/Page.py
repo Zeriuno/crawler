@@ -65,7 +65,7 @@ class Page:
 
 
     def wordcount(self):
-        '''
+        """
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
         Exemples
         Page1.wordset = [(12, 30.00, "salut"),(1, 2.000, "adieu")]
@@ -75,7 +75,7 @@ class Page:
         Page1.wordset[0][0] = 12
         Page1.wordset[0][1] = 30.00
         Page1.wordset[0][3] = "salut"
-        '''
+        """
         text = self.soup.get_text() #On récupère le texte
         items = re.sub("[^\w]", " ",  text).split()
         #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
