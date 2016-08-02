@@ -10,7 +10,7 @@ class db:
         """
         self.conn = pymysql.connect(host='localhost', port= 3306, user="mimocrawlerusr", password="yolo", database="mimocrawlerdb", charset='utf8')
 
-    def insertPage(Page):
+    def insertPage(self, Page):
         """
         Insère une page analysée dans la base.
         """
