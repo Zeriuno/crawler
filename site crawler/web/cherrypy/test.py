@@ -6,6 +6,7 @@ from URLWords import *
 from stopwords import *
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from creerXML import *
 
 lien = "http://news.ycombinator.com"
 lienparse = urlparse(lien)
