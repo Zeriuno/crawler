@@ -45,7 +45,7 @@ class Page:
                     url = 'http://' + url
                 if url != '' and url not in self.links:
                     self.links.append(url)
-                    print("J'ai pris ce lien aussi :" + url)  # debug
+                    #print("J'ai pris ce lien: " + url)  # debug
             except TypeError:
                 pass
 
