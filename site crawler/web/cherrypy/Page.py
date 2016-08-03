@@ -88,7 +88,9 @@ class Page:
         """
         Sélectionne dans self.wordset les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
         """
-        words_level1 = [self.wordset[0], self.wordset[1], self.wordset[2]]
+        words_level1 = []
+        for item in self.wordset[:5]:
+            words_level1.append(item)
         return words_level1
 
     def find_same_words(self, URLWords):
