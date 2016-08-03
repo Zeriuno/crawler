@@ -12,7 +12,6 @@ def analysis(lien, largeur):
     Page1 = Page(lien, largeur)
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
-
     level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
     words_level1 = [Page1.wordset[0], Page1.wordset[1], Page1.wordset[2]]
     level1.results = words_level1
