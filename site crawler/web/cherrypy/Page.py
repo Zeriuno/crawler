@@ -28,25 +28,24 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a')[:6]:  # il faudra améliorer ça en utilisant urllib.parse et urllib.join
+        for link in self.soup.find_all('a')[:20]:
             try:
-                url = link.get('href')[:3]
+                url = link.get('href')
                 #print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
-                if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
+                if url is None or urlanalysis.scheme[:4] != 'http':
                     #print("Je tue ce lien: " + url)
                     url = ''
-                if urlanalysis.scheme == '' and urlanalysis.netloc == '':
+                elif urlanalysis.scheme == '' and urlanalysis.netloc == '':
                     if url[0] == '/':
                         url = homeparse.scheme + '://' + homeparse.netloc + url
                     else:
                         url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
-                if urlanalysis.scheme == '' and urlanalysis.netloc != '':
+                elif urlanalysis.scheme == '' and urlanalysis.netloc != '':
                     url = 'http://' + url
                 if url != '' and url not in self.links:
                     self.links.append(url)
-                    #print("J'ai pris ce lien aussi :" + url)  # debug
-                    print("\n")
+                    print("J'ai pris ce lien aussi :" + url)  # debug
             except TypeError:
                 pass
 
