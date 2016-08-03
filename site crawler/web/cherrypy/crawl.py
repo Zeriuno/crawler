@@ -2,14 +2,14 @@ from Page import *
 from URLWords import *
 
 
-def analysis(lien):
+def analysis(lien, largeur):
     lienparse = urlparse(lien)
     if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
         lien = 'http://' + lien
 
     # ici tester si la page donne un 200 (r.status_code)
 
-    Page1 = Page(lien)
+    Page1 = Page(lien, largeur)
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 

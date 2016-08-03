@@ -15,7 +15,7 @@ class Page:
         wordset: lista delle parole con numero occorrenze, percentuale presenza, lemma
     """
 
-    def __init__(self, url):
+    def __init__(self, url, largeur):
         '''
         Pour créer un objet Page; nécesaire de passer en paramètre une URL.
         Exemple
@@ -28,7 +28,7 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a')[:20]:
+        for link in self.soup.find_all('a')[:largeur]:
             try:
                 url = link.get('href')
                 #print("J'ai vu ce lien: " + url)

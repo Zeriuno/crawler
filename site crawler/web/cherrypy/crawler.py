@@ -27,7 +27,8 @@ class Crawler(object):
 # récupérer le lien soumis
     def prendreURL(self, lien=None):
         if lien:
-            analysis(lien)
+            largeur = 20  # variable pour, dans une évolution, pouvoir varier le niveau de récursion horizontale
+            analysis(lien, largeur)
         else:
             print("Il est nécessaire de soumettre une URL")
         return ("Crawling en cours")
