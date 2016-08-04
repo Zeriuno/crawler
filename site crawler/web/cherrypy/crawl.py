@@ -46,7 +46,7 @@ def analysis(lien, largeur):
                 level2_links.append(link)
             Page2.wordcount()  # de chaque page on compte les mots
             res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
-            res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
+            res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent X% ou plus, la liste sera vide.
             level2.append(res_lev2)  # on ajoute le résultat dans le tableau
             level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
             for link in level2_links[:20]:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.

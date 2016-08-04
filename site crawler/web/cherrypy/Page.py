@@ -101,11 +101,12 @@ class Page:
         La liste est retournée par la fonction.
         """
 
-        comparison_list = [] # création de la liste où l'on mettra le résultat de la comparaison.
+        pourcentage_coherence = 1  # pourcentage de cohérence entre les mots de la première page et ceux des pages associées
+        comparison_list = []  # création de la liste où l'on mettra le résultat de la comparaison.
 
         for item in self.wordset:
             for result in URLWords.results:
-                if item[2] == result[2] and item[1] >= 1:
+                if item[2] == result[2] and item[1] >= pourcentage_coherence:
                     comparison_list.append(item)
 
         return comparison_list
