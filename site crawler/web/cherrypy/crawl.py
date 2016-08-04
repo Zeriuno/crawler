@@ -13,19 +13,20 @@ def analysis(lien, largeur):
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
     level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
-    words_level1 = [Page1.wordset[0], Page1.wordset[1], Page1.wordset[2]]
-    level1.results = words_level1
-    print("RESULTATS DU CRAWLING")
-    print("\n")
-    # VERIF print(level1.results)
-    print("     Résultats du crawling de la page 1 ")
-    print("Liens de la page 1", ", ".join(Page1.links))
-    print("Mot : ", level1.results[0][2], ", nombre d'occurences du mot : ", level1.results[0][0],
-          ",pourcentage de présence du mot : ", level1.results[0][1], "%")
-    print("Mot : ", level1.results[1][2], ", nombre d'occurences du mot : ", level1.results[1][0],
-          ",pourcentage de présence du mot : ", level1.results[1][1], "%")
-    print("Mot : ", level1.results[2][2], ", nombre d'occurences du mot : ", level1.results[2][0],
-          ",pourcentage de présence du mot : ", level1.results[2][1], "%")
+    level1.results = Page1.results_level1()
+
+
+    # print("RESULTATS DU CRAWLING")
+    # print("\n")
+    # # VERIF print(level1.results)
+    # print("     Résultats du crawling de la page 1 ")
+    # print("Liens de la page 1", ", ".join(Page1.links))
+    # print("Mot : ", level1.results[0][2], ", nombre d'occurences du mot : ", level1.results[0][0],
+    #       ",pourcentage de présence du mot : ", level1.results[0][1], "%")
+    # print("Mot : ", level1.results[1][2], ", nombre d'occurences du mot : ", level1.results[1][0],
+    #       ",pourcentage de présence du mot : ", level1.results[1][1], "%")
+    # print("Mot : ", level1.results[2][2], ", nombre d'occurences du mot : ", level1.results[2][0],
+    #       ",pourcentage de présence du mot : ", level1.results[2][1], "%")
 
     # level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
