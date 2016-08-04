@@ -30,7 +30,7 @@ def analysis(lien, largeur):
 
     # level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
 
-    level2_links = []  # ici on mettra tous les liens présents dans toutes les pages
+    level2_links = []  # ici on mettra tous les liens présents dans toutes les pages du deuxième niveau
     level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
     for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
         #print("Dans la boucle enumerate(Page1.links)")  # debug
