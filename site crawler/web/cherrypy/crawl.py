@@ -32,23 +32,20 @@ def analysis(lien, largeur):
 
     level2_links = []  # ici on mettra tous les liens présents dans toutes les pages
     level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
-    for index, link in enumerate(
-            Page1.links):  # tous les liens des pages du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
-        # debug print("Dans la boucle enumerate(Page1.links)")
-        if index == 10:  # limitation horizontale: il n'y aura l'analyse que de dix liens pour niveau
-            print("index == 10")  # debug
-            break
+    for index, link in enumerate(Page1.links):  # tous les liens des pages du deuxième niveau sont dans cette liste. On y boucle sur un nombre limité d'éléments.
+        #print("Dans la boucle enumerate(Page1.links)")  # debug
+        # if index == 10:  # limitation horizontale: il n'y aura l'analyse que de dix liens pour niveau
+        #     print("index == 10")  # debug
+        #     break
         Page2 = Page(link)  # de chaque lien on fait un objet Page
-        Page2.stopwords(lien)
-        # print("2 Un nouvel objet page")
+        #Page2.stopwords(lien)
         # print("2 Un nouvel objet page")  # debug
         for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
             if link != Page1.url and link not in level2_links:
                 level2_links.append(link)
             Page2.wordcount()  # de chaque page on compte les mots
             res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
-            res_lev2.results = Page2.find_same_words(
-                level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
+            res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
             level2.append(res_lev2)  # on ajoute le résultat dans le tableau
             level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
             for index, link in enumerate(
