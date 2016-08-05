@@ -15,7 +15,7 @@ class Page:
         wordset: lista delle parole con numero occorrenze, percentuale presenza, lemma
     """
 
-    def __init__(self, url):
+    def __init__(self, url, largeur):
         '''
         Pour créer un objet Page; nécesaire de passer en paramètre une URL.
         Exemple
@@ -28,40 +28,39 @@ class Page:
         # Récupère les liens de la page et les place dans un tableau.
         self.links = []
         self.wordset = []
-        for link in self.soup.find_all('a')[:6]:  # il faudra améliorer ça en utilisant urllib.parse et urllib.join
+        for link in self.soup.find_all('a')[:largeur]:
             try:
-                url = link.get('href')[:3]
+                url = link.get('href')
                 #print("J'ai vu ce lien: " + url)
                 urlanalysis = urlparse(url)
-                if url is None or urlanalysis.scheme == 'mailto' or urlanalysis.scheme == 'javascript':
+                if url is None or urlanalysis.scheme[:4] != 'http':
                     #print("Je tue ce lien: " + url)
                     url = ''
-                if urlanalysis.scheme == '' and urlanalysis.netloc == '':
+                elif urlanalysis.scheme == '' and urlanalysis.netloc == '':
                     if url[0] == '/':
                         url = homeparse.scheme + '://' + homeparse.netloc + url
                     else:
                         url = homeparse.scheme + '://' + homeparse.netloc + '/' + url
-                if urlanalysis.scheme == '' and urlanalysis.netloc != '':
+                elif urlanalysis.scheme == '' and urlanalysis.netloc != '':
                     url = 'http://' + url
                 if url != '' and url not in self.links:
                     self.links.append(url)
-                    #print("J'ai pris ce lien aussi :" + url)  # debug
-                    print("\n")
+                    #print("J'ai pris ce lien: " + url)  # debug
             except TypeError:
                 pass
 
 
-    def stopwords(self, lien):
-        """
-        Filtrer les mots
-        """
-        #dictionnaire français des mots à exclure
-        stop_words = set(stopwords.words("french"))
-        words = word_tokenize(lien)
-        filtered_phrase = []
-        for w in words:
-            if w not in stop_words:
-                lien = filtered_phrase.append(w)
+    # def stopwords(self, lien):
+    #     """
+    #     Filtrer les mots
+    #     """
+    #     #dictionnaire français des mots à exclure
+    #     stop_words = set(stopwords.words("french"))
+    #     words = word_tokenize(lien)
+    #     filtered_phrase = []
+    #     for w in words:
+    #         if w not in stop_words:
+    #             lien = filtered_phrase.append(w)
 
 
     def wordcount(self):
@@ -84,12 +83,13 @@ class Page:
         self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordset on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
 
-    @property
     def results_level1(self):
         """
         Sélectionne dans self.wordset les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
         """
-        words_level1 = [self.wordset[0], self.wordset[1], self.wordset[2]]
+        words_level1 = []
+        for item in self.wordset[:5]:
+            words_level1.append(item)
         return words_level1
 
     def find_same_words(self, URLWords):
@@ -101,11 +101,12 @@ class Page:
         La liste est retournée par la fonction.
         """
 
-        comparison_list = [] # création de la liste où l'on mettra le résultat de la comparaison.
+        pourcentage_coherence = 1  # pourcentage de cohérence entre les mots de la première page et ceux des pages associées
+        comparison_list = []  # création de la liste où l'on mettra le résultat de la comparaison.
 
         for item in self.wordset:
             for result in URLWords.results:
-                if item[2] == result[2] and item[1] >= 2:
+                if item[2] == result[2] and item[1] >= pourcentage_coherence:
                     comparison_list.append(item)
 
         return comparison_list
