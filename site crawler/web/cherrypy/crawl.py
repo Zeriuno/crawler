@@ -38,10 +38,10 @@ def analysis(lien, largeur):
         for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
             if link != Page1.url and link != Page2.url and link not in level2_links:
                 level2_links.append(link)
-            Page2.wordcount()  # de chaque page on compte les mots
-            res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
-            res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent X% ou plus, la liste sera vide.
-            level2.append(res_lev2)  # on ajoute le résultat dans la liste
+        Page2.wordcount()  # de chaque page on compte les mots
+        res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
+        res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent X% ou plus, la liste sera vide.
+        level2.append(res_lev2)  # on ajoute le résultat dans la liste
         level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
         for link in level2_links[:20]:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
             Page3 = Page(link)
