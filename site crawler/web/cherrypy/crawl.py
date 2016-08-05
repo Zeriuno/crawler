@@ -36,7 +36,7 @@ def analysis(lien, largeur):
         Page2 = Page(link, largeur/2)  # de chaque lien on fait un objet Page. On ne prendra que la moitié du paramètre `largeur` afin de ne pas trop grossir la taille du résultat (car pour exploiter tout ce qu'on récolte les pages de niveau 3 devront être largeur*(largeur/2))
         # print("2 Un nouvel objet page")  # debug
         for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
-            if link != Page1.url and link not in Page1.links and not in level2_links:
+            if link != Page1.url and link not in Page1.links and link not in level2_links:
                 level2_links.append(link)
             Page2.wordcount()  # de chaque page on compte les mots
             res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
