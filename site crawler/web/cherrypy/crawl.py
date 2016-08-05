@@ -43,16 +43,16 @@ def analysis(lien, largeur):
         res_lev2.results = Page2.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent X% ou plus, la liste sera vide.
         level2.append(res_lev2)  # on ajoute le résultat dans la liste
         level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
-        for link in level2_links[:20]:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
-            Page3 = Page(link)
-            # print("3 Encore un objet page")  # on crée un objet pour chaque lien
-            Page3.wordcount()  # de chaque page on compte les mots
-            res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
-            res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
-            level3.append(res_lev3)  # on ajoute le résultat dans le tableau
+    for link in level2_links[:20]:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
+        Page3 = Page(link)
+        # print("3 Encore un objet page")  # on crée un objet pour chaque lien
+        Page3.wordcount()  # de chaque page on compte les mots
+        res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
+        res_lev3.results = Page3.find_same_words(level1)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent 2% ou plus, la liste sera vide.
+        level3.append(res_lev3)  # on ajoute le résultat dans le tableau
 
-            crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
-            # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
+    crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des tableaux de 10 éléments de URLWords chacun (la limite horizontale imposée avec `index == 10`).
+        # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
     print("     Résultats du crawling de la page 2 ")
     if res_lev2.results:
         print("Liens de la page 2 ", ", ".join(Page2.links))
