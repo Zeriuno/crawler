@@ -27,7 +27,8 @@ class Crawler(object):
 # récupérer le lien soumis
     def prendreURL(self, lien=None):
         if lien:
-            largeur = 20  # variable pour, dans une évolution, pouvoir varier le niveau de récursion horizontale
+            largeur = 20  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le niveau de récursion horizontale
+            pourcentage = 1 # variable pour, dans une évolution, laisser déterminer à l'utilisateur le pourcentage de cohérence requis entre la première page et celles associées
             analysis(lien, largeur)  # fonction externalisée dans crawl.py
         else:
             print("Il est nécessaire de soumettre une URL")

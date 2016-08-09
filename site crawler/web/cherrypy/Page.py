@@ -92,21 +92,20 @@ class Page:
             words_level1.append(item)
         return words_level1
 
-    def find_same_words(self, URLWords):
+    def find_same_words(self, URLWords, pourcentage):
         """
-        La fonction prend un `URLWords` en argument et travaille sur son élément `results`.
+        La fonction prend un `URLWords` et un réel, `pourcentage` en argument et travaille sur son élément `results`.
         La liste est formatée de cette manière:
         [(12, 30.00, "salut"),(1, 2.000, "adieu"), (1, 2.000, "hellogoodbye")].
-        La fonction confronte les mots présents dans self.wordset avec ceux de la liste passée en argument. Si leur présence est supérieure à X%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
+        La fonction confronte les mots présents dans self.wordset avec ceux de la liste passée en argument. Si leur présence est supérieure à `pourcentage`%, les mots de self.worlist sont mis dans une liste (avec occurrences et pourcentage).
         La liste est retournée par la fonction.
         """
 
-        pourcentage_coherence = 1  # pourcentage de cohérence entre les mots de la première page et ceux des pages associées
         comparison_list = []  # création de la liste où l'on mettra le résultat de la comparaison.
 
         for item in self.wordset:
             for result in URLWords.results:
-                if item[2] == result[2] and item[1] >= pourcentage_coherence:
+                if item[2] == result[2] and item[1] >= pourcentage:
                     comparison_list.append(item)
 
         return comparison_list

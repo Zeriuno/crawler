@@ -2,7 +2,7 @@ from Page import *
 from URLWords import *
 
 
-def analysis(lien, largeur):
+def analysis(lien, largeur, pourcentage):
     lienparse = urlparse(lien)
     if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
         lien = 'http://' + lien
