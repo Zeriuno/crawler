@@ -32,8 +32,9 @@ def analysis(lien, largeur, pourcentage):
 
     level2_links = []  # ici on mettra tous les liens présents dans toutes les pages du deuxième niveau
     level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
+    largeurmoitie = int(largeur/2)
     for link in Page1.links:  # [:largeur] pas besoin de limiter l'itération horizontale ici, car nous avons déjà limité les liens collectés dans Page.links via le paramètre `largeur`
-        Page2 = Page(link, largeur/2)  # de chaque lien on fait un objet Page. On ne prendra que la moitié du paramètre `largeur` afin de ne pas trop grossir la taille du résultat (car pour exploiter tout ce qu'on récolte les pages de niveau 3 devront être largeur*(largeur/2))
+        Page2 = Page(link, largeurmoitie)  # de chaque lien on fait un objet Page. On ne prendra que la moitié du paramètre `largeur` afin de ne pas trop grossir la taille du résultat (car pour exploiter tout ce qu'on récolte les pages de niveau 3 devront être largeur*(largeur/2))
         # print("2 Un nouvel objet page")  # debug
         for link in Page2.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
             if link != Page1.url and link != Page2.url and link not in level2_links:
