@@ -49,11 +49,20 @@ def analysis(lien, largeur, pourcentage):
         # print("3 Encore un objet page")  # on crée un objet pour chaque lien
         Page3.wordcount()  # de chaque page on compte les mots
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
-        res_lev3.results = Page3.find_same_words(level1, pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent X% ou plus, la liste res_lev3 sera vide.
+        res_lev3.results = Page3.find_same_words(level1, pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste res_lev3 sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
 
     crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
+
+    # test d'affichage de résultats
+    print("     Résultats du crawling de la page 1 ")
+    print("URL : " + crawling[1].address)
+    for i in crawling[1].results:
+        print("Mot: "+ crawling[1].results[i][2])
+        print("Occurences"+ crawling[1].results[i][0])
+        print("Pourcentage"+ crawling[1].results[i][1])
+
     print("     Résultats du crawling de la page 2 ")
     if res_lev2.results:
         print("Liens de la page 2 ", ", ".join(Page2.links))
