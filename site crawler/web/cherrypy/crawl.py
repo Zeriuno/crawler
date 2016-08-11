@@ -69,6 +69,9 @@ def showcrawling(crawling):
         print("Pourcentage"+ crawling[1].results[i][1])
 
     print("     Résultats du crawling de la page 2 ")
+    for i in crawling[2]:
+        print("URL : " + crawling[2].i.address)
+          # contrôler si dans crawling[2].i.results il y a quelque chose. si vide, dire "Rien", sinon afficher.
     if res_lev2.results:
         print("Liens de la page 2 ", ", ".join(Page2.links))
     else:

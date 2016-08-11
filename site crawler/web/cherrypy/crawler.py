@@ -33,7 +33,7 @@ class Crawler(object):
             showcrawl(crawling)  # affichage des résultats du crawling
         else:
             print("Il est nécessaire de soumettre une URL")
-        return ("Crawling en cours")
+        return ("")
     prendreURL.exposed = True
 
   # # recupérer le texte de la page
