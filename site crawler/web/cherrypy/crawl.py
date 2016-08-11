@@ -59,6 +59,10 @@ def analysis(lien, largeur, pourcentage):
 def showcrawling(crawling):
     """
     Fonction qui affiche le contenu d'une liste de résultats de crawling.
+
+    crawling[1] = un objet de type URLWords
+    i > 1
+    crawling[i] = [o, o, o... ] liste d'objets de type URLWords
     """
     # test d'affichage de résultats
     print("     Résultats du crawling de la page 1 ")
