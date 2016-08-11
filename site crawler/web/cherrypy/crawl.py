@@ -13,7 +13,7 @@ def analysis(lien, largeur, pourcentage):
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
     level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
-    level1.results = Page1.results_level1()
+    level1.results = Page1.results_level1()  # amélioration: ici aussi, comme dans les cas suivants, mettre un tableau.
 
 
     # print("RESULTATS DU CRAWLING")
