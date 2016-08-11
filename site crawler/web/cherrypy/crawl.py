@@ -64,24 +64,33 @@ def showcrawling(crawling):
     i > 1
     crawling[i] = [o, o, o... ] liste d'objets de type URLWords
     """
-    # test d'affichage de résultats
-    print("     Résultats du crawling de la page 1 ")
-    print("URL : " + crawling[1].address)
-    for i in crawling[1].results:
-        print("Mot: "+ crawling[1].results[i][2])
-        print("Occurences"+ crawling[1].results[i][0])
-        print("Pourcentage"+ crawling[1].results[i][1])
 
-    print("     Résultats du crawling de la page 2 ")
-    for i in crawling[2]:
-        print("URL : " + crawling[2].i.address)
-          # contrôler si dans crawling[2].i.results il y a quelque chose. si vide, dire "Rien", sinon afficher.
-    if res_lev2.results:
-        print("Liens de la page 2 ", ", ".join(Page2.links))
-    else:
-        print("Pas de liens pour la page 2")  # on affiche pas les listes vides
+    cpt = 0
+    while(cpt < len(crawling)):  # boucle d'affichage: si on veut passer à une récursion sur plus de niveaux, le code est prêt
+        if(cpt == 0):  # la liste est constituée d'une suite d'éléments identiques sauf le premier. Exception donc ici
+            # test d'affichage de résultats
+            print("     Résultats du crawling de la page 1 ")
+            print("URL : " + crawling[1].address)
+            for i in crawling[1].results:
+                print("Mot: "+ crawling[1].results[i][2])
+                print("Occurences"+ crawling[1].results[i][0])
+                print("Pourcentage"+ crawling[1].results[i][1])
+        else:
+            print("     Résultats du crawling de la page 2 ")
+            for i in crawling[2]:
+                print("URL : " + crawling[2].i.address)
+        cpt += 1
 
-    # verif print(res_lev2.results)
+
+
+# ------------------------------------ partie à revoir
+                # contrôler si dans crawling[2].i.results il y a quelque chose. si vide, dire "Rien", sinon afficher.
+                if res_lev2.results:
+                    print("Liens de la page 2 ", ", ".join(Page2.links))
+                else:
+                    print("Pas de liens pour la page 2")  # on affiche pas les listes vides
+
+                # verif print(res_lev2.results)
     print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0],
           ",pourcentage de présence du mot : ", res_lev2.results[0][1], "%")
     print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0],
