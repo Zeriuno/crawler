@@ -67,9 +67,9 @@ def showcrawling(crawling):
 
     cpt = 0
     while(cpt < len(crawling)):  # boucle d'affichage: si on veut passer à une récursion sur plus de niveaux, le code est prêt
+        print("     Résultats du crawling de la page " + (cpt+1) )  # corriger la traduction de int à str
         if(cpt == 0):  # la liste est constituée d'une suite d'éléments identiques sauf le premier. Exception donc ici
             # test d'affichage de résultats
-            print("     Résultats du crawling de la page 1 ")
             print("URL : " + crawling[1].address)
             for i in crawling[1].results:
                 print("Mot: "+ crawling[1].results[i][2])
