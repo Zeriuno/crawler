@@ -29,7 +29,8 @@ class Crawler(object):
         if lien:
             largeur = 20  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le niveau de récursion horizontale
             pourcentage = 1 # variable pour, dans une évolution, laisser déterminer à l'utilisateur le pourcentage de cohérence requis entre la première page et celles associées
-            analysis(lien, largeur)  # fonction externalisée dans crawl.py
+            crawling = analysis(lien, largeur)  # fonction externalisée dans crawl.py, elle retourne une liste avec les résultats
+            showcrawl(crawling)  # affichage des résultats du crawling
         else:
             print("Il est nécessaire de soumettre une URL")
         return ("Crawling en cours")

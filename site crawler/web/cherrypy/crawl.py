@@ -54,7 +54,12 @@ def analysis(lien, largeur, pourcentage):
 
     crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
+    return crawling
 
+def showcrawling(crawling):
+    """
+    Fonction qui affiche le contenu d'une liste de résultats de crawling.
+    """
     # test d'affichage de résultats
     print("     Résultats du crawling de la page 1 ")
     print("URL : " + crawling[1].address)
