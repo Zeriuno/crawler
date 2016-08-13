@@ -56,32 +56,6 @@ def analysis(lien, largeur, pourcentage):
     # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
     return crawling
 
-def showcrawling(crawling):
-    """
-    Fonction qui affiche le contenu d'une liste de résultats de crawling.
-
-    crawling[1] = un objet de type URLWords
-    i > 1
-    crawling[i] = [o, o, o... ] liste d'objets de type URLWords
-    """
-
-    cpt = 0
-    while(cpt < len(crawling)):  # boucle d'affichage: si on veut passer à une récursion sur plus de niveaux, le code est prêt
-        print("     Résultats du crawling de la page " + (cpt+1) )  # corriger la traduction de int à str
-        if(cpt == 0):  # la liste est constituée d'une suite d'éléments identiques sauf le premier. Exception donc ici
-            # test d'affichage de résultats
-            print("URL : " + crawling[1].address)
-            for i in crawling[1].results:
-                print("Mot: "+ crawling[1].results[i][2])
-                print("Occurences"+ crawling[1].results[i][0])
-                print("Pourcentage"+ crawling[1].results[i][1])
-        else:
-            print("     Résultats du crawling de la page 2 ")
-            for i in crawling[2]:
-                print("URL : " + crawling[2].i.address)
-        cpt += 1
-
-
 
 # ------------------------------------ partie à revoir
     #             # contrôler si dans crawling[2].i.results il y a quelque chose. si vide, dire "Rien", sinon afficher.
