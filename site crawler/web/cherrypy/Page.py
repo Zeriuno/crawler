@@ -109,3 +109,5 @@ class Page:
                     comparison_list.append(item)
 
         return comparison_list
+
+# sauvegarder les résultats
