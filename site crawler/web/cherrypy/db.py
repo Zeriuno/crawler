@@ -18,15 +18,15 @@ class db:
     def __init__(self):
         """
         """
-        file = open("db.conf", "r")
+        file = open("db.conf", "r")  # amélioration: dans un try et sinon afficher un message d'erreur
         conf = file.read()
-        host = conf.split("\n")[0]
-        port = conf.split("\n")[1]
-        user = conf.split("\n")[2]
-        password = conf.split("\n")[3]
-        database = conf.split("\n")[4]
-        charset = conf.split("\n")[5]
-        self.conn = pymysql.connect(host, int(port), user, password, database, charset)
+        dbhost = conf.split("\n")[0]
+        dbport = conf.split("\n")[1]
+        dbuser = conf.split("\n")[2]
+        dbpassword = conf.split("\n")[3]
+        dbdatabase = conf.split("\n")[4]
+        dbcharset = conf.split("\n")[5]
+        self.conn = pymysql.connect(host = dbhost, port = int(dbport), user = dbuser, password = dbpassword, database = dbdatabase, charset = dbcharset)
 
     def insertPage(self, Page):
         """
