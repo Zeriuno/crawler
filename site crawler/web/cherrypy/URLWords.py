@@ -31,16 +31,3 @@ def showcrawling(self):
         cpt += 1
     else:
         print("Pas de résultats.")
-
-   # for result in crawling:
-        #print("1er lien: " + str(level1.Page1.url))
-        #print("Mots les plus frequents: " + str(level1.Page1.results))
-        #for link in Page2.links:
-           # print("lien: " + str(level2.Page2.url))
-           # print("Mots les plus frequents: " + str(level2.Page2.results))
-        #for link in Page3.links:
-           # print("lien: " + str(level3.Page3.url))
-           # print("Mots les plus frequents: " + str(level3.Page3.results))
-
-
-#sauvegarder les resultats
