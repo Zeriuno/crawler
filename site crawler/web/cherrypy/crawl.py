@@ -47,6 +47,5 @@ def analysis(lien, largeur, pourcentage):
         res_lev3.results = Page3.find_same_words(level1, pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste res_lev3 sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
 
-    crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
-    # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
+    crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1`, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     return crawling
