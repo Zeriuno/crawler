@@ -22,6 +22,7 @@ class URLWords(object):
 
 def showcrawling(self):
     print("Résultats de la page " + self.address)
+    if(self.results)  # corriger: on doit tester si il y a quelque chose dans ce tableau
    # for result in crawling:
         #print("1er lien: " + str(level1.Page1.url))
         #print("Mots les plus frequents: " + str(level1.Page1.results))
