@@ -18,7 +18,15 @@ class db:
     def __init__(self, db:object):
         """
         """
-        self.conn = pymysql.connect(host='localhost', port= 3306, user="mimocrawlerusr", password="yolo", database="mimocrawlerdb", charset='utf8')
+        file = open("db.conf", "r")
+        conf = file.read()
+        host = conf.split("\n")[0]
+        port = conf.split("\n")[1]
+        user = conf.split("\n")[2]
+        password = conf.split("\n")[3]
+        database = conf.split("\n")[4]
+        charset = conf.split("\n")[5]
+        self.conn = pymysql.connect(host, int(port), user, password, database, charset)
 
     def insertPage(self, Page):
         """
