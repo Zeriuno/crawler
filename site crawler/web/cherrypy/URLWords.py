@@ -20,9 +20,8 @@ class URLWords(object):
         self.results = []
 
 
-#fonction pour mettre dans le résultat
-
-#def showcrawling(self, crawling):
+def showcrawling(self):
+    print("Résultats de la page " + self.address)
    # for result in crawling:
         #print("1er lien: " + str(level1.Page1.url))
         #print("Mots les plus frequents: " + str(level1.Page1.results))
