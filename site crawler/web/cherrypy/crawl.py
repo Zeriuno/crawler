@@ -55,36 +55,3 @@ def analysis(lien, largeur, pourcentage):
     crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1` est un URLWords, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     # show_results(crawling)  # on pourrait appeller la fonction qui fait l'affichage des résultats
     return crawling
-
-
-# ------------------------------------ partie à revoir
-    #             # contrôler si dans crawling[2].i.results il y a quelque chose. si vide, dire "Rien", sinon afficher.
-    #             if res_lev2.results:
-    #                 print("Liens de la page 2 ", ", ".join(Page2.links))
-    #             else:
-    #                 print("Pas de liens pour la page 2")  # on affiche pas les listes vides
-    #
-    #             # verif print(res_lev2.results)
-    # print("Mot : ", res_lev2.results[0][2], ", nombre d'occurences du mot : ", res_lev2.results[0][0],
-    #       ",pourcentage de présence du mot : ", res_lev2.results[0][1], "%")
-    # print("Mot : ", res_lev2.results[1][2], ", nombre d'occurences du mot : ", res_lev2.results[1][0],
-    #       ",pourcentage de présence du mot : ", res_lev2.results[1][1], "%")
-    # print("Mot : ", res_lev2.results[2][2], ", nombre d'occurences du mot : ", res_lev2.results[2][0],
-    #       ",pourcentage de présence du mot : ", res_lev2.results[2][1], "%")
-    #
-    # print("\n")
-    #
-    # print("     Résultats du crawling de la page 3 ")
-    #
-    # if res_lev3.results:
-    #     print("Liens de la page 3", ", ".join(Page3.links))
-    # else:
-    #     print("Pas de liens pour la page 3")  # on affiche pas les listes vides
-    #
-    # # verif print(res_lev3.results)
-    # print("Mot : ", res_lev3.results[0][2], ", nombre d'occurences du mot : ", res_lev3.results[0][0],
-    #       ",pourcentage de présence du mot : ", res_lev3.results[0][1], "%")
-    # print("Mot : ", res_lev3.results[1][2], ", nombre d'occurences du mot : ", res_lev3.results[1][0],
-    #       ",pourcentage de présence du mot : ", res_lev3.results[1][1], "%")
-    # print("Mot : ", res_lev3.results[2][2], ", nombre d'occurences du mot : ", res_lev3.results[2][0],
-    #       ",pourcentage de présence du mot : ", res_lev3.results[2][1], "%")
