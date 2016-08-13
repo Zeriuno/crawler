@@ -12,23 +12,13 @@ def analysis(lien, largeur, pourcentage):
     Page1 = Page(lien, largeur)
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
-    level1 = URLWords(Page1)  # On crée un objet URLWords, il ne continet que l'URL de Page1.
-    level1.results = Page1.results_level1()  # amélioration: ici aussi, comme dans les cas suivants, mettre un tableau.
+    level1 = []  # liste qui n'aura qu'une seule case occupée, mais cela permet d'uniformiser le traitement pour l'affichage
+    res_lev1 = URLWords(Page1)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
+    res_lev1.results = Page1.results_level1()  # On ajoute les mots plus récurrents
+    level1.append(res_lev1)  # on met l'objet dans la liste level1
 
-
-    # print("RESULTATS DU CRAWLING")
-    # print("\n")
-    # # VERIF print(level1.results)
-    # print("     Résultats du crawling de la page 1 ")
-    # print("Liens de la page 1", ", ".join(Page1.links))
-    # print("Mot : ", level1.results[0][2], ", nombre d'occurences du mot : ", level1.results[0][0],
-    #       ",pourcentage de présence du mot : ", level1.results[0][1], "%")
-    # print("Mot : ", level1.results[1][2], ", nombre d'occurences du mot : ", level1.results[1][0],
-    #       ",pourcentage de présence du mot : ", level1.results[1][1], "%")
-    # print("Mot : ", level1.results[2][2], ", nombre d'occurences du mot : ", level1.results[2][0],
-    #       ",pourcentage de présence du mot : ", level1.results[2][1], "%")
-
-    # level1.results = Page1.results_level1()  # La fonction renvoie les trois premiers résultats, et ils sont passés dans la liste results
+# ----------------------
+# Traitement du niveau 2
 
     level2_links = []  # ici on mettra tous les liens présents dans toutes les pages du deuxième niveau
     level2 = []  # contrairement à `level1`, cette variable est une liste. Chaque élément de la liste est un URLWords.
@@ -43,6 +33,11 @@ def analysis(lien, largeur, pourcentage):
         res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
         res_lev2.results = Page2.find_same_words(level1, pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste sera vide.
         level2.append(res_lev2)  # on ajoute le résultat dans la liste
+
+# ----------------------
+# Traitement du niveau 3
+
+
         level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
     for link in level2_links:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
         Page3 = Page(link, 0)  # Nous n'allos pas garder d'informations sur les liens trouvés à ce niveau, donc 0
