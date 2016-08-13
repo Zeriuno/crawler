@@ -15,7 +15,7 @@ class db:
     Supprimer les contenus plus vieux de x jours.
     """
 
-    def __init__(self, db:object):
+    def __init__(self):
         """
         """
         file = open("db.conf", "r")
