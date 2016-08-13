@@ -1,4 +1,4 @@
-from crawl import analysis
+from crawl import *
 import cherrypy
 from jinja2 import Environment, FileSystemLoader
 
