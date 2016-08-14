@@ -16,6 +16,8 @@ def analysis(lien, largeur, pourcentage):
     res_lev1 = URLWords(Page1)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
     res_lev1.results = Page1.results_level1()  # On ajoute les mots plus récurrents
     level1.append(res_lev1)  # on met l'objet dans la liste level1
+    crawling = []
+    crawling.append(level1)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
 # ----------------------
 # Traitement du niveau 2
@@ -33,12 +35,13 @@ def analysis(lien, largeur, pourcentage):
         res_lev2 = URLWords(Page2)  # On crée un objet pour chaque page
         res_lev2.results = Page2.find_same_words(level1[0], pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste sera vide.
         level2.append(res_lev2)  # on ajoute le résultat dans la liste
+    crawling.append(level2)
 
 # ----------------------
 # Traitement du niveau 3
 
 
-        level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
+    level3 = []  # comme `level2`, cette variable est une liste. Chaque élément de la liste est un URLWords.
     for link in level2_links:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
         Page3 = Page(link, 0)  # Nous n'allos pas garder d'informations sur les liens trouvés à ce niveau, donc 0
         # print("3 Encore un objet page")  # on crée un objet pour chaque lien
@@ -46,8 +49,7 @@ def analysis(lien, largeur, pourcentage):
         res_lev3 = URLWords(Page3)  # On crée un objet pour chaque page
         res_lev3.results = Page3.find_same_words(level1, pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste res_lev3 sera vide.
         level3.append(res_lev3)  # on ajoute le résultat dans le tableau
-
-    crawling = [level1, level2, level3]  # Tous les résultats dans une seule variable. `level1`, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
+    crawling.append(level3)  # Tous les résultats dans une seule variable. `level1`, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     return crawling
 
 
