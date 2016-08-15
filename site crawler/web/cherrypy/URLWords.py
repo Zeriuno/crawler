@@ -22,7 +22,7 @@ class URLWords(object):
     def save1(self, connectdb):
         """
         Enregistre les données du premier niveau de recherche dans la base.
-        """ 
+        """
         curs = connectdb.conn.cursor()
         curs.execute("INSERT INTO url (url, date) VALUES ('"+self.address+"', NOW())")
         for item in self.results:
