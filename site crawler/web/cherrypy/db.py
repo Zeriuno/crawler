@@ -31,6 +31,7 @@ class db:
     def insertPage(self, Page):
         """
         Insère une page analysée dans la base.
+        Inutile, mais bon, une fois écrite ça semble dommage de la supprimer.
         """
         curs = self.conn.cursor()
         curs.execute("INSERT INTO url (url, date) VALUES ('"+Page.url+"', CURDATE())")
@@ -42,7 +43,8 @@ class db:
 
     def readPage(self, Page):
         """
-        Pour extraire le wordset d'une page, à partir d'une URL
+        Pour extraire le wordset d'une page, à partir d'une URL.
+        Inutile, mais bon, une fois écrite ça semble dommage de la supprimer.
         """
         curs = self.conn.cursor()
         curs.execute("SELECT occurrences, percentage, item FROM words WHERE (url = '"+Page.url+"')")
