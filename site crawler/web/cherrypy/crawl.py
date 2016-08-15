@@ -1,6 +1,6 @@
 from Page import *
 from URLWords import *
-
+from db import *
 
 def analysis(lien, largeur, pourcentage):
     lienparse = urlparse(lien)
@@ -19,6 +19,7 @@ def analysis(lien, largeur, pourcentage):
     level.append(res_lev)  # on met l'objet dans la liste level1
     crawling = []
     crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
+    crawling.[0][0].save1()  # URL et mots associés sont sauvegardés dans les tables url et words
 
 # ----------------------
 # Traitement du niveau 2
