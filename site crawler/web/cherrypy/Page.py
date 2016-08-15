@@ -83,12 +83,12 @@ class Page:
         self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordset on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
 
-    def results_level1(self):
+    def results_level1(self, podium):
         """
         Sélectionne dans self.wordset les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
         """
         words_level1 = []
-        for item in self.wordset[:5]:
+        for item in self.wordset[:podium]:
             words_level1.append(item)
         return words_level1
 

@@ -14,7 +14,8 @@ def analysis(lien, largeur, pourcentage):
     Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
     level = []  # liste qui n'aura qu'une seule case occupée, mais cela permet d'uniformiser le traitement pour l'affichage
     res_lev = URLWords(Page1)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
-    res_lev.results = Page1.results_level1()  # On ajoute les mots plus récurrents
+
+    res_lev.results = Page1.results_level1(5)  # On ajoute les mots plus présents
     level.append(res_lev)  # on met l'objet dans la liste level1
     crawling = []
     crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
