@@ -17,6 +17,15 @@ class URLWords(object):
         self.address = Page.url
         self.results = []
 
+    def save1(self, connectdb):
+        """
+        Enregistre les données du premier niveau de recherche dans la base.
+        """
+        curs = connectdb.conn.cursor()
+        curs.execute("INSERT INTO url (url, date) VALUES ('"+self.address+"', NOW())")
+        for item in self.results:
+            curs.execute("INSERT INTO words(item, occurrences, percentage, idurl) SELECT '"+item[2]+"', '"+item[0]+"', '"+item[1]+"', MAX(idurl) FROM url")
+
 
     def showcrawling(self):
         print("Résultats de la page " + self.address)
