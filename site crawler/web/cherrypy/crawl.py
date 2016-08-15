@@ -7,7 +7,7 @@ def analysis(lien, largeur, pourcentage):
     if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
         lien = 'http://' + lien
 
-    # ici tester si la page donne un 200 (r.status_code)
+    # ici tester si la page donne un 200 (r.status_code), else "veuillez tester votre url"
 
     Page1 = Page(lien, largeur)
     # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
