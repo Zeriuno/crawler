@@ -3,6 +3,8 @@ from URLWords import *
 from db import *
 
 def analysis(lien, largeur, pourcentage):
+
+    reclevel = 1  # indicateur du niveau de récursion; crade, mais pour l'instant on tient ça
     lienparse = urlparse(lien)
     if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
         lien = 'http://' + lien
@@ -21,11 +23,12 @@ def analysis(lien, largeur, pourcentage):
     crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
     database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
-    crawling.[0][0].save1()  # URL et mots associés sont sauvegardés dans les tables url et words
+    crawling[reclevel -1 ][0].save1()  # URL et mots associés sont sauvegardés dans les tables url et words
 
 # ----------------------
 # Traitement du niveau 2
 
+    reclevel += 1
     level2_links = []  # ici on mettra tous les liens présents dans toutes les pages du deuxième niveau
     level = []  # On vide la liste
     largeurmoitie = int(largeur/2)
@@ -40,7 +43,6 @@ def analysis(lien, largeur, pourcentage):
         res_lev.results = PageN.find_same_words(crawling[0][0], pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste sera vide.
         level.append(res_lev)  # on ajoute le résultat dans la liste
     crawling.append(level)
-    reclevel = 2  # crade, mais pour le moment on tient ça
     for i in crawling[reclevel -1]:
         i.savefollow(database, reclevel)
 
