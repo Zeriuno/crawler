@@ -1,4 +1,4 @@
-import pymysql
+# import pymysql  # on l'importe déjà dans crawl.py
 
 class URLWords(object):
     """
