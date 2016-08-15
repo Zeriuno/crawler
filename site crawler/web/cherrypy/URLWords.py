@@ -1,3 +1,5 @@
+import pymysql
+
 class URLWords(object):
     """
     Objet pour traiter les résultats des analyses des pages en vue de les afficher.
