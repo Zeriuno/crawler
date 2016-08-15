@@ -3,7 +3,7 @@
 * Traitement BDD:
   * enregistrer les résultats de la première page
     ```
-    INSERT INTO url(url, DATETIME) VALUES (crawling[0][0].address, CURDATE()); --> améliorer CURDATE qui ne retourne que le jour, pas l'heure
+    INSERT INTO url(url, DATETIME) VALUES (crawling[0][0].address, NOW());
     INSERT INTO words(item, occurrences, percentage, idurl)
       SELECT crawling[0][0].results[0][2], crawling[0][0].results[0][0], crawling[0][0].results[0][1], MAX(idurl)
       FROM url;
@@ -11,6 +11,10 @@
   * récupérer idurl et le passer au phases suivantes -> pas nécessaire, ce sera toujours `MAX(idurl) FROM url`
   * pour chaque lien:
     * si il y a des mots, pour chaque mot enregistrer url, mot, pourcentage, niveau de récursion
+    ```
+    INSERT INTO suite(urlsuite, idword, percentagesuite, occurrencessuite, niveausuite)
+    SELECT $url, idword FROM words WHERE item = $item AND idurl = MAX(idurl)
+    ```
     * si il n'y a pas de mots, idsuite, urlsuite, idword = null, pourcentage = null, niveau
 * Stopwords
 
