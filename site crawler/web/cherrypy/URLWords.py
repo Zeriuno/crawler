@@ -30,7 +30,7 @@ class URLWords(object):
         connectdb.conn.commit()
         curs.close()
 
-    def savefollow(self, connectdb, address, level):
+    def savefollow(self, connectdb, level):
         """
         Enregistre dans la base de données les résultats de l'analyse des niveaux successifs d'un crawling.
         """
