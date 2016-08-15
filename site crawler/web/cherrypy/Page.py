@@ -75,7 +75,7 @@ class Page:
         Page1.wordset[0][1] = 30.00
         Page1.wordset[0][3] = "salut"
         """
-        text = self.soup.get_text() #On récupère le texte
+        text = self.soup.get_text()  # On récupère le texte
         items = re.sub("[^\w]", " ",  text).split()
         #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
