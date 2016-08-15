@@ -1,6 +1,6 @@
-from Page import *
-from URLWords import *
-from db import *
+from Page import *  # Pour lier URL, contenu, calcul des mots
+from URLWords import *  # Pour gérer le résultat
+from db import *  #  Pour sauvegarder les résultats dans la base
 
 def analysis(lien, largeur, pourcentage):
 
