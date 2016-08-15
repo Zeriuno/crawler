@@ -35,7 +35,10 @@ class URLWords(object):
         Enregistre dans la base de données les résultats de l'analyse des niveaux successifs d'un crawling.
         """
         curs = connectdb.conn.cursor()
-        curs.execute()
+        if self.results:
+            curs.execute("INSERT INTO follow(link, idurl, idword, occurrencesfollow, percentagefollow) SELECT '"+self.address+"', MAX(idurl) FROM url, '"+str(self.results[][0])+"', '"+str(self.results[][1])+"'")
+        else:
+            curs.execute("INSERT INTO follow(link, idurl) SELECT '"+self.address+"', MAX(idurl) FROM url")
         connectdb.conn.commit()
         curs.close()
 
