@@ -30,16 +30,16 @@ class URLWords(object):
         connectdb.conn.commit()
         curs.close()
 
-    def savefollow(self, connectdb, address):
+    def savefollow(self, connectdb, address, level):
         """
         Enregistre dans la base de données les résultats de l'analyse des niveaux successifs d'un crawling.
         """
         curs = connectdb.conn.cursor()
         if self.results:
             for res in self.results:
-                curs.execute("INSERT INTO follow(link, idurl, idword, occurrencesfollow, percentagefollow) SELECT '"+self.address+"', MAX(idurl) FROM url, '"+str(res[0])+"', '"+str(res[1])+"'")
+                curs.execute("INSERT INTO follow(link, level, idurl, idword, occurrencesfollow, percentagefollow) SELECT '"+self.address+"', '"+level+"', MAX(idurl) FROM url, '"+str(res[0])+"', '"+str(res[1])+"'")
         else:
-            curs.execute("INSERT INTO follow(link, idurl) SELECT '"+self.address+"', MAX(idurl) FROM url")
+            curs.execute("INSERT INTO follow(link, level, idurl) SELECT '"+self.address+"', '"+level+"', MAX(idurl) FROM url")
         connectdb.conn.commit()
         curs.close()
 
