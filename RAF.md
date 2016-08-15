@@ -1,4 +1,4 @@
-* Affichage
+* Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 * XML
 * Traitement BDD:
   * pour chaque lien:
