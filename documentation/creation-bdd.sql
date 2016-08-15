@@ -23,4 +23,4 @@ CREATE TABLE follow(
   idword INT references words(idword),
   occurrencesfollow INT,
   percentagefollow FLOAT
-)
+);
