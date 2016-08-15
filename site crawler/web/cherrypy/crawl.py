@@ -1,6 +1,7 @@
 from Page import *  # Pour lier URL, contenu, calcul des mots
 from URLWords import *  # Pour gérer le résultat
 from db import *  #  Pour sauvegarder les résultats dans la base
+from lxml import etree  # Pour générer un XML à partir du résultat
 
 def analysis(lien, largeur, pourcentage):
 

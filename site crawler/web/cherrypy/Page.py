@@ -1,4 +1,4 @@
-from urllib.parse import *  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
+from urllib.parse import parse  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from bs4 import BeautifulSoup
