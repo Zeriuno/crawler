@@ -1,6 +1,11 @@
 * Affichage
 * XML
-* Traitement BDD
+* Traitement BDD:
+  * enregistrer les résultats de la première page: 
+  * récupérer idurl et le passer au phases suivantes
+  * pour chaque lien:
+    * si il y a des mots, pour chaque mot enregistrer url, mot, pourcentage, niveau de récursion
+    * si il n'y a pas de mots, idsuite, urlsuite, idword = null, pourcentage = null, niveau
 * Stopwords
 
 ~~* Pour l'instant on code en dur utilisateur et mot de passe de la BDD.~~
