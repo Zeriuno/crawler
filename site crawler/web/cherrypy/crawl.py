@@ -20,7 +20,7 @@ def analysis(lien, largeur, pourcentage):
     crawling = []
     crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
-    databse = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
+    database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
     crawling.[0][0].save1()  # URL et mots associés sont sauvegardés dans les tables url et words
 
 # ----------------------
