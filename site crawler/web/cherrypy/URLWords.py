@@ -27,6 +27,8 @@ class URLWords(object):
         curs.execute("INSERT INTO url (url, date) VALUES ('"+self.address+"', NOW())")
         for item in self.results:
             curs.execute("INSERT INTO words(item, occurrences, percentage, idurl) SELECT '"+item[2]+"', '"+item[0]+"', '"+item[1]+"', MAX(idurl) FROM url")
+        connectdb.conn.commit()
+        curs.close()
 
 
     def showcrawling(self):
