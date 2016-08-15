@@ -1,13 +1,14 @@
 * Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 * XML
 * Traitement BDD:
-  * pour chaque lien:
-    * si il y a des mots, pour chaque mot enregistrer url, mot, pourcentage, niveau de récursion
+  ~~* pour chaque lien:~~
+
+    ~~* si il y a des mots, pour chaque mot enregistrer url, mot, pourcentage, niveau de récursion~~
     ```
     INSERT INTO suite(urlsuite, idword, percentagesuite, occurrencessuite, niveausuite)
     SELECT $url, idword FROM words WHERE item = $item AND idurl = MAX(idurl)
     ```
-    * si il n'y a pas de mots, idsuite, urlsuite, idword = null, pourcentage = null, niveau
+    ~~* si il n'y a pas de mots, idsuite, urlsuite, idword = null, pourcentage = null, niveau~~
 * Stopwords
 
 ~~* Pour l'instant on code en dur utilisateur et mot de passe de la BDD.~~
