@@ -15,8 +15,11 @@ CREATE TABLE words(
   percentage FLOAT
 );
 
-CREATE TABLE links(
-  idlink INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE follow(
+  idfollow INT AUTO_INCREMENT PRIMARY KEY,
   link VARCHAR(300) NOT NULL,
-  idurl INT references url(idurl)
+  idurl INT references url(idurl), --nécessaire car des fois on a des liens sans mots
+  idword INT references words(idword),
+  occurrencesfollow INT,
+  percentagefollow FLOAT
 )
