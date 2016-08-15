@@ -36,7 +36,8 @@ class URLWords(object):
         """
         curs = connectdb.conn.cursor()
         if self.results:
-            curs.execute("INSERT INTO follow(link, idurl, idword, occurrencesfollow, percentagefollow) SELECT '"+self.address+"', MAX(idurl) FROM url, '"+str(self.results[][0])+"', '"+str(self.results[][1])+"'")
+            for res in self.results:
+                curs.execute("INSERT INTO follow(link, idurl, idword, occurrencesfollow, percentagefollow) SELECT '"+self.address+"', MAX(idurl) FROM url, '"+str(res[0])+"', '"+str(res[1])+"'")
         else:
             curs.execute("INSERT INTO follow(link, idurl) SELECT '"+self.address+"', MAX(idurl) FROM url")
         connectdb.conn.commit()
