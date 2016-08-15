@@ -18,6 +18,7 @@ CREATE TABLE words(
 CREATE TABLE follow(
   idfollow INT AUTO_INCREMENT PRIMARY KEY,
   link VARCHAR(300) NOT NULL,
+  level INT NOT NULL,
   idurl INT references url(idurl),
   idword INT references words(idword),
   occurrencesfollow INT,
