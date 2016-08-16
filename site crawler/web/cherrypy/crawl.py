@@ -115,7 +115,11 @@ def xprtxml(crawling):
                     word = etree.SubElement("word")
                     for w in r:
                         item = etree.SubElement("item")
+                        item.text = w[2]
                         occurrences = etree.SubElement("occurrences")
+                        occurrences.text = str(w[0])
                         percentage = etree.SubElement("percentage")
-
+                        percentage.text = str(w[1])
         count += 1
+
+    
