@@ -10,28 +10,28 @@ S'il faut une DTD ou proche, le schéma sera
 -->
 <?xml version="1.0" encoding="utf8"?>
 <crawling>
-<level iteration="1">
-  <page>
-  <url>`url`</url>
-  <results>
-    <word>
-      <item>`mot1`</item>
-      <occurences>nb`</occurences>
-      <percentage>`poursan`</percentage>
-    </word>
-    <word>
-      <item>`mot2`</item>
-      <occurences>nb`</occurences>
-      <percentage>`poursan`</percentage>
-    </word>
-    <word>
-      <item>`mot3`</item>
-      <occurences>nb`</occurences>
-      <percentage>`poursan`</percentage>
-    </word>
-  </results>
-  </page>
-</level>
+  <level iteration="1">
+    <page>
+      <url>`url`</url>
+      <results>
+        <word>
+          <item>`mot1`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+        <word>
+          <item>`mot2`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+        <word>
+          <item>`mot3`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+      </results>
+    </page>
+  </level>
 <level iteration="2">
   <page>
     <url>
