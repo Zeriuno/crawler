@@ -2,6 +2,10 @@
 
 * XML
 
+* Docker
+
+* setupdb.py
+
 * Réparer requête avec MAX(...) FROM ...WHERE...
 
 * Stopwords
