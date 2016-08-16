@@ -89,6 +89,9 @@ def show(crawling):
 
 
 def xprtxml(largeur):
+    """
+    http://lxml.de/tutorial.html
+    """
     root = etree.Element("crawling")
     count = 1
     while count < largeur:
