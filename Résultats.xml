@@ -11,7 +11,7 @@ S'il faut une DTD ou proche, le schéma sera
 <?xml version="1.0" encoding="utf8"?>
 <crawling>
   <level iteration="1">
-    <page>
+    <page content="base">
       <url>`url`</url>
       <results>
         <word>
@@ -33,14 +33,12 @@ S'il faut une DTD ou proche, le schéma sera
     </page>
   </level>
 <level iteration="2">
-  <page>
+  <page content="empty">
     <url>
       `url`
     </url>
-    <results>
-    </results>
   </page>
-  <page>
+  <page content="present">
     <url>
       `url`
     </url>
