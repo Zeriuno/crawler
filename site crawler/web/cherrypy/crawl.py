@@ -88,13 +88,14 @@ def show(crawling):
       # affichage des résultats du crawling
 
 
-def xprtxml(largeur):
+def xprtxml(crawling):
     """
+    Fonction pour traduire les résultats gardés dans la liste crawling, en un fichier XML.
     http://lxml.de/tutorial.html
     """
     root = etree.Element("crawling")
     count = 1
-    while count < largeur:
+    while count < len(crawling):
         root.append(etree.Element("level"))
         level.set("iteration", str(count))
         count += 1
