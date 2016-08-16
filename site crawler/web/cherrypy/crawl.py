@@ -121,5 +121,4 @@ def xprtxml(crawling):
                         percentage = etree.SubElement("percentage")
                         percentage.text = str(w[1])
         count += 1
-
-    
+    # now to file print(etree.tostring(root, encoding='UTF-8' pretty_print=True, xml_declaration=True)
