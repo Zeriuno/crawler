@@ -1,7 +1,5 @@
 * Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 
-* XML
-
 * Docker
 
 * setupdb.py
@@ -35,3 +33,5 @@
       SELECT $url, idword FROM words WHERE item = $item AND idurl = MAX(idurl)
       ```
       ~~* si il n'y a pas de mots, idsuite, urlsuite, idword = null, pourcentage = null, niveau~~
+
+~~* XML~~
