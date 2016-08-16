@@ -1,9 +1,10 @@
 <!--
-S'il faut une DTD ou proche, le schéma sera
+S'il fallait une DTD, le schéma serait
 <!ELEMENT crawling (level+)>
   <!ELEMENT level (page+)>
   <!ATTLIST level iteration (#CDATA) #REQUIRED>
     <!ELEMENT page (url, results+)>
+    <!ATTLIST page content (#CDATA) #REQUIRED>
       <!ELEMENT url (#PCDATA)>
       <!ELEMENT results (word?)>
         <!ELEMENT word (item, occurrences, percentage)>
