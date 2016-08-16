@@ -99,6 +99,23 @@ def xprtxml(crawling):
     root = etree.Element("crawling")
     count = 1
     while count < len(crawling):
-        root.append(etree.Element("level"))
+        level = etree.SubElement(root, "level")
         level.set("iteration", str(count))
+        for c in crawling[count-1]:
+            page = etree.SubElement(level, "page")
+            url = etree.SubElement(page, "url")
+            if count == 1:
+                page.set("content", "base")
+            elif not c.results:
+                page.set("content", "empty")
+            else:
+                page.set("content", "present")
+                results = etree.SubElement(page, "results")
+                for r in c.results:
+                    word = etree.SubElement("word")
+                    for w in r:
+                        item = etree.SubElement("item")
+                        occurrences = etree.SubElement("occurrences")
+                        percentage = etree.SubElement("percentage")
+
         count += 1
