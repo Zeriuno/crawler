@@ -86,3 +86,12 @@ def show(crawling):
             print("Pas de résultats pour le niveau " + str(cptniveaux+1))
         cptniveaux += 1
       # affichage des résultats du crawling
+
+
+def xprtxml(largeur):
+    root = etree.Element("crawling")
+    count = 1
+    while count < largeur:
+        root.append(etree.Element("level"))
+        level.set("iteration", str(count))
+        count += 1
