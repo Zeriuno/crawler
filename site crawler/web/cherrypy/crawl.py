@@ -24,7 +24,8 @@ def analysis(lien, largeur, pourcentage):
     crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
     database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
-    crawling[reclevel -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
+    try:  # tout sauvegarde en BDD est mise dans un `try` afin d'éviter que cela puisse bloquer l'exécution du programme
+        crawling[reclevel -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
 
 # ----------------------
 # Traitement du niveau 2
@@ -44,8 +45,9 @@ def analysis(lien, largeur, pourcentage):
         res_lev.results = PageN.find_same_words(crawling[0][0], pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste sera vide.
         level.append(res_lev)  # on ajoute le résultat dans la liste
     crawling.append(level)
-    for i in crawling[reclevel -1]:
-        i.savefollow(database, reclevel)
+    try:
+        for i in crawling[reclevel -1]:
+            i.savefollow(database, reclevel)
 
 # ----------------------
 # Traitement du niveau 3
@@ -62,8 +64,9 @@ def analysis(lien, largeur, pourcentage):
         level.append(res_lev)  # on ajoute le résultat dans le tableau
     crawling.append(level)  # Tous les résultats dans une seule variable. `level1`, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
     reclevel += 1  # crade, mais pour le moment on tient ça
-    for i in crawling[reclevel -1]:
-        i.savefollow(database, reclevel)
+    try:
+        for i in crawling[reclevel -1]:
+            i.savefollow(database, reclevel)
 
     return crawling
 
