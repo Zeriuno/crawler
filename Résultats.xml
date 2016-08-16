@@ -3,10 +3,10 @@ S'il fallait une DTD, le schéma serait
 <!ELEMENT crawling (level+)>
   <!ELEMENT level (page+)>
   <!ATTLIST level iteration (#CDATA) #REQUIRED>
-    <!ELEMENT page (url, results+)>
+    <!ELEMENT page (url, results?)>
     <!ATTLIST page content (#CDATA) #REQUIRED>
       <!ELEMENT url (#PCDATA)>
-      <!ELEMENT results (word?)>
+      <!ELEMENT results (word+)>
         <!ELEMENT word (item, occurrences, percentage)>
 -->
 <?xml version="1.0" encoding="utf8"?>
