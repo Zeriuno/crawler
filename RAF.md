@@ -2,7 +2,7 @@
 
 * setupdb.py
 
-* Réparer requête avec MAX(...) FROM ...WHERE...
+~~* Réparer requête avec MAX(...) FROM ...WHERE...~~
 
 * Stopwords
 
