@@ -98,7 +98,6 @@ def show(crawling):
 def xprtxml(crawling):
     """
     Fonction pour traduire les résultats gardés dans la liste crawling, en un fichier XML.
-    http://lxml.de/tutorial.html
     """
     root = etree.Element("crawling")
     count = 1
