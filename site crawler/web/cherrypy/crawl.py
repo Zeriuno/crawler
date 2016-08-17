@@ -70,7 +70,8 @@ def analysis(lien, largeur, pourcentage):
     try:
         for i in crawling[reclevel -1]:
             i.savefollow(database, reclevel)
-
+    except:
+        pass
     return crawling
 
 
