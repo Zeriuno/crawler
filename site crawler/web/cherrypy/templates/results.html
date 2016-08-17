@@ -13,8 +13,9 @@
     </ol>
     {%- endfor %}
 
+
   <h3>Pages associées</h3>
-  {while count < len(crawling)}
+  {% while count < len(crawling) %}
   <h4>Niveau: {{ count }}</h4>
     {% for c in crawling[count] %}
     <ol>
@@ -30,3 +31,5 @@
       {%- endif %}
     <ol>
     {%- endfor %}
+  {% count = count + 1%}
+  {% endwhile %}
