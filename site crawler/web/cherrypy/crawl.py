@@ -26,6 +26,8 @@ def analysis(lien, largeur, pourcentage):
     database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
     try:  # tout sauvegarde en BDD est mise dans un `try` afin d'éviter que cela puisse bloquer l'exécution du programme
         crawling[reclevel -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
+    except:
+        pass
 
 # ----------------------
 # Traitement du niveau 2
@@ -48,7 +50,8 @@ def analysis(lien, largeur, pourcentage):
     try:
         for i in crawling[reclevel -1]:
             i.savefollow(database, reclevel)
-
+    except:
+        pass
 # ----------------------
 # Traitement du niveau 3
 
