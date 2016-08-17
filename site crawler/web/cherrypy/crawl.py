@@ -107,6 +107,7 @@ def xprtxml(crawling):
         for c in crawling[count-1]:
             page = etree.SubElement(level, "page")
             url = etree.SubElement(page, "url")
+            url.text = c.address
             if count == 1:
                 page.set("content", "base")
             elif not c.results:
