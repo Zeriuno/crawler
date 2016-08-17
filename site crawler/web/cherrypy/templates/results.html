@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block head %}
+{{ super() }}
+{% endblock head%}
+
+<h2>Résultats</h2>
+  <h3>Page d'origine: {{crawling[0][0].address}}</h3>
+    {for r in crawling[0][0].results}
+    <ol>
+    <li>Mot: {{r[2]}}<li>
+    <li>Occurrences: {{r[0]}}<li>
+    <li>Pourcentage: {{r[1]}}<li>
+    </ol>
+    {%- enfor %}
+
+  <h3>Pages associées</h3>
+  {while count < len(crawling)}
+  <h4>Niveau: {count}</h4>
+    {for page in crawling[count]}
+    <ol>
+      <li>Page: {{}}</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    <ol>
