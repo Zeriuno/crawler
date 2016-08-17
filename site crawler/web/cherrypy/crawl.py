@@ -116,13 +116,12 @@ def xprtxml(crawling):
                 page.set("content", "present")
                 results = etree.SubElement(page, "results")
                 for r in c.results:
-                    word = etree.SubElement("word")
-                    for w in r:
-                        item = etree.SubElement("item")
-                        item.text = w[2]
-                        occurrences = etree.SubElement("occurrences")
-                        occurrences.text = str(w[0])
-                        percentage = etree.SubElement("percentage")
-                        percentage.text = str(w[1])
+                    word = etree.SubElement(results, "word")
+                    item = etree.SubElement(word, "item")
+                    item.text = r[2]
+                    occurrences = etree.SubElement(word, "occurrences")
+                    occurrences.text = str(r[0])
+                    percentage = etree.SubElement(word, "percentage")
+                    percentage.text = str(r[1])
         count += 1
     # now to file print(etree.tostring(root, encoding='UTF-8' pretty_print=True, xml_declaration=True)
