@@ -4,6 +4,7 @@ from db import *  #  Pour sauvegarder les résultats dans la base
 from lxml import etree  # Pour générer un XML à partir du résultat
 
 def analysis(lien, largeur, pourcentage):
+# def analysis(lien, liste_liens, largeur, pourcentage):  # pour passer à une fonction récursive
 
     reclevel = 1  # indicateur du niveau de récursion; crade, mais pour l'instant on tient ça
     lienparse = urlparse(lien)
