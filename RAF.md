@@ -1,10 +1,10 @@
 * Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 
-* setupdb.py
+* setupdb.py ?
+
+~~* Stopwords~~
 
 ~~* Réparer requête avec MAX(...) FROM ...WHERE...~~
-
-* Stopwords
 
 ~~* Pour l'instant on code en dur utilisateur et mot de passe de la BDD.~~
 
