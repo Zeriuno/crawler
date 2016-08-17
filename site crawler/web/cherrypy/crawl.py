@@ -58,7 +58,6 @@ def analysis(lien, largeur, pourcentage):
 
     level = []
     for link in level2_links:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
-        print("Niveau 3 " + link)  # debug
         PageN = Page(link, 0)  # Nous n'allos pas garder d'informations sur les liens trouvés à ce niveau, donc 0
         # print("3 Encore un objet page")  # on crée un objet pour chaque lien
         PageN.wordcount()  # de chaque page on compte les mots
