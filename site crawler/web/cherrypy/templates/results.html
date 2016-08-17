@@ -4,23 +4,29 @@
 {% endblock head%}
 
 <h2>Résultats</h2>
-  <h3>Page d'origine: {{crawling[0][0].address}}</h3>
-    {for r in crawling[0][0].results}
+  <h3>Page d'origine: {{ crawling[0][0].address }}</h3>
+    {% for r in crawling[0][0].results %}
     <ol>
     <li>Mot: {{r[2]}}<li>
-    <li>Occurrences: {{r[0]}}<li>
-    <li>Pourcentage: {{r[1]}}<li>
+    <li>Occurrences: {{ r[0] }}<li>
+    <li>Pourcentage: {{ r[1] }}<li>
     </ol>
-    {%- enfor %}
+    {%- endfor %}
 
   <h3>Pages associées</h3>
   {while count < len(crawling)}
-  <h4>Niveau: {count}</h4>
-    {for page in crawling[count]}
+  <h4>Niveau: {{ count }}</h4>
+    {% for c in crawling[count] %}
     <ol>
-      <li>Page: {{}}</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Page: {{ c.address }}</li>
+      {% if c.results %}
+      {% for r in c.results%}
+      <li>Mot: {{% r[2] %}}</li>
+      <li>Occurrences: {{% r[0] %}}</li>
+      <li>Pourcentage: {{% r[1] %}}</li>
+      {%- endfor %}
+      {% else %}
+      <li>Pas de résultats</li>
+      {%- endif %}
     <ol>
+    {%- endfor %}
