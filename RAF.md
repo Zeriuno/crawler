@@ -1,7 +1,5 @@
 * Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 
-* Docker
-
 * setupdb.py
 
 * Réparer requête avec MAX(...) FROM ...WHERE...
