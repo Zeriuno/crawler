@@ -75,26 +75,6 @@ def analysis(lien, largeur, pourcentage):
     return crawling
 
 
-def show(crawling):
-    """
-    Fonction pour afficher le résultat d'un crawling.
-    Travaille sur une liste dont chaque élément contient une liste d'objets URLWords.
-    1. Contrôle le fait que le niveau (créé en fonction du niveau de récursion verticale demandé) a été rempli. Si vide, arrêt.
-    2. Si plein, itère sur les objets URLWords présents en faisant appel à leur fonction showcrawling.
-    """
-    cptniveaux = 0
-    while cptniveaux < len(crawling):
-        if crawling[cptniveaux]:
-            cptinterne = 0
-            while cptinterne < len(crawling[cptniveaux]):
-                crawling[cptniveaux][cptinterne].showcrawling()
-                cptinterne += 1
-        else:
-            print("Pas de résultats pour le niveau " + str(cptniveaux+1))
-        cptniveaux += 1
-      # affichage des résultats du crawling
-
-
 def xprtxml(crawling):
     """
     Fonction pour traduire les résultats gardés dans la liste crawling, en un fichier XML.
