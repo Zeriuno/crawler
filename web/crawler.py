@@ -27,9 +27,16 @@ class Crawler(object):
 # récupérer le lien soumis
     def crawlurl(self, lien=None):
         if lien:
-            largeur = 20  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le niveau de récursion horizontale
-            pourcentage = 1 # variable pour, dans une évolution, laisser déterminer à l'utilisateur le pourcentage de cohérence requis entre la première page et celles associées
-            crawling = analysis(lien, largeur, pourcentage)  # fonction externalisée dans crawl.py, elle retourne une liste avec les résultats
+            width = 20  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le niveau de récursion horizontale
+            coherence = 1  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le pourcentage de cohérence requis entre la première page et celles associées
+            recursions = 3  # variable pour, dans une évolution, laisser déterminer à l'utilisateur combien de niveaux de récursion sont effectués
+            top_mots = 5  # variable pour, dans une évolution, laisser déterminer à l'utilisateur combien de mots de la première page sont retenus pour la confrontation avec les pages suivantes.
+            links_list = []
+            list = []
+            list.append(lien)
+            links_list.append(list)
+            crawling = []
+            crawling = analysis(links_list, top_mots, crawling, width, coherence, recursions)  # fonction externalisée dans crawl.py, elle retourne une liste avec les résultats
             xprtxml(crawling)  # le résultat est sauvegardé dans un fichier XML
         else:
             print("Il est nécessaire de soumettre une URL")
