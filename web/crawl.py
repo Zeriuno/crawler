@@ -68,10 +68,14 @@ def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # p
         analysis(links_list, top_mots, crawling, width, coherence, recursions)
     return crawling
 
+
 def sumup(crawling):
     """
-    Fonction pour résumer les résultats du crawling.
+    Fonction pour résumer les résultats positifs du crawling.
     """
+    summary = []
+    for c in crawling:
+        summary.append(0)
     for c in crawling[1:len(crawling)]:
         for d in c:
             if d.results:
