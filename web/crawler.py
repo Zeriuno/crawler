@@ -38,6 +38,8 @@ class Crawler(object):
             crawling = []
             crawling = analysis(links_list, top_mots, crawling, width, coherence, recursions)  # fonction externalisée dans crawl.py, elle retourne une liste avec les résultats
             xprtxml(crawling)  # le résultat est sauvegardé dans un fichier XML
+            summary = sumup(crawling)  # sommaire des pages avec résultats
+            empties = sumdown(crawling)  # sommaire des pages sans résultats
         else:
             print("Il est nécessaire de soumettre une URL")
         tmpl = env.get_template('results.html')
