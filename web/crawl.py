@@ -5,7 +5,14 @@ from lxml import etree  # Pour générer un XML à partir du résultat
 
 def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # pour compter à quelle récursion nous sommes il suffit d'avoir len(links_list)
     """
-    
+    Fonction qui analyse un lien initial, ceux associés, en faisant appel à elle-même à la fin de chaque exécution si le nombre d'itérations effectuées (lisible par `len(links_list)`) n'est pas égale à `recursions`.
+
+    * `links_list`: liste de listes, une pour chaque niveau. Au [0][0] on trouve le lien saisi par l'utilisateur. Remplie au four et à mésure, sert comme test d'arrêt.
+    * `top_mots`: nombre des mots à sélectionner dans la prémière page analysée. Une valeur fixe, utilisée seulement lors de la prémière itération.
+    * `crawling`: liste de listes d'objets URLWords, elle contient les url, `crawling[0][0].address` et une liste avec les résultats `crawling[0][0].results`. Remplie au four et à mésure, sera retournée à la fin de l'exécution. pourrait éventuellement servir comme test d'arrêt.
+    * `width`: limite de l'analyse en horizontal, on ne prendra pas plus de liens que ceci. Valeur fixe.
+    * `coherence`: variable qui détermine le niveau audessus duquel les mots doivent être présents dans les pages associées pour être retenus parmi les résultats. Valeur fixe.
+    * `recursions`: nombre de niveaux (celui de départ inclus) qui seront analysés. Valeur fixe, sert comme test d'arrêt.
     """
     if len(links_list) == 1:
         lienparse = urlparse(links_list[0][0])
