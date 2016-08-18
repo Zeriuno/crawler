@@ -82,6 +82,24 @@ def sumup(crawling):
                 summary[crawling.index(c)] += 1
     for s in summary:
         summary[0] += s
+    return summary
+
+
+def sumdown(crawling):
+    """
+    Fonction pour résumer les résultats vides du crawling.
+    """
+    empties = []
+    for c in crawling:
+        empties.append(0)
+    for c in crawling[1:len(crawling)]:
+        for d in c:
+            if d.results:
+                empties[crawling.index(c)] += 1
+    for e in empties:
+        empties[0] += s
+    return empties
+
 
 def xprtxml(crawling):
     """
