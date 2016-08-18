@@ -11,45 +11,50 @@ def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # p
 
         # ici tester si la page donne un 200 (r.status_code), else "veuillez tester votre url"
 
-        Page1 = Page(links_list[0][0], width)
+        Pag = Page(links_list[0][0], width)
 
-        Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
+        Pag.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
-        res_lev = URLWords(Page1)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
+        res_lev = URLWords(Pag)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
 
-        res_lev.results = Page1.results_level1(top_mots)  # On ajoute les mots plus présents
+        res_lev.results = Pag.results_level1(top_mots)  # On ajoute les mots plus présents
+        level = []  # Liste pour les résultats URLWords du niveau
+        level.append(res_lev)
         crawling = []
-        crawling.append(res_lev)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
+        crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
         database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
         try:  # tout sauvegarde en BDD est mise dans un `try` afin d'éviter que cela puisse bloquer l'exécution du programme
             crawling[len(links_list) -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
         except:
             pass
-        links_list.append(Page1.links)
+        links_list.append(Pag.links)
         analysis(links_list, top_mots, crawling, width, coherence, recursions)
     else:
-        results_level = []  # On vide la liste
-        links_level = []
-        for link in links_level[len(links_level) - 1]:  # pas besoin de limiter l'itération horizontale ici, car nous avons déjà limité les liens collectés dans Page.links via le paramètre `width`
+        level = []  # Liste pour les résultats URLWords du niveau
+        links_level = []  # Liste pour les liens réceuillis dans ce niveau
+        for link in links_list[len(links_list) - 1]:  # pas besoin de limiter l'itération horizontale ici, car nous avons déjà limité les liens collectés dans Page.links via le paramètre `width`
             if len(links_list) == recursions:
-                PageN = Page(link, 0)  # quand on est au dernier niveau de la récursion on ne va pas chercher les liens contenus dans les pages
+                Pag = Page(link, 0)  # quand on est au dernier niveau de la récursion on ne va pas chercher les liens contenus dans les pages
             else:
-                PageN = Page(link, width)  # de chaque lien on fait un objet Page.
-            for lk in PageN.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
+                Pag = Page(link, width)  # de chaque lien on fait un objet Page.
+            for lk in Pag.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
                 if lk not in links_list and lk not in links_level:  # test à améliorer: www.example.com et example.com seront pris tous les deux.
-                    links_level.append(link)
-            PageN.wordcount()  # de chaque page on compte les mots
-            res_lev = URLWords(PageN)  # On crée un objet pour chaque page
-            res_lev.results = PageN.find_same_words(crawling[0][0], coherence)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `coherence`% ou plus, la liste sera vide.
+                    links_level.append(lk)
+            Pag.wordcount()  # de chaque page on compte les mots
+            res_lev = URLWords(Pag)  # On crée un objet pour chaque page
+            res_lev.results = Pag.find_same_words(crawling[0][0], coherence)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `coherence`% ou plus, la liste sera vide.
             level.append(res_lev)  # on ajoute le résultat dans la liste
+        links_list.append(links_level)
         crawling.append(level)
+        database = db()
         try:
             for i in crawling[len(links_list) -1]:
                 i.savefollow(database, len(links_list))
         except:
             pass
     if len(links_list) < recursions:
+        print("Recursions : " + str(len(links_list)))  # debug
         analysis(links_list, top_mots, crawling, width, coherence, recursions)
     return crawling
 
