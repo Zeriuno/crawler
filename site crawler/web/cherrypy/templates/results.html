@@ -1,34 +1,32 @@
-{% extends "index.html" %}
-{% block head %}
-{{ super() }}
-{% endblock head%}
 
 <h2>Résultats</h2>
-  <h3>Page d'origine: {{ first.address }}</h3>
-    {% for r in first.results %}
-    <ol>
-    <li>Mot: {{ r[2] }}<li>
-    <li>Occurrences: {{ r[0] }}<li>
-    <li>Pourcentage: {{ r[1] }}<li>
-    </ol>
+  <h3>Page d'origine: {{ first.address -}}</h3>
+    {% for r in first.results -%}
+    <ul>
+    <li>Mot: {{ r[2] -}}</li>
+    <li>Occurrences: {{ r[0] -}}</li>
+    <li>Pourcentage: {{ r[1] -}}</li>
+    </ul>
     {%- endfor %}
 
 
   <h3>Pages associées</h3>
   {% for f in follow %}
-  <h4>Niveau: {{ follow.index(f) + 1 }}</h4>
-    {% for f in follow %}
-    <ol>
-      <li>Page: {{ f.address }}</li>
-      {% if f.results %}
-      {% for r in f.results%}
-      <li>Mot: {{ r[2] }}</li>
-      <li>Occurrences: {{ r[0] }}</li>
-      <li>Pourcentage: {{ r[1] }}</li>
-      {%- endfor %}
-      {% else %}
+  <h4>Niveau: {{ follow.index(f) + 2 }}</h4>
+  <ol>
+    {% for page in f -%}
+      <li>Page: {{ page.address }}</li>
+      <ul>
+      {% if page.results -%}
+      {% for r in page.results%}
+      <li>Mot: {{ r[2] -}}</li>
+      <li>Occurrences: {{ r[0] -}}</li>
+      <li>Pourcentage: {{ r[1] -}}</li>
+      {%- endfor -%}
+      {% else -%}
       <li>Pas de résultats</li>
       {%- endif %}
-    <ol>
+      </ul>
     {%- endfor %}
+    </ol>
   {%- endfor %}
