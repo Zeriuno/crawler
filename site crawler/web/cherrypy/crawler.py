@@ -33,7 +33,8 @@ class Crawler(object):
             show(crawling)  # affichage des résultats, fonction externalisée dans crawl.py
         else:
             print("Il est nécessaire de soumettre une URL")
-        return ("")
+        tmpl = env.get_template('results.html')
+        return tmpl.render(first = crawling[0][0], follow = crawling[1:len(crawling)])
     crawlurl.exposed = True
 
 cherrypy.quickstart(Crawler(), config='server.conf')
