@@ -3,77 +3,63 @@ from URLWords import *  # Pour gérer le résultat
 from db import *  #  Pour sauvegarder les résultats dans la base
 from lxml import etree  # Pour générer un XML à partir du résultat
 
-def analysis(lien, largeur, pourcentage):
-# def analysis(lien, liste_liens, largeur, pourcentage):  # pour passer à une fonction récursive
+def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # pour compter à quelle récursion nous sommes il suffit d'avoir len(links_list)
+    """
+    
+    """
+    if len(links_list) == 1:
+        lienparse = urlparse(links_list[0][0])
+        if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
+            links_list[0][0] = 'http://' + links_list[0][0]
 
-    reclevel = 1  # indicateur du niveau de récursion; crade, mais pour l'instant on tient ça
-    lienparse = urlparse(lien)
-    if lienparse.scheme == '':  # ici on pourrait ajouter d'autres tests: vérifier par exemple que celui fourni est un nom de domaine valide
-        lien = 'http://' + lien
+        # ici tester si la page donne un 200 (r.status_code), else "veuillez tester votre url"
 
-    # ici tester si la page donne un 200 (r.status_code), else "veuillez tester votre url"
+        Pag = Page(links_list[0][0], width)
 
-    Page1 = Page(lien, largeur)
-    # Page1.stopwords(lien)  # fonction à revoir et à intégrer directement dans Page.wordcount
-    Page1.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
-    level = []  # liste qui n'aura qu'une seule case occupée, mais cela permet d'uniformiser le traitement pour l'affichage
-    res_lev = URLWords(Page1)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
+        Pag.wordcount()  # On récupère les mots dans la page et leur occurrence. Dans la fonction définie dans la classe Page.py il faut intégrer le travail sur les stopwords.
 
-    res_lev.results = Page1.results_level1(5)  # On ajoute les mots plus présents
-    level.append(res_lev)  # on met l'objet dans la liste level1
-    crawling = []
-    crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
+        res_lev = URLWords(Pag)  # On crée un objet URLWords, il ne contient que l'URL de Page1.
 
-    database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
-    try:  # tout sauvegarde en BDD est mise dans un `try` afin d'éviter que cela puisse bloquer l'exécution du programme
-        crawling[reclevel -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
-    except:
-        pass
+        res_lev.results = Pag.results_level1(top_mots)  # On ajoute les mots plus présents
+        level = []  # Liste pour les résultats URLWords du niveau
+        level.append(res_lev)
+        crawling = []
+        crawling.append(level)  # Tous les résultats iront dans une seule variable faite de listes d'éléments URLWords.
 
-# ----------------------
-# Traitement du niveau 2
-
-    reclevel += 1
-    level2_links = []  # ici on mettra tous les liens présents dans toutes les pages du deuxième niveau
-    level = []  # On vide la liste
-    largeurmoitie = int(largeur/2)
-    for link in Page1.links:  # [:largeur] pas besoin de limiter l'itération horizontale ici, car nous avons déjà limité les liens collectés dans Page.links via le paramètre `largeur`
-        PageN = Page(link, largeurmoitie)  # de chaque lien on fait un objet Page. On ne prendra que la moitié du paramètre `largeur` afin de ne pas trop grossir la taille du résultat (car pour exploiter tout ce qu'on récolte les pages de niveau 3 devront être largeur*(largeur/2))
-        # print("2 Un nouvel objet page")  # debug
-        for link in PageN.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
-            if link != Page1.url and link != PageN.url and link not in level2_links:  # test à améliorer: www.example.com et example.com seront pris tous les deux.
-                level2_links.append(link)
-        PageN.wordcount()  # de chaque page on compte les mots
-        res_lev = URLWords(PageN)  # On crée un objet pour chaque page
-        res_lev.results = PageN.find_same_words(crawling[0][0], pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste sera vide.
-        level.append(res_lev)  # on ajoute le résultat dans la liste
-    crawling.append(level)
-    try:
-        for i in crawling[reclevel -1]:
-            i.savefollow(database, reclevel)
-    except:
-        pass
-# ----------------------
-# Traitement du niveau 3
-
-
-    level = []
-    for link in level2_links:  # cette fois, troisième itération, on boucle sur les liens trouvés au deuxième niveau.
-        PageN = Page(link, 0)  # Nous n'allos pas garder d'informations sur les liens trouvés à ce niveau, donc 0
-        # print("3 Encore un objet page")  # on crée un objet pour chaque lien
-        PageN.wordcount()  # de chaque page on compte les mots
-        res_lev = URLWords(PageN)  # On crée un objet pour chaque page
-        res_lev.results = PageN.find_same_words(crawling[0][0], pourcentage)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `pourcentage`% ou plus, la liste res_lev3 sera vide.
-        level.append(res_lev)  # on ajoute le résultat dans le tableau
-    crawling.append(level)  # Tous les résultats dans une seule variable. `level1`, `level2` et `level3` sont des listes d'éléments URLWords (la limite max horizontale imposée avec `largeur` et ses ajustements).
-    reclevel += 1  # crade, mais pour le moment on tient ça
-    try:
-        for i in crawling[reclevel -1]:
-            i.savefollow(database, reclevel)
-    except:
-        pass
+        database = db()  # On est arrivé jusque là, on a des résultats à sauvegarder en base de données, donc autant créer notre objet db
+        try:  # tout sauvegarde en BDD est mise dans un `try` afin d'éviter que cela puisse bloquer l'exécution du programme
+            crawling[len(links_list) -1 ][0].save1(database)  # URL et mots associés sont sauvegardés dans les tables url et words
+        except:
+            pass
+        links_list.append(Pag.links)
+        analysis(links_list, top_mots, crawling, width, coherence, recursions)
+    else:
+        level = []  # Liste pour les résultats URLWords du niveau
+        links_level = []  # Liste pour les liens réceuillis dans ce niveau
+        for link in links_list[len(links_list) - 1]:  # pas besoin de limiter l'itération horizontale ici, car nous avons déjà limité les liens collectés dans Page.links via le paramètre `width`
+            if len(links_list) == recursions:
+                Pag = Page(link, 0)  # quand on est au dernier niveau de la récursion on ne va pas chercher les liens contenus dans les pages
+            else:
+                Pag = Page(link, width)  # de chaque lien on fait un objet Page.
+            for lk in Pag.links:  # test pour éviter de mettre plusieurs fois le même lien dans la liste. On ne veut pas mettre à nouveau le lien de la page source ni plusieurs fois le même lien
+                if lk not in links_list and lk not in links_level:  # test à améliorer: www.example.com et example.com seront pris tous les deux.
+                    links_level.append(lk)
+            Pag.wordcount()  # de chaque page on compte les mots
+            res_lev = URLWords(Pag)  # On crée un objet pour chaque page
+            res_lev.results = Pag.find_same_words(crawling[0][0], coherence)  # On garde trace des résultats. S'il n'y a pas de mots qui reviennent `coherence`% ou plus, la liste sera vide.
+            level.append(res_lev)  # on ajoute le résultat dans la liste
+        links_list.append(links_level)
+        crawling.append(level)
+        database = db()
+        try:
+            for i in crawling[len(links_list) -1]:
+                i.savefollow(database, len(links_list))
+        except:
+            pass
+    if len(links_list) < recursions:
+        print("Recursions : " + str(len(links_list)))  # debug
+        analysis(links_list, top_mots, crawling, width, coherence, recursions)
     return crawling
-
 
 def xprtxml(crawling):
     """
