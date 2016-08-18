@@ -30,7 +30,7 @@ class Crawler(object):
             largeur = 20  # variable pour, dans une évolution, laisser déterminer à l'utilisateur le niveau de récursion horizontale
             pourcentage = 1 # variable pour, dans une évolution, laisser déterminer à l'utilisateur le pourcentage de cohérence requis entre la première page et celles associées
             crawling = analysis(lien, largeur, pourcentage)  # fonction externalisée dans crawl.py, elle retourne une liste avec les résultats
-            show(crawling)  # affichage des résultats, fonction externalisée dans crawl.py
+            xprtxml(crawling)  # le résultat est sauvegardé dans un fichier XML
         else:
             print("Il est nécessaire de soumettre une URL")
         tmpl = env.get_template('results.html')
