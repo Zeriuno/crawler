@@ -63,8 +63,7 @@ def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # p
                 i.savefollow(database, len(links_list))
         except:
             pass
-    if len(links_list) < recursions:
-        print("Recursions : " + str(len(links_list)))  # debug
+    if len(links_list) < (recursions + 1):  # à ce moment on a une liste remplie pour le prochain niveau, pas encore analysée. Du coup on la confronte à `recursions + 1`
         analysis(links_list, top_mots, crawling, width, coherence, recursions)
     return crawling
 
