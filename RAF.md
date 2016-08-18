@@ -1,6 +1,4 @@
-* Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
-
-* setupdb.py ?
+~~* Affichage → extends http://jinja.pocoo.org/docs/dev/templates/#template-inheritance~~
 
 ~~* Stopwords~~
 
