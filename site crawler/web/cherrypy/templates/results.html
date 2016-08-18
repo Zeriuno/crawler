@@ -7,7 +7,7 @@
   <h3>Page d'origine: {{ first.address }}</h3>
     {% for r in first.results %}
     <ol>
-    <li>Mot: {{r[2]}}<li>
+    <li>Mot: {{ r[2] }}<li>
     <li>Occurrences: {{ r[0] }}<li>
     <li>Pourcentage: {{ r[1] }}<li>
     </ol>
@@ -22,9 +22,9 @@
       <li>Page: {{ f.address }}</li>
       {% if f.results %}
       {% for r in f.results%}
-      <li>Mot: {{% r[2] %}}</li>
-      <li>Occurrences: {{% r[0] %}}</li>
-      <li>Pourcentage: {{% r[1] %}}</li>
+      <li>Mot: {{ r[2] }}</li>
+      <li>Occurrences: {{ r[0] }}</li>
+      <li>Pourcentage: {{ r[1] }}</li>
       {%- endfor %}
       {% else %}
       <li>Pas de résultats</li>
