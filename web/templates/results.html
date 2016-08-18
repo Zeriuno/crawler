@@ -9,6 +9,20 @@
     </ul>
     {%- endfor %}
 
+  <h3>Analyse</h3>
+  <p>Pages avec présence des mêmes mots: {{ str(got[0]) -}}</p>
+  <ul>
+    {% for g in got[1:len(got)] -%}
+    <li>{{ g }} au niveau {{ crawling.index(g) + 1 }}</li>
+    {%- endfor %}
+  </ul>
+
+  <p>Pages sans présence des mêmes mots: {{ str(gotnot[0]) -}}</p>
+  <ul>
+    {% for o in gotnot[1:len(gotnot)] -%}
+    <li>{{ o }} au niveau {{ crawling.index(o) + 1 }}</li>
+    {%- endfor %}
+  </ul>
 
   <h3>Pages associées</h3>
   {% for f in follow %}
