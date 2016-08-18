@@ -68,6 +68,17 @@ def analysis(links_list, top_mots, crawling, width, coherence, recursions):  # p
         analysis(links_list, top_mots, crawling, width, coherence, recursions)
     return crawling
 
+def sumup(crawling):
+    """
+    Fonction pour résumer les résultats du crawling.
+    """
+    for c in crawling[1:len(crawling)]:
+        for d in c:
+            if d.results:
+                summary[crawling.index(c)] += 1
+    for s in summary:
+        summary[0] += s
+
 def xprtxml(crawling):
     """
     Fonction pour traduire les résultats gardés dans la liste crawling, en un fichier XML.
