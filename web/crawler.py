@@ -45,4 +45,10 @@ class Crawler(object):
         return tmpl.render(first = crawling[0][0], follow = crawling[1:len(crawling)], got = summary, gotnot = empties)
     crawlurl.exposed = True
 
+    def getxml(self):
+        filename = "crawling-results.xml"  # le fichier est créé par xprtxml
+        filepath = os.path.abspath(filename)
+        return serve_file(filepath, "application/x-download", "attachment")
+    getxml.exposed = True
+
 cherrypy.quickstart(Crawler(), config='server.conf')
