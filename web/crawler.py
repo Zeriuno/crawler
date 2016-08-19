@@ -8,9 +8,8 @@ import requests
 from bs4 import BeautifulSoup
 from Page import *
 from URLWords import *
-from stopwords import *
-import os.path
-from cherrypy.lib.static import serve_file
+import os.path  # pour getxml
+from cherrypy.lib.static import serve_file  # pour getxml
 
 env = Environment(loader=FileSystemLoader('templates'))
 
