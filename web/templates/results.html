@@ -13,14 +13,14 @@
   <p>Pages avec présence des mêmes mots: {{ got[0] -}}</p>
   <ul>
     {% for g in got[1:got|length] -%}
-    <li>{{ g }} au niveau {{ crawling.index(g) + 1 }}</li>
+    <li>{{ g }} au niveau {{ got.index(g) + 1 }}</li>
     {%- endfor %}
   </ul>
 
-  <p>Pages sans présence des mêmes mots: {{ str(gotnot[0]) -}}</p>
+  <p>Pages sans présence des mêmes mots: {{ gotnot[0] -}}</p>
   <ul>
-    {% for o in gotnot[1:len(gotnot)] -%}
-    <li>{{ o }} au niveau {{ crawling.index(o) + 1 }}</li>
+    {% for o in gotnot[1:got|length] -%}
+    <li>{{ o }} au niveau {{ gotnot.index(o) + 1 }}</li>
     {%- endfor %}
   </ul>
 
