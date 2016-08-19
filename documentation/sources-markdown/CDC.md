@@ -1,6 +1,6 @@
 # Crawler thématique
 
-* Meriyama Bane
+* MBA
 * Salah Dahamni
 * Daniele Pitrolo
 
