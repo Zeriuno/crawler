@@ -96,7 +96,7 @@ def sumdown(crawling):
             if d.results:
                 empties[crawling.index(c)] += 1
     for e in empties:
-        empties[0] += s
+        empties[0] += e
     return empties
 
 
