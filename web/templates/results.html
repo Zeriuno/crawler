@@ -10,9 +10,9 @@
     {%- endfor %}
 
   <h3>Analyse</h3>
-  <p>Pages avec présence des mêmes mots: {{ str(got[0]) -}}</p>
+  <p>Pages avec présence des mêmes mots: {{ got[0] -}}</p>
   <ul>
-    {% for g in got[1:len(got)] -%}
+    {% for g in got[1:got|length] -%}
     <li>{{ g }} au niveau {{ crawling.index(g) + 1 }}</li>
     {%- endfor %}
   </ul>
