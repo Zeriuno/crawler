@@ -1,6 +1,4 @@
 from urllib.parse import urlparse  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 from bs4 import BeautifulSoup
 import requests
 import re  # pour découper le texte en mots
