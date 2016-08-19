@@ -2,6 +2,8 @@
 
 ## Dépendances
 
+Le programme nécessite de:
+
 * python3.4 ou supérieur
   * jinja2
   * beautifulsoup4
