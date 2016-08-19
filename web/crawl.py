@@ -93,7 +93,7 @@ def sumdown(crawling):
         empties.append(0)
     for c in crawling[1:len(crawling)]:
         for d in c:
-            if d.results:
+            if not d.results:
                 empties[crawling.index(c)] += 1
     for e in empties:
         empties[0] += e
