@@ -1,5 +1,9 @@
 # Crawler thématique
 
+* MBA
+* Salah Dahamni
+* Daniele Pitrolo
+
 ## Objet
 
 Le présent cahier des charges a pour objet la définition des exigences liées au programme *crawler thématique*.
@@ -88,7 +92,7 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Origine :** Julien Roussel.
 
-**Critère de satisfaction :** Capacité d'identifier les mots les plus fréquents hormis les articles, conjonctions et prépositions.
+**Critère de satisfaction :** Capacité d'identifier les mots les plus fréquents.
 
 **Contentement du maître d’ouvrage :** 5
 
@@ -124,7 +128,9 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Documents relatifs :** /
 
-**Historique :** 2016-05-08
+**Historique :**
+* 2016-05-08
+* 2016-08-08 Cette exigence est supprimée. Les pages web sont en effet sujettes à une variabilité du contenu difficile à déterminer (certaines ne changeront jamais, d'autres évoluent dans l'espace de quelques minutes). Plutôt que gérer cette variété, trop complexe, ou bien introduire sciemment une erreur de vetusté des données, l'application effectuera une analyse à chaque fois qu'un lecteur le demande.
 
 ### Exigence CRA3.a
 
@@ -174,7 +180,9 @@ Ces éléments seront pris en compte au cours du développement du produit.
 
 **Documents relatifs :** /
 
-**Historique :** 2016-05-08
+**Historique :**
+* 2016-05-08
+* 2016-08-08 L'algorithme de crawling est entièrement récursif et peut être adapté à d'autres niveaux de récursion.
 
 ### Exigence CRA5.a
 
@@ -250,31 +258,6 @@ L'analyse est exhaustive.
 
 **Historique :** 2016-04-29
 
-
-### Exigence CRA5.d
-
-**Type d’exigence :** Exigence Fonctionnelle
-
-**Description :** Le système doit permettre à l'utilisateur de désactiver les limitations du point CRA5.c.
-
-**Justification :** l'utlisateur doit pouvoir se limiter à l'analyse de l'URL donnée s'il le souhaite.
-
-**Origine :** Daniele Pitrolo (suggestion de Georges Grosz).
-
-**Critère de satisfaction :** Il existe une option qui permet d'avoir des résultats plus exhaustifs.
-
-**Contentement du maître d’ouvrage :** 3
-
-**Mécontentement du maître d’ouvrage :** 1
-
-**Exigences dépendantes :** CRA1.a, CRA2.a
-
-**Exigences conflictuelles :** /
-
-**Documents relatifs :** /
-
-**Historique :** 2016-05-08
-
 ### Présentation du résultat
 
 ### Exigence CRA2.c
@@ -287,7 +270,7 @@ L'analyse est exhaustive.
 
 **Origine :** MBA.
 
-**Critère de satisfaction :** Si l'URL fournie par l'utilisateur n'est pas valide ou bien si elle renvoie un code HTTP d'erreur, le message d'erreur est affiché à l'écran.
+**Critère de satisfaction :** Si l'URL fournie par l'utilisateur n'est pas valide la saisie ne peut être validée.
 
 **Contentement du maître d’ouvrage :** 2
 
@@ -305,7 +288,7 @@ L'analyse est exhaustive.
 
 **Type d’exigence :** Exigence Fonctionnelle
 
-**Description :** Le système doit permettre l'affichage des résulats d'analyse de l'URL fournie et de ses pages associées.
+**Description :** Le système doit permettre l'affichage des résultats d'analyse de l'URL fournie et de ses pages associées.
 
 **Justification :** Rendre possible à l'utilisateur de prendre connaissance de l'analyse effectuée; suivre l'évolution des mots-clefs à travers plusieurs pages.
 
@@ -329,7 +312,7 @@ L'analyse est exhaustive.
 
 **Type d’exigence :** Exigence Fonctionnelle
 
-**Description :** Les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité thématique suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
+**Description :** Les pages des niveaux ultérieurs d'analyse ne sont incluses parmi les résultats que s'ils présentent une continuité lexicale suffisante avec la première page (le niveau sera déterminé en cours de développement par le biais de tests).
 
 **Justification :** Affichage des résultats uniquement s'ils sont pertinents par rapport à l'analyse de l'URL fournie.
 
@@ -354,9 +337,9 @@ L'analyse est exhaustive.
 ### Exigence CRA7.a
 **Type d’exigence :** Exigence fonctionnelle
 
-**Description :** Le système doit stocker les résultats dans une base de données associée et les conserver pour une durée qui sera déterminée au cours du projet.
+**Description :** Le système doit stocker les résultats dans une base de données associée.
 
-**Justification :** Réduire le temps nécessaire pour fournir le résultat et la charge sur le système en cas de multiples requêtes pour le même élément.
+**Justification :** Pouvoir suivre a posteriori les changements éventuels dans la continuité lexicale entre les pages analysées.
 
 **Origine :** Julien Roussel.
 
@@ -399,32 +382,6 @@ L'analyse est exhaustive.
 **Documents relatifs :** /
 
 **Historique :** 2016-05-20
-
-
-### Exigence CRA9.a
-
-**Type d’exigence :** Contrainte
-
-**Description :** Le système sera deploié sur un serveur GNU/Linux.
-
-**Justification :** Parce que.
-
-**Origine :** Daniele Pitrolo.
-
-**Critère de satisfaction :** /
-
-**Contentement du maître d’ouvrage :** 1
-
-**Mécontentement du maître d’ouvrage :** 2
-
-**Exigences dépendantes :** /
-
-**Exigences conflictuelles :** /
-
-**Documents relatifs :** /
-
-**Historique :** 2016-05-21
-
 
 ## Références
 

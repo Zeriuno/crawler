@@ -1,0 +1,122 @@
+<!--
+S'il fallait une DTD, le schéma serait
+<!ELEMENT crawling (level+)>
+  <!ELEMENT level (page+)>
+  <!ATTLIST level iteration (#CDATA) #REQUIRED>
+    <!ELEMENT page (url, results?)>
+    <!ATTLIST page content (#CDATA) #REQUIRED>
+      <!ELEMENT url (#PCDATA)>
+      <!ELEMENT results (word+)>
+        <!ELEMENT word (item, occurrences, percentage)>
+-->
+<?xml version="1.0" encoding="utf8"?>
+<crawling>
+  <level iteration="1">
+    <page content="base">
+      <url>`url`</url>
+      <results>
+        <word>
+          <item>`mot1`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+        <word>
+          <item>`mot2`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+        <word>
+          <item>`mot3`</item>
+          <occurences>nb`</occurences>
+          <percentage>`poursan`</percentage>
+        </word>
+      </results>
+    </page>
+  </level>
+  <level iteration="2">
+    <page content="empty">
+      <url>
+        `url`
+      </url>
+    </page>
+    <page content="present">
+      <url>
+        `url`
+      </url>
+      <results>
+        <word>
+          <item>
+            `mot1`
+          </item>
+          <occurrences>
+            `nb`
+          </occurrences>
+          <percentage>
+            `poursan`
+          </percentage>
+        </word>
+      </results>
+    </page>
+    <page content="present">
+      <url>
+        `url`
+      </url>
+      <results>
+        <word>
+          <item>
+            `mot2`
+          </item>
+          <occurrences>
+            `nb`
+          </occurrences>
+          <percentage>
+            `poursan`
+          </percentage>
+        </word>
+      </results>
+    </page>
+  </level>
+  <level iteration="3">
+    <page content="empty">
+      <url>
+        `url`
+      </url>
+    </page>
+    <page content="present">
+      <url>
+        `url`
+      </url>
+      <results>
+        <word>
+          <item>
+            `mot1`
+          </item>
+          <occurrences>
+            `nb`
+          </occurrences>
+          <percentage>
+            `poursan`
+          </percentage>
+        </word>
+      </results>
+    </page>
+    <page content="present">
+      <url>
+        `url`
+      </url>
+      <results>
+        <word>
+          <item>
+            `mot2`
+          </item>
+          <occurrences>
+            `nb`
+          </occurrences>
+          <percentage>
+            `poursan`
+          </percentage>
+        </word>
+      </results>
+    </page>
+  </level>
+</crawling>

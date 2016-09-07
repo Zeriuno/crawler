@@ -15,14 +15,23 @@ class db:
     Supprimer les contenus plus vieux de x jours.
     """
 
-    def __init__(self, db:object):
+    def __init__(self):
         """
         """
-        self.conn = pymysql.connect(host='localhost', port= 3306, user="mimocrawlerusr", password="yolo", database="mimocrawlerdb", charset='utf8')
+        file = open("db.conf", "r")  # amélioration: dans un try et sinon afficher un message d'erreur
+        conf = file.read()
+        dbhost = conf.split("\n")[0]
+        dbport = conf.split("\n")[1]
+        dbuser = conf.split("\n")[2]
+        dbpassword = conf.split("\n")[3]
+        dbdatabase = conf.split("\n")[4]
+        dbcharset = conf.split("\n")[5]
+        self.conn = pymysql.connect(host = dbhost, port = int(dbport), user = dbuser, password = dbpassword, database = dbdatabase, charset = dbcharset)
 
     def insertPage(self, Page):
         """
         Insère une page analysée dans la base.
+        Inutile, mais bon, une fois écrite ça semble dommage de la supprimer.
         """
         curs = self.conn.cursor()
         curs.execute("INSERT INTO url (url, date) VALUES ('"+Page.url+"', CURDATE())")
@@ -34,7 +43,8 @@ class db:
 
     def readPage(self, Page):
         """
-        Pour extraire le wordset d'une page, à partir d'une URL
+        Pour extraire le wordset d'une page, à partir d'une URL.
+        Inutile, mais bon, une fois écrite ça semble dommage de la supprimer.
         """
         curs = self.conn.cursor()
         curs.execute("SELECT occurrences, percentage, item FROM words WHERE (url = '"+Page.url+"')")

@@ -1,6 +1,4 @@
-from urllib.parse import *  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+from urllib.parse import urlparse  # pour parser les url dans les pages et obtenir des adresses absolues au lieu de relatives
 from bs4 import BeautifulSoup
 import requests
 import re  # pour découper le texte en mots
@@ -50,19 +48,6 @@ class Page:
                 pass
 
 
-    # def stopwords(self, lien):
-    #     """
-    #     Filtrer les mots
-    #     """
-    #     #dictionnaire français des mots à exclure
-    #     stop_words = set(stopwords.words("french"))
-    #     words = word_tokenize(lien)
-    #     filtered_phrase = []
-    #     for w in words:
-    #         if w not in stop_words:
-    #             lien = filtered_phrase.append(w)
-
-
     def wordcount(self):
         """
         Fonction qui construit le compte des mots de la page. Elle est appellée avec `NomObjetPage.wordcount()`
@@ -75,7 +60,7 @@ class Page:
         Page1.wordset[0][1] = 30.00
         Page1.wordset[0][3] = "salut"
         """
-        text = self.soup.get_text() #On récupère le texte
+        text = self.soup.get_text()  # On récupère le texte
         items = re.sub("[^\w]", " ",  text).split()
         #  items = [text.replace('"', '').lower() for t in text.split()] #découpage en mots, imparfait: les mots avec apostrophe restent unis. Il faudrait passer par nltk avec la tokenization
         # stopwords(text) #avant le reste il faut éliminer les mots communs
@@ -83,12 +68,12 @@ class Page:
         self.wordset = sorted([(items.count(word), (items.count(word)*100 / totitems), word) for word in set(items)], reverse=True)  # dans wordset on a ainsi une liste d'éléments constitués de nombre d'occurrences, pourcentage et mot, la liste est ordonnée par nombre décroissant d'occurrences.
 
 
-    def results_level1(self):
+    def results_level1(self, podium):
         """
         Sélectionne dans self.wordset les trois mots les plus présents dans la page et leur présence, les mets dans une liste qui est renvoyée.
         """
         words_level1 = []
-        for item in self.wordset[:5]:
+        for item in self.wordset[:podium]:
             words_level1.append(item)
         return words_level1
 
@@ -109,3 +94,5 @@ class Page:
                     comparison_list.append(item)
 
         return comparison_list
+
+# sauvegarder les résultats
